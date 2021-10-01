@@ -359,8 +359,8 @@
               "id"           : "cert_chain_of_trust",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "passed."
+              "severity"     : "CRITICAL",
+              "finding"      : "failed (expired)."
           }
 ,         {
               "id"           : "cert_certificatePolicies_EV",
@@ -374,7 +374,7 @@
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (23)"
+              "finding"      : "expires < 30 days (22)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -424,13 +424,6 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "offered"
-          }
-,         {
-              "id"           : "cert_ocspRevoked",
-              "ip"           : "www.festivalparminous.org/51.159.70.213",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension",
@@ -577,7 +570,7 @@
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
+              "finding"      : "-1 seconds from localtime"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1126,62 +1119,69 @@
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "100"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "protocol_support_score_weighted",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "30"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "key_exchange_score",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "90"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "key_exchange_score_weighted",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "27"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "cipher_strength_score",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "90"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "cipher_strength_score_weighted",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "36"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "final_score",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "93"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "overall_grade",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "A+"
+              "severity"     : "CRITICAL",
+              "finding"      : "T"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "www.festivalparminous.org/51.159.70.213",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to T. Issues with the chain of trust (expired)"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.festivalparminous.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "142"
+              "finding"      : "101"
           }
 ]
