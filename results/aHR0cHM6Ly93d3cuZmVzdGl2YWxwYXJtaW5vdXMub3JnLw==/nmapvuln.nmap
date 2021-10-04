@@ -1,6 +1,6 @@
-# Nmap 7.91 scan initiated Sun Oct  3 04:33:02 2021 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
+# Nmap 7.91 scan initiated Mon Oct  4 04:34:06 2021 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
 Nmap scan report for www.festivalparminous.org (51.159.70.213)
-Host is up (0.083s latency).
+Host is up (0.084s latency).
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered ports
 PORT     STATE SERVICE    VERSION
@@ -72,8 +72,28 @@ PORT     STATE SERVICE    VERSION
 |     auth_mechanisms: 
 |_      PLAIN
 5269/tcp open  jabber     Prosody Jabber server 0.8.0 or newer
+| vulners: 
+|   Prosody Jabber server 0.8.0 or newer: 
+|     	VMSA-2008-0014.3	10.0	https://vulners.com/vmware/VMSA-2008-0014.3
+|     	SSV:3950	10.0	https://vulners.com/seebug/SSV:3950	*EXPLOIT*
+|     	VMSA-2008-0018	9.3	https://vulners.com/vmware/VMSA-2008-0018
+|     	SSV:4423	9.3	https://vulners.com/seebug/SSV:4423	*EXPLOIT*
+|     	VMSA-2009-0007	7.5	https://vulners.com/vmware/VMSA-2009-0007
+|     	SSV:3423	7.5	https://vulners.com/seebug/SSV:3423	*EXPLOIT*
+|     	SSV:3166	7.5	https://vulners.com/seebug/SSV:3166	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2008-1808/	7.5	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2008-1808/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2008-1807/	7.5	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2008-1807/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2008-1806/	7.5	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2008-1806/	*EXPLOIT*
+|     	MSF:ILITIES/LINUXRPM-RHSA-2008-0558/	7.5	https://vulners.com/metasploit/MSF:ILITIES/LINUXRPM-RHSA-2008-0558/	*EXPLOIT*
+|     	MSF:ILITIES/GENTOO-LINUX-CVE-2008-1806/	7.5	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2008-1806/	*EXPLOIT*
+|     	VMSA-2008-0019.1	7.2	https://vulners.com/vmware/VMSA-2008-0019.1
+|     	SSV:4528	7.2	https://vulners.com/seebug/SSV:4528	*EXPLOIT*
+|     	SSV:4422	6.9	https://vulners.com/seebug/SSV:4422	*EXPLOIT*
+|     	SSV:3949	5.0	https://vulners.com/seebug/SSV:3949	*EXPLOIT*
+|     	SSV:11498	4.0	https://vulners.com/seebug/SSV:11498	*EXPLOIT*
+|_    	SSV:3947	2.1	https://vulners.com/seebug/SSV:3947	*EXPLOIT*
 |_xmpp-info: ERROR: Script execution failed (use -d to debug)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Oct  3 04:35:50 2021 -- 1 IP address (1 host up) scanned in 167.87 seconds
+# Nmap done at Mon Oct  4 04:36:53 2021 -- 1 IP address (1 host up) scanned in 167.41 seconds
