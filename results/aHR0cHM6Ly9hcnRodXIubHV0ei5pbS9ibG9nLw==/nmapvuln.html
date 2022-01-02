@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln arthur.lutz.im</pre>
-<p class="lead">Sat Jan  1 04:33:43 2022 – Sat Jan  1 04:34:19 2022<br>1 hosts scanned.
+<p class="lead">Sun Jan  2 04:34:12 2022 – Sun Jan  2 04:34:37 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -129,7 +129,10 @@
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">5222</td>
 <td title="Protocol">tcp</td>
@@ -143,24 +146,26 @@
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:prosody:prosody">cpe:/a:prosody:prosody</a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   Respects server name
-  STARTTLS Failed
   info: 
-    stream_id: 153f55b2-e55c-4a49-8656-c2eae2800b18
-    errors: 
-
-    compression_methods: 
-
     xmpp: 
       lang: en
       version: 1.0
-    unknown: 
+    capabilities: 
+
+  pre_tls: 
+    xmpp: 
+
+    capabilities: 
 
     features: 
       TLS (required)
-    auth_mechanisms: 
+  post_tls: 
+    xmpp: 
 
     capabilities: 
-</pre>
+
+    auth_mechanisms: 
+      PLAIN</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
