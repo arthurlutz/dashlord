@@ -2,7 +2,215 @@
   {
     "404": null,
     "url": "https://arthur.lutz.im",
-    "http": null,
+    "http": {
+      "url": "https://arthur.lutz.im",
+      "algorithm_version": 2,
+      "end_time": "Fri, 11 Mar 2022 05:39:15 GMT",
+      "grade": "B+",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Type": "text/html",
+        "Date": "Fri, 11 Mar 2022 05:39:11 GMT",
+        "Permissions-Policy": "interest-cohort=()",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-SSO-WAT": "You've just been SSOed",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "scan_id": 25080798,
+      "score": 80,
+      "start_time": "Fri, 11 Mar 2022 04:29:40 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 1,
+      "tests_passed": 11,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": {
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
+            },
+            "http": true,
+            "meta": false,
+            "policy": {
+              "antiClickjacking": false,
+              "defaultNone": false,
+              "insecureBaseUri": true,
+              "insecureFormAction": true,
+              "insecureSchemeActive": false,
+              "insecureSchemePassive": false,
+              "strictDynamic": false,
+              "unsafeEval": false,
+              "unsafeInline": true,
+              "unsafeInlineStyle": true,
+              "unsafeObjects": true
+            }
+          },
+          "pass": false,
+          "result": "csp-implemented-with-unsafe-inline",
+          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
+          "score_modifier": -20
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://arthur.lutz.im/intro/",
+            "redirects": true,
+            "route": [
+              "http://arthur.lutz.im/",
+              "https://arthur.lutz.im/",
+              "https://arthur.lutz.im/intro",
+              "https://arthur.lutz.im/intro/"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": "max-age=63072000; includeSubDomains; preload",
+            "includeSubDomains": true,
+            "max-age": 63072000,
+            "preload": true,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hsts-implemented-max-age-at-least-six-months",
+          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {}
+          },
+          "pass": true,
+          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": "nosniff"
+          },
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": "SAMEORIGIN"
+          },
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": "1; mode=block"
+          },
+          "pass": true,
+          "result": "x-xss-protection-enabled-mode-block",
+          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
+          "score_modifier": 0
+        }
+      }
+    },
     "updownio": {
       "token": "hh0z",
       "url": "https://arthur.lutz.im/",
@@ -21,15 +229,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2022-03-11T04:34:28Z",
-      "next_check_at": "2022-03-11T05:04:15Z",
+      "last_check_at": "2022-03-12T04:26:26Z",
+      "next_check_at": "2022-03-12T04:56:24Z",
       "mute_until": null,
       "favicon_url": null,
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2022-03-11T02:05:44Z",
+        "tested_at": "2022-03-12T02:57:09Z",
         "expires_at": "2022-05-13T04:28:41Z",
         "valid": true,
         "error": null
@@ -37,12 +245,12 @@
       "metrics": {
         "apdex": 1,
         "timings": {
-          "redirect": 1422,
-          "namelookup": 0,
-          "connection": 183,
-          "handshake": 258,
-          "response": 190,
-          "total": 2054
+          "redirect": 1055,
+          "namelookup": 1,
+          "connection": 125,
+          "handshake": 194,
+          "response": 133,
+          "total": 1508
         }
       },
       "uptimeGrade": "A",
@@ -95,268 +303,268 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/UBUNTU-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-25017/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/IBM-AIX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/DEBIAN-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "metasploit",
-                "is_exploit": "true",
                 "id": "MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "type": "exploitpack",
-                "is_exploit": "true",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "type": "exploitpack",
-                "is_exploit": "true",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "type": "exploitdb",
-                "is_exploit": "true",
                 "id": "EDB-ID:46516",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "type": "exploitdb",
-                "is_exploit": "true",
                 "id": "EDB-ID:46193",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "type": "cve",
-                "is_exploit": "false",
                 "id": "CVE-2019-6111",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "cve",
+                "is_exploit": "false"
               },
               {
-                "type": "zdt",
-                "is_exploit": "true",
                 "id": "1337DAY-ID-32328",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "zdt",
+                "is_exploit": "true"
               },
               {
-                "type": "zdt",
-                "is_exploit": "true",
                 "id": "1337DAY-ID-32009",
-                "cvss": "5.8"
+                "cvss": "5.8",
+                "type": "zdt",
+                "is_exploit": "true"
               },
               {
-                "type": "canvas",
-                "is_exploit": "true",
                 "id": "SSH_ENUM",
-                "cvss": "5.0"
+                "cvss": "5.0",
+                "type": "canvas",
+                "is_exploit": "true"
               },
               {
-                "type": "packetstorm",
-                "is_exploit": "true",
                 "id": "PACKETSTORM:150621",
-                "cvss": "5.0"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS",
-                "cvss": "5.0"
-              },
-              {
-                "type": "exploitpack",
-                "is_exploit": "true",
-                "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "cvss": "5.0"
-              },
-              {
-                "type": "exploitpack",
-                "is_exploit": "true",
-                "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "cvss": "5.0"
-              },
-              {
-                "type": "exploitdb",
-                "is_exploit": "true",
-                "id": "EDB-ID:45939",
-                "cvss": "5.0"
-              },
-              {
-                "type": "exploitdb",
-                "is_exploit": "true",
-                "id": "EDB-ID:45233",
-                "cvss": "5.0"
-              },
-              {
-                "type": "cve",
-                "is_exploit": "false",
-                "id": "CVE-2018-15919",
-                "cvss": "5.0"
-              },
-              {
-                "type": "cve",
-                "is_exploit": "false",
-                "id": "CVE-2018-15473",
-                "cvss": "5.0"
-              },
-              {
-                "type": "cve",
-                "is_exploit": "false",
-                "id": "CVE-2017-15906",
-                "cvss": "5.0"
-              },
-              {
-                "type": "zdt",
-                "is_exploit": "true",
-                "id": "1337DAY-ID-31730",
-                "cvss": "5.0"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
-                "cvss": "4.3"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
-                "cvss": "4.3"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
-                "cvss": "4.3"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
-                "cvss": "4.3"
-              },
-              {
-                "type": "metasploit",
-                "is_exploit": "true",
-                "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
-                "cvss": "4.3"
-              },
-              {
+                "cvss": "5.0",
                 "type": "packetstorm",
-                "is_exploit": "true",
-                "id": "PACKETSTORM:151227",
-                "cvss": "0.0"
+                "is_exploit": "true"
               },
               {
+                "id": "MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS",
+                "cvss": "5.0",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
+                "cvss": "5.0",
+                "type": "exploitpack",
+                "is_exploit": "true"
+              },
+              {
+                "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
+                "cvss": "5.0",
+                "type": "exploitpack",
+                "is_exploit": "true"
+              },
+              {
+                "id": "EDB-ID:45939",
+                "cvss": "5.0",
+                "type": "exploitdb",
+                "is_exploit": "true"
+              },
+              {
+                "id": "EDB-ID:45233",
+                "cvss": "5.0",
+                "type": "exploitdb",
+                "is_exploit": "true"
+              },
+              {
+                "id": "CVE-2018-15919",
+                "cvss": "5.0",
+                "type": "cve",
+                "is_exploit": "false"
+              },
+              {
+                "id": "CVE-2018-15473",
+                "cvss": "5.0",
+                "type": "cve",
+                "is_exploit": "false"
+              },
+              {
+                "id": "CVE-2017-15906",
+                "cvss": "5.0",
+                "type": "cve",
+                "is_exploit": "false"
+              },
+              {
+                "id": "1337DAY-ID-31730",
+                "cvss": "5.0",
                 "type": "zdt",
-                "is_exploit": "true",
+                "is_exploit": "true"
+              },
+              {
+                "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
+                "cvss": "4.3",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
+                "cvss": "4.3",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
+                "cvss": "4.3",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
+                "cvss": "4.3",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
+                "cvss": "4.3",
+                "type": "metasploit",
+                "is_exploit": "true"
+              },
+              {
+                "id": "PACKETSTORM:151227",
+                "cvss": "0.0",
+                "type": "packetstorm",
+                "is_exploit": "true"
+              },
+              {
                 "id": "1337DAY-ID-30937",
-                "cvss": "0.0"
+                "cvss": "0.0",
+                "type": "zdt",
+                "is_exploit": "true"
               }
             ]
           }
@@ -749,7 +957,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "62 >= 30 days"
+        "finding": "61 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -959,7 +1167,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "1646973484"
+        "finding": "1647059446"
       },
       {
         "id": "HSTS_time",
@@ -1564,7 +1772,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "142"
+        "finding": "106"
       }
     ],
     "thirdparties": {
@@ -1605,7 +1813,7 @@
       "cookies": [],
       "headers": {
         "server": "nginx",
-        "date": "Fri, 11 Mar 2022 04:36:41 GMT",
+        "date": "Sat, 12 Mar 2022 04:29:29 GMT",
         "content-type": "text/html",
         "x-sso-wat": "You've just been SSOed",
         "content-security-policy": "upgrade-insecure-requests",
@@ -1716,7 +1924,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.250.125.95",
+          "ip": "172.217.2.106",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1826,57 +2034,8 @@
         },
         {
           "hostname": "i.creativecommons.org",
-          "ip": "172.67.34.140",
-          "geoip": {
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
-            },
-            "registered_country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            }
-          }
+          "ip": "104.20.151.16",
+          "geoip": null
         },
         {
           "hostname": "blogantipub.files.wordpress.com",
@@ -2021,7 +2180,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "64.233.191.94",
+          "ip": "142.250.81.195",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2257,7 +2416,7 @@
     "lhr": {
       "requestedUrl": "https://arthur.lutz.im/",
       "finalUrl": "https://arthur.lutz.im/intro/",
-      "fetchTime": "2022-03-11T04:29:31.126Z",
+      "fetchTime": "2022-03-12T04:29:05.135Z",
       "runWarnings": [
         "The page may not be loading as expected because your test URL (https://arthur.lutz.im/) was redirected to https://arthur.lutz.im/intro/. Try testing the second URL directly."
       ],
@@ -2301,49 +2460,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 4145,
+          "numericValue": 4135,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 2974,
-                "firstMeaningfulPaint": 2974,
-                "largestContentfulPaint": 3364,
-                "firstCPUIdle": 3755,
-                "interactive": 4145,
-                "speedIndex": 5246,
+                "firstContentfulPaint": 3049,
+                "firstMeaningfulPaint": 3531,
+                "largestContentfulPaint": 3531,
+                "firstCPUIdle": 3773,
+                "interactive": 4135,
+                "speedIndex": 4773,
                 "estimatedInputLatency": 13,
-                "totalBlockingTime": 7,
-                "maxPotentialFID": 64,
-                "cumulativeLayoutShift": 0.06013904571533203,
+                "totalBlockingTime": 10,
+                "maxPotentialFID": 70,
+                "cumulativeLayoutShift": 0,
                 "cumulativeLayoutShiftAllFrames": 0,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 315061013,
+                "observedTimeOriginTs": 133962068,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 315061013,
-                "observedFirstPaint": 1931,
-                "observedFirstPaintTs": 316992387,
-                "observedFirstContentfulPaint": 1931,
-                "observedFirstContentfulPaintTs": 316992387,
-                "observedFirstMeaningfulPaint": 2011,
-                "observedFirstMeaningfulPaintTs": 317071740,
-                "observedLargestContentfulPaint": 1931,
-                "observedLargestContentfulPaintTs": 316992387,
-                "observedTraceEnd": 3122,
-                "observedTraceEndTs": 318182645,
-                "observedLoad": 2064,
-                "observedLoadTs": 317125433,
-                "observedDomContentLoaded": 1918,
-                "observedDomContentLoadedTs": 316978924,
-                "observedCumulativeLayoutShift": 0.06013904571533203,
+                "observedNavigationStartTs": 133962068,
+                "observedFirstPaint": 1649,
+                "observedFirstPaintTs": 135610769,
+                "observedFirstContentfulPaint": 1649,
+                "observedFirstContentfulPaintTs": 135610769,
+                "observedFirstMeaningfulPaint": 1686,
+                "observedFirstMeaningfulPaintTs": 135648503,
+                "observedLargestContentfulPaint": 1649,
+                "observedLargestContentfulPaintTs": 135610769,
+                "observedTraceEnd": 2819,
+                "observedTraceEndTs": 136780819,
+                "observedLoad": 1760,
+                "observedLoadTs": 135721728,
+                "observedDomContentLoaded": 1631,
+                "observedDomContentLoadedTs": 135593532,
+                "observedCumulativeLayoutShift": 0,
                 "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 1942,
-                "observedFirstVisualChangeTs": 317003013,
-                "observedLastVisualChange": 2542,
-                "observedLastVisualChangeTs": 317603013,
-                "observedSpeedIndex": 1968,
-                "observedSpeedIndexTs": 317028652
+                "observedFirstVisualChange": 1649,
+                "observedFirstVisualChangeTs": 135611068,
+                "observedLastVisualChange": 2249,
+                "observedLastVisualChangeTs": 136211068,
+                "observedSpeedIndex": 1665,
+                "observedSpeedIndexTs": 135627241
               },
               {
                 "lcpInvalidated": false
@@ -2365,18 +2524,18 @@
                 "numScripts": 8,
                 "numStylesheets": 7,
                 "numFonts": 2,
-                "numTasks": 283,
-                "numTasksOver10ms": 2,
+                "numTasks": 278,
+                "numTasksOver10ms": 1,
                 "numTasksOver25ms": 1,
                 "numTasksOver50ms": 0,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 14.525000000000002,
-                "throughput": 9281600.785707274,
-                "maxRtt": 124.68299999999999,
-                "maxServerLatency": 19.389000000000003,
-                "totalByteWeight": 472418,
-                "totalTaskTime": 107.09500000000003,
+                "rtt": 5.627000000000001,
+                "throughput": 15917552.433569,
+                "maxRtt": 96.93799999999999,
+                "maxServerLatency": 24.333000000000013,
+                "totalByteWeight": 472414,
+                "totalTaskTime": 116.409,
                 "mainDocumentTransferSize": 14814
               }
             ]
@@ -2390,6 +2549,7 @@
     "declaration-a11y": null,
     "declaration-rgpd": null,
     "summary": {
+      "httpGrade": "B+",
       "apdex": 1,
       "apdexGrade": "A",
       "uptime": 100,
@@ -2419,7 +2579,215 @@
   {
     "404": null,
     "url": "https://arthur.lutz.im/blog/",
-    "http": null,
+    "http": {
+      "url": "https://arthur.lutz.im/blog/",
+      "algorithm_version": 2,
+      "end_time": "Sat, 12 Mar 2022 04:29:47 GMT",
+      "grade": "B+",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Type": "text/html",
+        "Date": "Sat, 12 Mar 2022 04:29:43 GMT",
+        "Permissions-Policy": "interest-cohort=()",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-SSO-WAT": "You've just been SSOed",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "scan_id": 25097385,
+      "score": 80,
+      "start_time": "Sat, 12 Mar 2022 04:29:40 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 1,
+      "tests_passed": 11,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": {
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
+            },
+            "http": true,
+            "meta": false,
+            "policy": {
+              "antiClickjacking": false,
+              "defaultNone": false,
+              "insecureBaseUri": true,
+              "insecureFormAction": true,
+              "insecureSchemeActive": false,
+              "insecureSchemePassive": false,
+              "strictDynamic": false,
+              "unsafeEval": false,
+              "unsafeInline": true,
+              "unsafeInlineStyle": true,
+              "unsafeObjects": true
+            }
+          },
+          "pass": false,
+          "result": "csp-implemented-with-unsafe-inline",
+          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
+          "score_modifier": -20
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://arthur.lutz.im/intro/",
+            "redirects": true,
+            "route": [
+              "http://arthur.lutz.im/",
+              "https://arthur.lutz.im/",
+              "https://arthur.lutz.im/intro",
+              "https://arthur.lutz.im/intro/"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": "max-age=63072000; includeSubDomains; preload",
+            "includeSubDomains": true,
+            "max-age": 63072000,
+            "preload": true,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hsts-implemented-max-age-at-least-six-months",
+          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {}
+          },
+          "pass": true,
+          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": "nosniff"
+          },
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": "SAMEORIGIN"
+          },
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": "1; mode=block"
+          },
+          "pass": true,
+          "result": "x-xss-protection-enabled-mode-block",
+          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
+          "score_modifier": 0
+        }
+      }
+    },
     "updownio": null,
     "nmap": {
       "host": "arthur.lutz.im",
@@ -2468,268 +2836,268 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/UBUNTU-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-25017/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/IBM-AIX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/DEBIAN-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "exploitpack"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "exploitpack"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "EDB-ID:46516",
-                "type": "exploitdb",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "exploitdb"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "EDB-ID:46193",
-                "type": "exploitdb",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "exploitdb"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "false",
                 "id": "CVE-2019-6111",
-                "type": "cve",
-                "cvss": "5.8",
-                "is_exploit": "false"
+                "type": "cve"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-32328",
-                "type": "zdt",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "zdt"
               },
               {
+                "cvss": "5.8",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-32009",
-                "type": "zdt",
-                "cvss": "5.8",
-                "is_exploit": "true"
+                "type": "zdt"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "SSH_ENUM",
-                "type": "canvas",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "canvas"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "PACKETSTORM:150621",
-                "type": "packetstorm",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "packetstorm"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS",
-                "type": "metasploit",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "type": "exploitpack",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "exploitpack"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "type": "exploitpack",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "exploitpack"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "EDB-ID:45939",
-                "type": "exploitdb",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "exploitdb"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "EDB-ID:45233",
-                "type": "exploitdb",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "exploitdb"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "false",
                 "id": "CVE-2018-15919",
-                "type": "cve",
-                "cvss": "5.0",
-                "is_exploit": "false"
+                "type": "cve"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "false",
                 "id": "CVE-2018-15473",
-                "type": "cve",
-                "cvss": "5.0",
-                "is_exploit": "false"
+                "type": "cve"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "false",
                 "id": "CVE-2017-15906",
-                "type": "cve",
-                "cvss": "5.0",
-                "is_exploit": "false"
+                "type": "cve"
               },
               {
+                "cvss": "5.0",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-31730",
-                "type": "zdt",
-                "cvss": "5.0",
-                "is_exploit": "true"
+                "type": "zdt"
               },
               {
+                "cvss": "4.3",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
-                "type": "metasploit",
-                "cvss": "4.3",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "4.3",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
-                "type": "metasploit",
-                "cvss": "4.3",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "4.3",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
-                "type": "metasploit",
-                "cvss": "4.3",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "4.3",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
-                "type": "metasploit",
-                "cvss": "4.3",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "4.3",
+                "is_exploit": "true",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
-                "type": "metasploit",
-                "cvss": "4.3",
-                "is_exploit": "true"
+                "type": "metasploit"
               },
               {
+                "cvss": "0.0",
+                "is_exploit": "true",
                 "id": "PACKETSTORM:151227",
-                "type": "packetstorm",
-                "cvss": "0.0",
-                "is_exploit": "true"
+                "type": "packetstorm"
               },
               {
-                "id": "1337DAY-ID-30937",
-                "type": "zdt",
                 "cvss": "0.0",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "id": "1337DAY-ID-30937",
+                "type": "zdt"
               }
             ]
           }
@@ -3122,7 +3490,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "62 >= 30 days"
+        "finding": "61 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -3332,7 +3700,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "1646973486"
+        "finding": "1647059506"
       },
       {
         "id": "HSTS_time",
@@ -3937,7 +4305,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "144"
+        "finding": "156"
       }
     ],
     "thirdparties": {
@@ -3945,7 +4313,7 @@
       "cookies": [],
       "headers": {
         "server": "nginx",
-        "date": "Fri, 11 Mar 2022 04:36:47 GMT",
+        "date": "Sat, 12 Mar 2022 04:30:17 GMT",
         "content-type": "text/html; charset=UTF-8",
         "x-sso-wat": "You've just been SSOed",
         "link": "<https://arthur.lutz.im/blog/wp-json/>; rel=\"https://api.w.org/\"",
@@ -4074,31 +4442,31 @@
         "https://arthur.lutz.im/blog/tag/demontage/": {
           "status": 200
         },
-        "https://arthur.lutz.im/blog/tag/teardown-2/?order=DESC": {
-          "status": 200
-        },
         "https://arthur.lutz.im/blog/tag/soudure/": {
-          "status": 200
-        },
-        "https://arthur.lutz.im/blog/tag/teardown-2/?order=ASC": {
           "status": 200
         },
         "https://arthur.lutz.im/blog/tag/reparation/": {
           "status": 200
         },
-        "https://arthur.lutz.im/blog/tag/tricopter/?order=DESC": {
+        "https://arthur.lutz.im/blog/tag/teardown-2/?order=DESC": {
           "status": 200
         },
-        "https://arthur.lutz.im/blog/2020/04/28/demontage-myfox-security-camera-part-3/": {
+        "https://arthur.lutz.im/blog/tag/tricopter/?order=DESC": {
           "status": 200
         },
         "https://arthur.lutz.im/blog/tag/android/": {
           "status": 200
         },
+        "https://arthur.lutz.im/blog/tag/teardown-2/?order=ASC": {
+          "status": 200
+        },
+        "https://arthur.lutz.im/blog/tag/tricopter/?order=ASC": {
+          "status": 200
+        },
         "https://arthur.lutz.im/blog/tag/diy-2/": {
           "status": 200
         },
-        "https://arthur.lutz.im/blog/tag/internet-des-objets/": {
+        "https://arthur.lutz.im/blog/2020/04/28/demontage-myfox-security-camera-part-3/": {
           "status": 200
         },
         "https://arthur.lutz.im/blog/tag/dvd/": {
@@ -4251,8 +4619,10 @@
     "lhr": {
       "requestedUrl": "https://arthur.lutz.im/blog/",
       "finalUrl": "https://arthur.lutz.im/blog/",
-      "fetchTime": "2022-03-11T04:29:37.797Z",
-      "runWarnings": [],
+      "fetchTime": "2022-03-12T04:29:24.346Z",
+      "runWarnings": [
+        "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
+      ],
       "categories": {
         "performance": {
           "title": "Performance",
@@ -4293,49 +4663,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 2384,
+          "numericValue": 2768,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 2384,
-                "firstMeaningfulPaint": 2384,
-                "largestContentfulPaint": 4346,
-                "firstCPUIdle": 2384,
-                "interactive": 2384,
-                "speedIndex": 5506,
+                "firstContentfulPaint": 2425,
+                "firstMeaningfulPaint": 2425,
+                "largestContentfulPaint": 5760,
+                "firstCPUIdle": 2575,
+                "interactive": 2768,
+                "speedIndex": 6846,
                 "estimatedInputLatency": 13,
-                "totalBlockingTime": 0,
-                "maxPotentialFID": 23,
+                "totalBlockingTime": 90,
+                "maxPotentialFID": 131,
                 "cumulativeLayoutShift": 0.04453304121229384,
                 "cumulativeLayoutShiftAllFrames": 0,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 307569410,
+                "observedTimeOriginTs": 120463701,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 307569410,
-                "observedFirstPaint": 2272,
-                "observedFirstPaintTs": 309841305,
-                "observedFirstContentfulPaint": 2272,
-                "observedFirstContentfulPaintTs": 309841305,
-                "observedFirstMeaningfulPaint": 2272,
-                "observedFirstMeaningfulPaintTs": 309841305,
-                "observedLargestContentfulPaint": 2416,
-                "observedLargestContentfulPaintTs": 309985358,
-                "observedTraceEnd": 3457,
-                "observedTraceEndTs": 311026544,
-                "observedLoad": 2394,
-                "observedLoadTs": 309963171,
-                "observedDomContentLoaded": 2266,
-                "observedDomContentLoadedTs": 309835222,
+                "observedNavigationStartTs": 120463701,
+                "observedFirstPaint": 2462,
+                "observedFirstPaintTs": 122926167,
+                "observedFirstContentfulPaint": 2462,
+                "observedFirstContentfulPaintTs": 122926167,
+                "observedFirstMeaningfulPaint": 2462,
+                "observedFirstMeaningfulPaintTs": 122926167,
+                "observedLargestContentfulPaint": 2848,
+                "observedLargestContentfulPaintTs": 123312181,
+                "observedTraceEnd": 3929,
+                "observedTraceEndTs": 124393093,
+                "observedLoad": 2824,
+                "observedLoadTs": 123287731,
+                "observedDomContentLoaded": 2468,
+                "observedDomContentLoadedTs": 122931319,
                 "observedCumulativeLayoutShift": 0.04453304121229384,
                 "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 2284,
-                "observedFirstVisualChangeTs": 309853410,
-                "observedLastVisualChange": 2868,
-                "observedLastVisualChangeTs": 310437410,
-                "observedSpeedIndex": 2389,
-                "observedSpeedIndexTs": 309958768
+                "observedFirstVisualChange": 2464,
+                "observedFirstVisualChangeTs": 122927701,
+                "observedLastVisualChange": 3081,
+                "observedLastVisualChangeTs": 123544701,
+                "observedSpeedIndex": 2724,
+                "observedSpeedIndexTs": 123187239
               },
               {
                 "lcpInvalidated": false
@@ -4357,19 +4727,19 @@
                 "numScripts": 9,
                 "numStylesheets": 7,
                 "numFonts": 0,
-                "numTasks": 476,
-                "numTasksOver10ms": 3,
-                "numTasksOver25ms": 0,
+                "numTasks": 538,
+                "numTasksOver10ms": 7,
+                "numTasksOver25ms": 4,
                 "numTasksOver50ms": 0,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 125.697,
-                "throughput": 32513263.750386354,
-                "maxRtt": 125.697,
-                "maxServerLatency": 134.06900000000002,
-                "totalByteWeight": 3740624,
-                "totalTaskTime": 139.4089999999998,
-                "mainDocumentTransferSize": 33698
+                "rtt": 164.554,
+                "throughput": 25364142.880630944,
+                "maxRtt": 164.554,
+                "maxServerLatency": 44.297,
+                "totalByteWeight": 3744205,
+                "totalTaskTime": 313.30499999999995,
+                "mainDocumentTransferSize": 37279
               }
             ]
           }
@@ -4382,6 +4752,7 @@
     "declaration-a11y": null,
     "declaration-rgpd": null,
     "summary": {
+      "httpGrade": "B+",
       "nmapGrade": "F",
       "nmapOpenPortsCount": 5,
       "nmapOpenPortsGrade": "F",
@@ -4407,7 +4778,214 @@
   {
     "404": null,
     "url": "https://www.festivalparminous.org/",
-    "http": null,
+    "http": {
+      "url": "https://www.festivalparminous.org/",
+      "algorithm_version": 2,
+      "end_time": "Fri, 11 Mar 2022 05:39:13 GMT",
+      "grade": "B+",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Fri, 11 Mar 2022 05:39:10 GMT",
+        "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
+        "Permissions-Policy": "interest-cohort=()",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-SSO-WAT": "You've just been SSOed",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "scan_id": 25080801,
+      "score": 80,
+      "start_time": "Fri, 11 Mar 2022 04:29:50 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 1,
+      "tests_passed": 11,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": {
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
+            },
+            "http": true,
+            "meta": false,
+            "policy": {
+              "antiClickjacking": false,
+              "defaultNone": false,
+              "insecureBaseUri": true,
+              "insecureFormAction": true,
+              "insecureSchemeActive": false,
+              "insecureSchemePassive": false,
+              "strictDynamic": false,
+              "unsafeEval": false,
+              "unsafeInline": true,
+              "unsafeInlineStyle": true,
+              "unsafeObjects": true
+            }
+          },
+          "pass": false,
+          "result": "csp-implemented-with-unsafe-inline",
+          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
+          "score_modifier": -20
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://www.festivalparminous.org/",
+            "redirects": true,
+            "route": [
+              "http://www.festivalparminous.org/",
+              "https://www.festivalparminous.org/"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": "max-age=63072000; includeSubDomains; preload",
+            "includeSubDomains": true,
+            "max-age": 63072000,
+            "preload": true,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hsts-implemented-max-age-at-least-six-months",
+          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {}
+          },
+          "pass": true,
+          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": "nosniff"
+          },
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": "SAMEORIGIN"
+          },
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": "1; mode=block"
+          },
+          "pass": true,
+          "result": "x-xss-protection-enabled-mode-block",
+          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
+          "score_modifier": 0
+        }
+      }
+    },
     "updownio": {
       "token": "2yk9",
       "url": "https://www.festivalparminous.org",
@@ -4426,15 +5004,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2022-03-11T04:20:11Z",
-      "next_check_at": "2022-03-11T04:49:56Z",
+      "last_check_at": "2022-03-12T04:12:30Z",
+      "next_check_at": "2022-03-12T04:42:13Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-32x32.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2022-03-11T00:21:30Z",
+        "tested_at": "2022-03-12T01:13:37Z",
         "expires_at": "2022-06-03T04:27:16Z",
         "valid": true,
         "error": null
@@ -4443,11 +5021,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 57,
-          "connection": 107,
-          "handshake": 137,
-          "response": 175,
-          "total": 476
+          "namelookup": 37,
+          "connection": 137,
+          "handshake": 168,
+          "response": 209,
+          "total": 550
         }
       },
       "uptimeGrade": "A",
@@ -4466,196 +5044,196 @@
             "version": "7.9p1 Debian 10+deb10u2",
             "vulnerabilities": [
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/UBUNTU-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-25017/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/IBM-AIX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/DEBIAN-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "exploitpack",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "exploitpack",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "exploitdb",
                 "id": "EDB-ID:46516",
-                "type": "exploitdb",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "exploitdb",
                 "id": "EDB-ID:46193",
-                "type": "exploitdb",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
-                "id": "CVE-2019-6111",
                 "type": "cve",
-                "is_exploit": "false"
+                "id": "CVE-2019-6111",
+                "is_exploit": "false",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "zdt",
                 "id": "1337DAY-ID-32328",
-                "type": "zdt",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "type": "zdt",
                 "id": "1337DAY-ID-32009",
-                "type": "zdt",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "5.8"
               },
               {
-                "cvss": "4.3",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "is_exploit": "true",
+                "cvss": "4.3"
               },
               {
-                "cvss": "0.0",
-                "id": "PACKETSTORM:151227",
                 "type": "packetstorm",
-                "is_exploit": "true"
+                "id": "PACKETSTORM:151227",
+                "is_exploit": "true",
+                "cvss": "0.0"
               }
             ]
           }
@@ -5119,7 +5697,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "83 >= 30 days"
+        "finding": "82 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -5329,7 +5907,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1646973505"
+        "finding": "1647059444"
       },
       {
         "id": "HSTS_time",
@@ -5934,7 +6512,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "159"
+        "finding": "97"
       }
     ],
     "thirdparties": {
@@ -5942,7 +6520,7 @@
       "cookies": [],
       "headers": {
         "server": "nginx",
-        "date": "Fri, 11 Mar 2022 04:36:56 GMT",
+        "date": "Sat, 12 Mar 2022 04:29:35 GMT",
         "content-type": "text/html; charset=UTF-8",
         "x-sso-wat": "You've just been SSOed",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
@@ -6092,7 +6670,7 @@
           "slug": "wordpress",
           "name": "WordPress",
           "confidence": 100,
-          "version": "5.9.1",
+          "version": "5.9.2",
           "icon": "WordPress.svg",
           "website": "https://wordpress.org",
           "cpe": "cpe:/a:wordpress:wordpress",
@@ -6201,13 +6779,13 @@
     "lhr": {
       "requestedUrl": "https://www.festivalparminous.org/",
       "finalUrl": "https://www.festivalparminous.org/",
-      "fetchTime": "2022-03-11T04:29:37.971Z",
+      "fetchTime": "2022-03-12T04:29:12.037Z",
       "runWarnings": [],
       "categories": {
         "performance": {
           "title": "Performance",
           "id": "performance",
-          "score": 0.808164405822754
+          "score": 0.8079851150512696
         },
         "accessibility": {
           "title": "Accessibility",
@@ -6243,49 +6821,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 3911,
+          "numericValue": 3227,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 3547,
-                "firstMeaningfulPaint": 3547,
-                "largestContentfulPaint": 4150,
-                "firstCPUIdle": 3911,
-                "interactive": 3911,
-                "speedIndex": 4722,
+                "firstContentfulPaint": 3227,
+                "firstMeaningfulPaint": 3227,
+                "largestContentfulPaint": 3871,
+                "firstCPUIdle": 3227,
+                "interactive": 3227,
+                "speedIndex": 3592,
                 "estimatedInputLatency": 13,
-                "totalBlockingTime": 212,
-                "maxPotentialFID": 262,
+                "totalBlockingTime": 0,
+                "maxPotentialFID": 42,
                 "cumulativeLayoutShift": 0.0008937581380208332,
                 "cumulativeLayoutShiftAllFrames": 0,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 127921527,
+                "observedTimeOriginTs": 125833676,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 127921527,
-                "observedFirstPaint": 1862,
-                "observedFirstPaintTs": 129783954,
-                "observedFirstContentfulPaint": 1862,
-                "observedFirstContentfulPaintTs": 129783954,
-                "observedFirstMeaningfulPaint": 1874,
-                "observedFirstMeaningfulPaintTs": 129795408,
-                "observedLargestContentfulPaint": 1874,
-                "observedLargestContentfulPaintTs": 129795408,
-                "observedTraceEnd": 3089,
-                "observedTraceEndTs": 131010600,
-                "observedLoad": 2025,
-                "observedLoadTs": 129946321,
-                "observedDomContentLoaded": 1716,
-                "observedDomContentLoadedTs": 129637202,
+                "observedNavigationStartTs": 125833676,
+                "observedFirstPaint": 1220,
+                "observedFirstPaintTs": 127053597,
+                "observedFirstContentfulPaint": 1220,
+                "observedFirstContentfulPaintTs": 127053597,
+                "observedFirstMeaningfulPaint": 1231,
+                "observedFirstMeaningfulPaintTs": 127065144,
+                "observedLargestContentfulPaint": 1231,
+                "observedLargestContentfulPaintTs": 127065144,
+                "observedTraceEnd": 2377,
+                "observedTraceEndTs": 128210425,
+                "observedLoad": 1318,
+                "observedLoadTs": 127151926,
+                "observedDomContentLoaded": 1207,
+                "observedDomContentLoadedTs": 127040948,
                 "observedCumulativeLayoutShift": 0.0008937581380208332,
                 "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 1856,
-                "observedFirstVisualChangeTs": 129777527,
-                "observedLastVisualChange": 2173,
-                "observedLastVisualChangeTs": 130094527,
-                "observedSpeedIndex": 1867,
-                "observedSpeedIndexTs": 129788975
+                "observedFirstVisualChange": 1227,
+                "observedFirstVisualChangeTs": 127060676,
+                "observedLastVisualChange": 1544,
+                "observedLastVisualChangeTs": 127377676,
+                "observedSpeedIndex": 1239,
+                "observedSpeedIndexTs": 127072417
               },
               {
                 "lcpInvalidated": false
@@ -6303,22 +6881,22 @@
             "type": "debugdata",
             "items": [
               {
-                "numRequests": 21,
-                "numScripts": 4,
+                "numRequests": 23,
+                "numScripts": 6,
                 "numStylesheets": 7,
                 "numFonts": 2,
-                "numTasks": 279,
-                "numTasksOver10ms": 6,
+                "numTasks": 322,
+                "numTasksOver10ms": 4,
                 "numTasksOver25ms": 2,
-                "numTasksOver50ms": 2,
+                "numTasksOver50ms": 1,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 155.09300000000002,
-                "throughput": 19870511.501833875,
-                "maxRtt": 155.09300000000002,
-                "maxServerLatency": 158.16499999999996,
-                "totalByteWeight": 2054347,
-                "totalTaskTime": 297.91299999999984,
+                "rtt": 95.554,
+                "throughput": 34324039.25544292,
+                "maxRtt": 95.554,
+                "maxServerLatency": 0,
+                "totalByteWeight": 2055287,
+                "totalTaskTime": 194.50399999999993,
                 "mainDocumentTransferSize": 128294
               }
             ]
@@ -6332,6 +6910,7 @@
     "declaration-a11y": null,
     "declaration-rgpd": null,
     "summary": {
+      "httpGrade": "B+",
       "apdex": 1,
       "apdexGrade": "A",
       "uptime": 100,
@@ -6346,7 +6925,7 @@
       "cookiesCount": 0,
       "trackersGrade": "A",
       "trackersCount": 0,
-      "lighthouse_performance": 0.808164405822754,
+      "lighthouse_performance": 0.8079851150512696,
       "lighthouse_performanceGrade": "B",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
@@ -6361,7 +6940,218 @@
   {
     "404": null,
     "url": "https://www.soundsmag.org/",
-    "http": null,
+    "http": {
+      "url": "https://www.soundsmag.org/",
+      "algorithm_version": 2,
+      "end_time": "Fri, 11 Mar 2022 05:37:12 GMT",
+      "grade": "B",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Composed-By": "SPIP 4.0.0 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
+        "Connection": "keep-alive",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 11 Mar 2022 05:37:07 GMT",
+        "Link": "<https://www.soundsmag.org/local/cache-css/e0d05f94f3aadccae3c8318a4bb83073.css?1629039128>;rel=\"preload\";as=\"style\";",
+        "Permissions-Policy": "interest-cohort=()",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=15768000",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Cookie, Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-Robots-Tag": "none",
+        "X-SSO-WAT": "You've just been SSOed",
+        "X-Spip-Cache": "86400",
+        "X-XSS-Protection": "1, mode=block"
+      },
+      "scan_id": 25080893,
+      "score": 70,
+      "start_time": "Fri, 11 Mar 2022 04:42:33 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 2,
+      "tests_passed": 10,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": {
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
+            },
+            "http": true,
+            "meta": false,
+            "policy": {
+              "antiClickjacking": false,
+              "defaultNone": false,
+              "insecureBaseUri": true,
+              "insecureFormAction": true,
+              "insecureSchemeActive": false,
+              "insecureSchemePassive": false,
+              "strictDynamic": false,
+              "unsafeEval": false,
+              "unsafeInline": true,
+              "unsafeInlineStyle": true,
+              "unsafeObjects": true
+            }
+          },
+          "pass": false,
+          "result": "csp-implemented-with-unsafe-inline",
+          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
+          "score_modifier": -20
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://www.soundsmag.org/",
+            "redirects": true,
+            "route": [
+              "http://www.soundsmag.org/",
+              "https://www.soundsmag.org/"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": "max-age=15768000",
+            "includeSubDomains": false,
+            "max-age": 15768000,
+            "preload": false,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hsts-implemented-max-age-at-least-six-months",
+          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {}
+          },
+          "pass": true,
+          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
+          "score_modifier": 0
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": "nosniff"
+          },
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": "SAMEORIGIN"
+          },
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": "1, mode=block"
+          },
+          "pass": false,
+          "result": "x-xss-protection-header-invalid",
+          "score_description": "X-XSS-Protection header cannot be recognized",
+          "score_modifier": -10
+        }
+      }
+    },
     "updownio": null,
     "nmap": {
       "host": "www.soundsmag.org",
@@ -6376,196 +7166,196 @@
             "version": "7.9p1 Debian 10+deb10u2",
             "vulnerabilities": [
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/UBUNTU-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-25017/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/IBM-AIX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/DEBIAN-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "exploitpack",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "exploitpack",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "exploitdb",
                 "id": "EDB-ID:46516",
-                "type": "exploitdb",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "exploitdb",
                 "id": "EDB-ID:46193",
-                "type": "exploitdb",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
-                "id": "CVE-2019-6111",
+                "is_exploit": "false",
                 "type": "cve",
-                "is_exploit": "false"
+                "id": "CVE-2019-6111",
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "zdt",
                 "id": "1337DAY-ID-32328",
-                "type": "zdt",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "5.8",
+                "is_exploit": "true",
+                "type": "zdt",
                 "id": "1337DAY-ID-32009",
-                "type": "zdt",
-                "is_exploit": "true"
+                "cvss": "5.8"
               },
               {
-                "cvss": "4.3",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "4.3"
               },
               {
-                "cvss": "4.3",
+                "is_exploit": "true",
+                "type": "metasploit",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
-                "type": "metasploit",
-                "is_exploit": "true"
+                "cvss": "4.3"
               },
               {
-                "cvss": "0.0",
-                "id": "PACKETSTORM:151227",
+                "is_exploit": "true",
                 "type": "packetstorm",
-                "is_exploit": "true"
+                "id": "PACKETSTORM:151227",
+                "cvss": "0.0"
               }
             ]
           }
@@ -7029,7 +7819,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "84 >= 30 days"
+        "finding": "83 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -7239,7 +8029,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1646974248"
+        "finding": "1647059763"
       },
       {
         "id": "HSTS_time",
@@ -7844,7 +8634,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "142"
+        "finding": "141"
       }
     ],
     "thirdparties": {
@@ -7852,7 +8642,7 @@
       "cookies": [],
       "headers": {
         "server": "nginx",
-        "date": "Fri, 11 Mar 2022 04:49:32 GMT",
+        "date": "Sat, 12 Mar 2022 04:34:47 GMT",
         "content-type": "text/html; charset=utf-8",
         "x-sso-wat": "You've just been SSOed",
         "vary": "Cookie, Accept-Encoding",
@@ -7994,7 +8784,7 @@
         "https://www.soundsmag.org/-Cinema-": {
           "status": 200
         },
-        "https://www.soundsmag.org/Un-Autre-Monde-de-Stephane-Brize": {
+        "https://www.soundsmag.org/Viens-Je-t-emmene-d-Alain-Guiraudie": {
           "status": 200
         },
         "https://www.soundsmag.org/Fahrenheit-2021": {
@@ -8012,10 +8802,10 @@
         "https://www.soundsmag.org/-Politique-": {
           "status": 200
         },
-        "https://www.soundsmag.org/Mark-Lanegan-1964-2022": {
+        "https://www.soundsmag.org/Un-Autre-Monde-de-Stephane-Brize": {
           "status": 200
         },
-        "https://www.soundsmag.org/Fargo-de-Joel-et-Ethan-Coen-1996-cine-concert-par-Fragments-espace-1789-le-15": {
+        "https://www.soundsmag.org/Mark-Lanegan-1964-2022": {
           "status": 200
         }
       },
@@ -8096,7 +8886,7 @@
     "lhr": {
       "requestedUrl": "https://www.soundsmag.org/",
       "finalUrl": "https://www.soundsmag.org/",
-      "fetchTime": "2022-03-11T04:42:25.155Z",
+      "fetchTime": "2022-03-12T04:34:24.147Z",
       "runWarnings": [],
       "categories": {
         "performance": {
@@ -8138,49 +8928,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 3910,
+          "numericValue": 3985,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 3236,
-                "firstMeaningfulPaint": 3236,
-                "largestContentfulPaint": 3986,
-                "firstCPUIdle": 3236,
-                "interactive": 3910,
-                "speedIndex": 3990,
+                "firstContentfulPaint": 3237,
+                "firstMeaningfulPaint": 3237,
+                "largestContentfulPaint": 3312,
+                "firstCPUIdle": 3237,
+                "interactive": 3985,
+                "speedIndex": 3896,
                 "estimatedInputLatency": 13,
                 "totalBlockingTime": 14,
-                "maxPotentialFID": 78,
+                "maxPotentialFID": 77,
                 "cumulativeLayoutShift": 0,
                 "cumulativeLayoutShiftAllFrames": 0,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 338810232,
+                "observedTimeOriginTs": 181334049,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 338810232,
-                "observedFirstPaint": 1517,
-                "observedFirstPaintTs": 340327224,
-                "observedFirstContentfulPaint": 1517,
-                "observedFirstContentfulPaintTs": 340327224,
-                "observedFirstMeaningfulPaint": 1517,
-                "observedFirstMeaningfulPaintTs": 340327224,
-                "observedLargestContentfulPaint": 1517,
-                "observedLargestContentfulPaintTs": 340327224,
-                "observedTraceEnd": 2661,
-                "observedTraceEndTs": 341471576,
-                "observedLoad": 1604,
-                "observedLoadTs": 340413990,
-                "observedDomContentLoaded": 1254,
-                "observedDomContentLoadedTs": 340063841,
+                "observedNavigationStartTs": 181334049,
+                "observedFirstPaint": 1461,
+                "observedFirstPaintTs": 182794824,
+                "observedFirstContentfulPaint": 1461,
+                "observedFirstContentfulPaintTs": 182794824,
+                "observedFirstMeaningfulPaint": 1461,
+                "observedFirstMeaningfulPaintTs": 182794824,
+                "observedLargestContentfulPaint": 1461,
+                "observedLargestContentfulPaintTs": 182794824,
+                "observedTraceEnd": 2609,
+                "observedTraceEndTs": 183943032,
+                "observedLoad": 1551,
+                "observedLoadTs": 182885058,
+                "observedDomContentLoaded": 1302,
+                "observedDomContentLoadedTs": 182636484,
                 "observedCumulativeLayoutShift": 0,
                 "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 1526,
-                "observedFirstVisualChangeTs": 340336232,
-                "observedLastVisualChange": 1526,
-                "observedLastVisualChangeTs": 340336232,
-                "observedSpeedIndex": 1526,
-                "observedSpeedIndexTs": 340336386
+                "observedFirstVisualChange": 1458,
+                "observedFirstVisualChangeTs": 182792049,
+                "observedLastVisualChange": 1458,
+                "observedLastVisualChangeTs": 182792049,
+                "observedSpeedIndex": 1459,
+                "observedSpeedIndexTs": 182792688
               },
               {
                 "lcpInvalidated": false
@@ -8202,19 +8992,19 @@
                 "numScripts": 5,
                 "numStylesheets": 5,
                 "numFonts": 0,
-                "numTasks": 226,
+                "numTasks": 227,
                 "numTasksOver10ms": 2,
                 "numTasksOver25ms": 0,
                 "numTasksOver50ms": 0,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 111.02900000000001,
-                "throughput": 12718557.207076857,
-                "maxRtt": 111.02900000000001,
-                "maxServerLatency": 2.0079999999999956,
-                "totalByteWeight": 902316,
-                "totalTaskTime": 105.31400000000001,
-                "mainDocumentTransferSize": 20557
+                "rtt": 115.127,
+                "throughput": 12274462.248973617,
+                "maxRtt": 115.127,
+                "maxServerLatency": 2.4050000000000153,
+                "totalByteWeight": 900256,
+                "totalTaskTime": 102.58600000000008,
+                "mainDocumentTransferSize": 20577
               }
             ]
           }
@@ -8227,6 +9017,7 @@
     "declaration-a11y": null,
     "declaration-rgpd": null,
     "summary": {
+      "httpGrade": "B",
       "nmapGrade": "F",
       "nmapOpenPortsCount": 10,
       "nmapOpenPortsGrade": "F",
@@ -8252,7 +9043,223 @@
   {
     "404": null,
     "url": "https://cartographiepublicitaire.eu.org",
-    "http": null,
+    "http": {
+      "url": "https://cartographiepublicitaire.eu.org",
+      "algorithm_version": 2,
+      "end_time": "Fri, 11 Mar 2022 05:37:20 GMT",
+      "grade": "B",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Security-Policy": "upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Fri, 11 Mar 2022 05:37:08 GMT",
+        "Link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
+        "Permissions-Policy": "interest-cohort=()",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Transfer-Encoding": "chunked",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-SSO-WAT": "You've just been SSOed",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "scan_id": 25080895,
+      "score": 75,
+      "start_time": "Fri, 11 Mar 2022 04:42:41 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 2,
+      "tests_passed": 10,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": {
+              "upgrade-insecure-requests": [
+                "'none'"
+              ]
+            },
+            "http": true,
+            "meta": false,
+            "policy": {
+              "antiClickjacking": false,
+              "defaultNone": false,
+              "insecureBaseUri": true,
+              "insecureFormAction": true,
+              "insecureSchemeActive": false,
+              "insecureSchemePassive": false,
+              "strictDynamic": false,
+              "unsafeEval": false,
+              "unsafeInline": true,
+              "unsafeInlineStyle": true,
+              "unsafeObjects": true
+            }
+          },
+          "pass": false,
+          "result": "csp-implemented-with-unsafe-inline",
+          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
+          "score_modifier": -20
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://cartographiepublicitaire.eu.org/",
+            "redirects": true,
+            "route": [
+              "http://cartographiepublicitaire.eu.org/",
+              "https://cartographiepublicitaire.eu.org/"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": "max-age=63072000; includeSubDomains; preload",
+            "includeSubDomains": true,
+            "max-age": 63072000,
+            "preload": true,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hsts-implemented-max-age-at-least-six-months",
+          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
+          "score_modifier": 0
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {
+              "https://unpkg.com/leaflet.markercluster@1.0.4/dist/leaflet.markercluster.js": {
+                "crossorigin": null,
+                "integrity": null
+              },
+              "https://unpkg.com/leaflet@1.0.3/dist/leaflet.js": {
+                "crossorigin": null,
+                "integrity": null
+              }
+            }
+          },
+          "pass": false,
+          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
+          "score_modifier": -5
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": "nosniff"
+          },
+          "pass": true,
+          "result": "x-content-type-options-nosniff",
+          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
+          "score_modifier": 0
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": "SAMEORIGIN"
+          },
+          "pass": true,
+          "result": "x-frame-options-sameorigin-or-deny",
+          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
+          "score_modifier": 0
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": "1; mode=block"
+          },
+          "pass": true,
+          "result": "x-xss-protection-enabled-mode-block",
+          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
+          "score_modifier": 0
+        }
+      }
+    },
     "updownio": null,
     "nmap": {
       "host": "cartographiepublicitaire.eu.org",
@@ -8267,196 +9274,196 @@
             "version": "7.9p1 Debian 10+deb10u2",
             "vulnerabilities": [
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/UBUNTU-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/SUSE-CVE-2019-25017/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/IBM-AIX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/DEBIAN-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/",
                 "type": "metasploit",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
                 "type": "exploitpack",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
                 "type": "exploitpack",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EDB-ID:46516",
                 "type": "exploitdb",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EDB-ID:46193",
                 "type": "exploitdb",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "false",
+                "cvss": "5.8",
                 "id": "CVE-2019-6111",
                 "type": "cve",
-                "cvss": "5.8"
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32328",
                 "type": "zdt",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32009",
                 "type": "zdt",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "4.3",
                 "id": "MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/",
                 "type": "metasploit",
-                "cvss": "4.3"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "4.3",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/",
                 "type": "metasploit",
-                "cvss": "4.3"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "4.3",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/",
                 "type": "metasploit",
-                "cvss": "4.3"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "4.3",
                 "id": "MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/",
                 "type": "metasploit",
-                "cvss": "4.3"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "4.3",
                 "id": "MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/",
                 "type": "metasploit",
-                "cvss": "4.3"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "0.0",
                 "id": "PACKETSTORM:151227",
                 "type": "packetstorm",
-                "cvss": "0.0"
+                "is_exploit": "true"
               }
             ]
           }
@@ -8920,7 +9927,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "36 >= 30 days"
+        "finding": "35 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -9130,7 +10137,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1646974281"
+        "finding": "1647059872"
       },
       {
         "id": "HSTS_time",
@@ -9735,7 +10742,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "156"
+        "finding": "96"
       }
     ],
     "thirdparties": {
@@ -9786,7 +10793,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=a77fdc240866e23be3f4643e04241ececc9f0389",
+          "url": "https://syndication.twitter.com/settings?session_id=c972ef5effddcaee9d0cd79abf45684761452058",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9810,7 +10817,383 @@
         },
         {
           "type": "twitter",
-          "url": "https://cdn.syndication.twimg.com/timeline/profile?callback=__twttr.callbacks.tl_i0_profile_carto_des_pubs_old&dnt=false&domain=cartographiepublicitaire.eu.org&lang=fr&screen_name=carto_des_pubs&suppress_response_codes=true&t=1829971&tz=GMT%2B0000&with_replies=false",
+          "url": "https://cdn.syndication.twimg.com/timeline/profile?callback=__twttr.callbacks.tl_i0_profile_carto_des_pubs_old&dnt=false&domain=cartographiepublicitaire.eu.org&lang=fr&screen_name=carto_des_pubs&suppress_response_codes=true&t=1830066&tz=GMT%2B0000&with_replies=false",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1501415974926491650/GMcnK3ey?format=jpg&name=144x144_2",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1500783911307296774/rGmjGC3D?format=jpg&name=600x314",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://platform.twitter.com/css/timeline.2fcb295ab98c2ce26f4cca0d2b2d0f48.light.ltr.css",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://platform.twitter.com/css/timeline.2fcb295ab98c2ce26f4cca0d2b2d0f48.light.ltr.css",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1501415974926491650/GMcnK3ey?format=jpg&name=144x144_2",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1500783911307296774/rGmjGC3D?format=jpg&name=600x314",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/1657050036/pub_normal.png",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/1097399669158825984/aXZ49j3I_normal.png",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/1155038792681738241/_V5otcty_normal.jpg",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/855706729069281280/kG0daHp__normal.jpg",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/438707192808484864/leuxNs8C_normal.png",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/657481705/an_logo_tweet_normal.png",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/419897293320380416/QrZ-aD5S_normal.png",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/profile_images/1721357213/70411219_0ad016b112_z_normal.jpg",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1Yn4uzW0AAZufL?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YMx4QX4AEJ-qf?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DyT2T7WX0AEOIaR?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DjNIyfqX4AADPpG?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/tweet_video_thumb/C8GNYcoW4AAzth7?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/CUgGAJcWEAA3kf4?format=png&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YafxOWkAA3dQ0?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YahY8XcAEP_Qm?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnRvZwX0AAVVO5?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnRwooW4AAOSZu?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnGyYqX0AINSfv?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnGzqdX0AEMIUc?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/C9D5xlLXYAAwvJ3?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/C9D5xkzWAAEcGBc?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/ClZruX7WMAAGEHS?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/ClZruciXIAEplII?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/ClZru2qXEAAdGIA?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/ClZrxrMWgAACeth?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/CQBLujEWIAMnHsT?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/CQBLj8zWwAARsKw?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/CQBLtdyWEAAsIHQ?format=jpg&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/B6LYKtJCMAAb64G?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/B6LYKZmCMAA9Q6j?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/B6LXircCYAEek6J?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/B6LXgsqCIAEN4fO?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/B6LXgTTCYAAPdwk?format=png&name=120x120",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://ton.twimg.com/tfw/css/syndication_bundle_v1_73385286cca9d2256f6bf3993470820d4827b058.css",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://ton.twimg.com/tfw/css/syndication_bundle_v1_73385286cca9d2256f6bf3993470820d4827b058.css",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1501415974926491650/GMcnK3ey?format=jpg&name=144x144_2",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/card_img/1500783911307296774/rGmjGC3D?format=jpg&name=600x314",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://ton.twimg.com/tfw/assets/news_stroke_v1_78ce5b21fb24a7c7e528d22fc25bd9f9df7f24e2.svg",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://syndication.twitter.com/i/jot",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://platform.twitter.com/jot.html",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9820,7 +11203,7 @@
       "cookies": [],
       "headers": {
         "server": "nginx",
-        "date": "Fri, 11 Mar 2022 04:49:51 GMT",
+        "date": "Sat, 12 Mar 2022 04:36:39 GMT",
         "content-type": "text/html; charset=UTF-8",
         "x-sso-wat": "You've just been SSOed",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
@@ -9932,7 +11315,7 @@
         },
         {
           "hostname": "unpkg.com",
-          "ip": "104.16.123.175",
+          "ip": "104.16.124.175",
           "geoip": null
         },
         {
@@ -9996,7 +11379,7 @@
         },
         {
           "hostname": "syndication.twitter.com",
-          "ip": "104.244.42.200",
+          "ip": "104.244.42.72",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -10101,6 +11484,114 @@
               }
             }
           }
+        },
+        {
+          "hostname": "pbs.twimg.com",
+          "ip": "72.21.91.70",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
+        },
+        {
+          "hostname": "ton.twimg.com",
+          "ip": "152.199.24.184",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
         }
       ]
     },
@@ -10136,10 +11627,10 @@
         "https://cartographiepublicitaire.eu.org/2019/03/": {
           "status": 200
         },
-        "https://cartographiepublicitaire.eu.org/pourquoi/?replytocom=520": {
+        "https://cartographiepublicitaire.eu.org/carte/?replytocom=5964": {
           "status": 200
         },
-        "https://cartographiepublicitaire.eu.org/carte/?replytocom=5964": {
+        "https://cartographiepublicitaire.eu.org/pourquoi/?replytocom=520": {
           "status": 200
         },
         "https://cartographiepublicitaire.eu.org/2019/03/contribuer-avec-mapillary-et-deriviste/": {
@@ -10167,7 +11658,7 @@
           "slug": "wordpress",
           "name": "WordPress",
           "confidence": 100,
-          "version": "5.9.1",
+          "version": "5.9.2",
           "icon": "WordPress.svg",
           "website": "https://wordpress.org",
           "cpe": "cpe:/a:wordpress:wordpress",
@@ -10404,13 +11895,13 @@
     "lhr": {
       "requestedUrl": "https://cartographiepublicitaire.eu.org/",
       "finalUrl": "https://cartographiepublicitaire.eu.org/",
-      "fetchTime": "2022-03-11T04:42:29.723Z",
+      "fetchTime": "2022-03-12T04:36:07.950Z",
       "runWarnings": [],
       "categories": {
         "performance": {
           "title": "Performance",
           "id": "performance",
-          "score": 0.9336252212524414
+          "score": 0.06362705230712891
         },
         "accessibility": {
           "title": "Accessibility",
@@ -10446,49 +11937,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 9634,
+          "numericValue": 10424,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 7814,
-                "firstMeaningfulPaint": 7814,
-                "largestContentfulPaint": 8359,
-                "firstCPUIdle": 8446,
-                "interactive": 9634,
-                "speedIndex": 9158,
-                "estimatedInputLatency": 13,
-                "totalBlockingTime": 31,
-                "maxPotentialFID": 87,
+                "firstContentfulPaint": 6985,
+                "firstMeaningfulPaint": 6985,
+                "largestContentfulPaint": 8556,
+                "firstCPUIdle": 9860,
+                "interactive": 10424,
+                "speedIndex": 8562,
+                "estimatedInputLatency": 22,
+                "totalBlockingTime": 118,
+                "maxPotentialFID": 131,
                 "cumulativeLayoutShift": 0,
-                "cumulativeLayoutShiftAllFrames": 0,
+                "cumulativeLayoutShiftAllFrames": 0.07833333333333334,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 273299814,
+                "observedTimeOriginTs": 93652905,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 273299814,
-                "observedFirstPaint": 2199,
-                "observedFirstPaintTs": 275499267,
-                "observedFirstContentfulPaint": 2199,
-                "observedFirstContentfulPaintTs": 275499267,
-                "observedFirstMeaningfulPaint": 2199,
-                "observedFirstMeaningfulPaintTs": 275499267,
-                "observedLargestContentfulPaint": 2199,
-                "observedLargestContentfulPaintTs": 275499267,
-                "observedTraceEnd": 3404,
-                "observedTraceEndTs": 276703994,
-                "observedLoad": 2343,
-                "observedLoadTs": 275642473,
-                "observedDomContentLoaded": 2190,
-                "observedDomContentLoadedTs": 275489367,
+                "observedNavigationStartTs": 93652905,
+                "observedFirstPaint": 1785,
+                "observedFirstPaintTs": 95437457,
+                "observedFirstContentfulPaint": 1785,
+                "observedFirstContentfulPaintTs": 95437457,
+                "observedFirstMeaningfulPaint": 1785,
+                "observedFirstMeaningfulPaintTs": 95437457,
+                "observedLargestContentfulPaint": 1785,
+                "observedLargestContentfulPaintTs": 95437457,
+                "observedTraceEnd": 3234,
+                "observedTraceEndTs": 96887279,
+                "observedLoad": 1883,
+                "observedLoadTs": 95535473,
+                "observedDomContentLoaded": 1747,
+                "observedDomContentLoadedTs": 95399948,
                 "observedCumulativeLayoutShift": 0,
-                "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 2205,
-                "observedFirstVisualChangeTs": 275504814,
-                "observedLastVisualChange": 2805,
-                "observedLastVisualChangeTs": 276104814,
-                "observedSpeedIndex": 2215,
-                "observedSpeedIndexTs": 275514979
+                "observedCumulativeLayoutShiftAllFrames": 0.07833333333333334,
+                "observedFirstVisualChange": 1793,
+                "observedFirstVisualChangeTs": 95445905,
+                "observedLastVisualChange": 2409,
+                "observedLastVisualChangeTs": 96061905,
+                "observedSpeedIndex": 1800,
+                "observedSpeedIndexTs": 95453348
               },
               {
                 "lcpInvalidated": false
@@ -10506,22 +11997,22 @@
             "type": "debugdata",
             "items": [
               {
-                "numRequests": 32,
-                "numScripts": 15,
-                "numStylesheets": 12,
+                "numRequests": 85,
+                "numScripts": 19,
+                "numStylesheets": 14,
                 "numFonts": 1,
-                "numTasks": 391,
-                "numTasksOver10ms": 9,
+                "numTasks": 1049,
+                "numTasksOver10ms": 11,
                 "numTasksOver25ms": 1,
-                "numTasksOver50ms": 0,
+                "numTasksOver50ms": 1,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 1.346,
-                "throughput": 13554244.064557316,
-                "maxRtt": 150.32999999999998,
-                "maxServerLatency": 285.166,
-                "totalByteWeight": 1396571,
-                "totalTaskTime": 285.5969999999998,
+                "rtt": 5.42,
+                "throughput": 42601898.173752144,
+                "maxRtt": 86.505,
+                "maxServerLatency": 141.922,
+                "totalByteWeight": 3336427,
+                "totalTaskTime": 458.78299999999825,
                 "mainDocumentTransferSize": 72538
               }
             ]
@@ -10535,6 +12026,7 @@
     "declaration-a11y": null,
     "declaration-rgpd": null,
     "summary": {
+      "httpGrade": "B",
       "nmapGrade": "F",
       "nmapOpenPortsCount": 10,
       "nmapOpenPortsGrade": "F",
@@ -10543,10 +12035,10 @@
       "testsslGrade": "A+",
       "cookiesGrade": "A",
       "cookiesCount": 0,
-      "trackersGrade": "C",
-      "trackersCount": 10,
-      "lighthouse_performance": 0.9336252212524414,
-      "lighthouse_performanceGrade": "A",
+      "trackersGrade": "F",
+      "trackersCount": 57,
+      "lighthouse_performance": 0.06362705230712891,
+      "lighthouse_performanceGrade": "F",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
       "lighthouse_best-practices": 0.87,
