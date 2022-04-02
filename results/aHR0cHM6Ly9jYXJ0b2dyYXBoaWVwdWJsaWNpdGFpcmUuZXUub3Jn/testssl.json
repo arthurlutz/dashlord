@@ -132,27 +132,6 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "cipher_order",
-              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
-              "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
-              "id"           : "protocol_negotiated",
-              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "Default protocol TLS1.3"
-          }
-,         {
-              "id"           : "cipher_negotiated",
-              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLS_AES_256_GCM_SHA384, 253 bit ECDH (X25519)  (limited sense as client will pick)"
-          }
-,         {
               "id"           : "cipher-tls1_2_xc030",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
@@ -186,6 +165,27 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "protocol_negotiated",
+              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Default protocol TLS1.3"
+          }
+,         {
+              "id"           : "cipher_negotiated",
+              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLS_AES_256_GCM_SHA384, 253 bit ECDH (X25519)  (limited sense as client will pick)"
           }
 ,         {
               "id"           : "FS",
@@ -380,8 +380,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (15)"
+              "severity"     : "HIGH",
+              "finding"      : "expires < 15 days (14)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -394,7 +394,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "HIGH",
               "finding"      : "2022-04-17 04:25"
           }
 ,         {
@@ -584,14 +584,14 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1648788187"
+              "finding"      : "1648874227"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1196,6 +1196,6 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "158"
+              "finding"      : "137"
           }
 ]
