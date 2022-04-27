@@ -1,4 +1,4 @@
-# Nmap 7.91 scan initiated Tue Apr 26 04:54:40 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.91 scan initiated Wed Apr 27 05:12:47 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
 Host is up (0.087s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
@@ -54,6 +54,8 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     capabilities: 
+| 
 |     unknown: 
 | 
 |     errors: 
@@ -62,17 +64,16 @@ PORT     STATE SERVICE      VERSION
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
+|     features: 
 | 
 |     compression_methods: 
 | 
-|     features: 
+|     stream_id: 5a7770c2-25c8-4717-877c-a1d9f10795e0
+|     auth_mechanisms: 
 | 
 |     xmpp: 
 |       lang: en
-|       version: 1.0
-|     stream_id: 321db638-1faf-47c5-97e0-5beaae52a735
-|_    capabilities: 
+|_      version: 1.0
 5269/tcp open  xmpp-server?
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
@@ -80,6 +81,8 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     capabilities: 
+| 
 |     unknown: 
 | 
 |     errors: 
@@ -88,20 +91,19 @@ PORT     STATE SERVICE      VERSION
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
+|     features: 
 | 
 |     compression_methods: 
 | 
-|     features: 
+|     stream_id: 9ab9d66d-1fe5-44b9-95e9-dbee02e1ae83
+|     auth_mechanisms: 
 | 
 |     xmpp: 
 |       lang: en
-|       version: 1.0
-|     stream_id: e074c3ae-51fe-4e00-88a0-7cc677b21553
-|_    capabilities: 
+|_      version: 1.0
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.91%I=7%D=4/26%Time=62677B1D%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.91%I=7%D=4/27%Time=6268D0DB%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -134,7 +136,7 @@ SF:/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.91%I=7%D=4/26%Time=62677B1D%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.91%I=7%D=4/27%Time=6268D0DB%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
 SF:tream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:se
 SF:rver'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'>
@@ -171,4 +173,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Apr 26 04:57:28 2022 -- 1 IP address (1 host up) scanned in 168.08 seconds
+# Nmap done at Wed Apr 27 05:15:34 2022 -- 1 IP address (1 host up) scanned in 167.59 seconds
