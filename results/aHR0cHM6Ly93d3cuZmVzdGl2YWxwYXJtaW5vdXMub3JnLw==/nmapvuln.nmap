@@ -1,6 +1,6 @@
-# Nmap 7.91 scan initiated Mon May  2 05:03:27 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
+# Nmap 7.91 scan initiated Tue May  3 04:46:44 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
 Nmap scan report for www.festivalparminous.org (51.159.70.213)
-Host is up (0.088s latency).
+Host is up (0.15s latency).
 Other addresses for www.festivalparminous.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered ports
@@ -55,6 +55,16 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     auth_mechanisms: 
+| 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     unknown: 
+| 
+|     stream_id: ed7db107-00e6-4af8-b384-2ec756e96371
+|     features: 
+| 
 |     compression_methods: 
 | 
 |     errors: 
@@ -63,18 +73,7 @@ PORT     STATE SERVICE      VERSION
 |         text: This server does not serve www.festivalparminous.org
 |       stream:stream
 |       (timeout)
-|     stream_id: 51376b00-3fd5-492e-b0cd-a17dfaf939b5
-|     unknown: 
-| 
-|     features: 
-| 
-|     auth_mechanisms: 
-| 
-|     capabilities: 
-| 
-|     xmpp: 
-|       lang: en
-|_      version: 1.0
+|_    capabilities: 
 5269/tcp open  xmpp-server?
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
@@ -82,6 +81,16 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     auth_mechanisms: 
+| 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     unknown: 
+| 
+|     stream_id: 28491919-6ad9-4bd0-a768-2720fbdfdca8
+|     features: 
+| 
 |     compression_methods: 
 | 
 |     errors: 
@@ -90,21 +99,10 @@ PORT     STATE SERVICE      VERSION
 |         text: This host does not serve www.festivalparminous.org
 |       stream:stream
 |       (timeout)
-|     stream_id: 6caa3149-8684-4c40-8697-22fdbc143c04
-|     unknown: 
-| 
-|     features: 
-| 
-|     auth_mechanisms: 
-| 
-|     capabilities: 
-| 
-|     xmpp: 
-|       lang: en
-|_      version: 1.0
+|_    capabilities: 
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.91%I=7%D=5/2%Time=626F662B%P=x86_64-alpine-linux-musl%
+SF-Port5222-TCP:V=7.91%I=7%D=5/3%Time=6270B3C3%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:str
 SF:eam='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xm
 SF:l:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xm
@@ -137,7 +135,7 @@ SF:streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-w
 SF:ell-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:err
 SF:or></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.91%I=7%D=5/2%Time=626F662B%P=x86_64-alpine-linux-musl%
+SF-Port5269-TCP:V=7.91%I=7%D=5/3%Time=6270B3C3%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:ser
 SF:ver'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'><
@@ -174,4 +172,4 @@ SF:tream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May  2 05:06:14 2022 -- 1 IP address (1 host up) scanned in 167.65 seconds
+# Nmap done at Tue May  3 04:49:37 2022 -- 1 IP address (1 host up) scanned in 172.90 seconds
