@@ -1,6 +1,6 @@
-# Nmap 7.91 scan initiated Sat May 28 05:05:20 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.91 scan initiated Sun May 29 04:55:09 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.088s latency).
+Host is up (0.15s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered ports
@@ -56,10 +56,9 @@ PORT     STATE SERVICE      VERSION
 |   info: 
 |     capabilities: 
 | 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     unknown: 
+| 
+|     features: 
 | 
 |     errors: 
 |       host-unknown
@@ -67,13 +66,14 @@ PORT     STATE SERVICE      VERSION
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     compression_methods: 
-| 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
 |     auth_mechanisms: 
 | 
-|     features: 
+|     compression_methods: 
 | 
-|_    stream_id: cbaf08e4-c4e9-438d-b148-3b2df401d823
+|_    stream_id: e10ab47a-49af-43ed-9ec4-1ead84688c46
 5269/tcp open  xmpp-server?
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
@@ -83,10 +83,9 @@ PORT     STATE SERVICE      VERSION
 |   info: 
 |     capabilities: 
 | 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     unknown: 
+| 
+|     features: 
 | 
 |     errors: 
 |       host-unknown
@@ -94,16 +93,17 @@ PORT     STATE SERVICE      VERSION
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     compression_methods: 
-| 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
 |     auth_mechanisms: 
 | 
-|     features: 
+|     compression_methods: 
 | 
-|_    stream_id: b855654f-fb0f-4250-a562-99492dfc859f
+|_    stream_id: 92e48742-5628-44da-bc33-0f9118553c9f
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.91%I=7%D=5/28%Time=6291AD9C%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.91%I=7%D=5/29%Time=6292FCBC%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -136,7 +136,7 @@ SF:/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.91%I=7%D=5/28%Time=6291AD9C%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.91%I=7%D=5/29%Time=6292FCBC%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
 SF:tream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:se
 SF:rver'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'>
@@ -173,4 +173,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 28 05:08:07 2022 -- 1 IP address (1 host up) scanned in 167.18 seconds
+# Nmap done at Sun May 29 04:58:01 2022 -- 1 IP address (1 host up) scanned in 172.58 seconds
