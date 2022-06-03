@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Jun  2 05:03:45 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Fri Jun  3 04:48:03 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.15s latency).
+Host is up (0.087s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -54,46 +54,46 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     stream_id: 3d6ee688-cfce-4eb2-9274-70219d77f0ee
+|     stream_id: 3714fd9b-b4f6-4488-a8bb-0f243f10149a
 |     capabilities: 
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     auth_mechanisms: 
 |     unknown: 
-|_    auth_mechanisms: 
+|     features: 
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
 5269/tcp open  xmpp-server?
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     stream_id: 1c0a3c70-d6eb-4024-884c-9b8d5f059889
+|     stream_id: a5495e5d-f108-4c9b-a58a-8a4e1e8df5ea
 |     capabilities: 
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     auth_mechanisms: 
 |     unknown: 
-|_    auth_mechanisms: 
+|     features: 
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=6/2%Time=629844C0%P=x86_64-alpine-linux-musl%
+SF-Port5222-TCP:V=7.92%I=7%D=6/3%Time=6299928F%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:str
 SF:eam='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xm
 SF:l:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xm
@@ -126,7 +126,7 @@ SF:streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-w
 SF:ell-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:err
 SF:or></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=6/2%Time=629844C0%P=x86_64-alpine-linux-musl%
+SF-Port5269-TCP:V=7.92%I=7%D=6/3%Time=6299928F%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:ser
 SF:ver'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'><
@@ -163,4 +163,4 @@ SF:tream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jun  2 05:06:38 2022 -- 1 IP address (1 host up) scanned in 173.44 seconds
+# Nmap done at Fri Jun  3 04:50:51 2022 -- 1 IP address (1 host up) scanned in 168.51 seconds
