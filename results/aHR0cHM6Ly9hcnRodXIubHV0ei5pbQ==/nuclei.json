@@ -1,36 +1,5 @@
 [
   {
-    "template": "miscellaneous/google-floc-disabled.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
-    "template-id": "google-floc-disabled",
-    "info": {
-      "name": "Google FLoC Disabled",
-      "author": [
-        "geeknik"
-      ],
-      "tags": [
-        "google",
-        "floc",
-        "misc"
-      ],
-      "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
-      "reference": [
-        "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
-      ],
-      "severity": "info"
-    },
-    "type": "http",
-    "host": "https://arthur.lutz.im",
-    "matched-at": "https://arthur.lutz.im",
-    "request": "GET / HTTP/1.1\r\nHost: arthur.lutz.im\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 302 Moved Temporarily\r\nConnection: close\r\nContent-Length: 154\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/html\r\nDate: Wed, 08 Jun 2022 04:41:13 GMT\r\nLocation: https://arthur.lutz.im/intro\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
-    "ip": "82.65.202.15",
-    "timestamp": "2022-06-08T04:41:14.009342623Z",
-    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://arthur.lutz.im'",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
     "template": "misconfiguration/xss-deprecated-header.yaml",
     "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/xss-deprecated-header.yaml",
     "template-id": "xss-deprecated-header-detect",
@@ -58,101 +27,41 @@
       "1; mode=block"
     ],
     "request": "GET / HTTP/1.1\r\nHost: arthur.lutz.im\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
-    "response": "HTTP/1.1 302 Moved Temporarily\r\nConnection: close\r\nContent-Length: 154\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/html\r\nDate: Wed, 08 Jun 2022 04:41:13 GMT\r\nLocation: https://arthur.lutz.im/intro\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "response": "HTTP/1.1 302 Moved Temporarily\r\nConnection: close\r\nContent-Length: 154\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/html\r\nDate: Thu, 09 Jun 2022 04:39:27 GMT\r\nLocation: https://arthur.lutz.im/intro\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
     "ip": "82.65.202.15",
-    "timestamp": "2022-06-08T04:41:14.013353243Z",
+    "timestamp": "2022-06-09T04:39:27.97523603Z",
     "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://arthur.lutz.im'",
     "matcher-status": true,
     "matched-line": null
   },
   {
-    "template": "ssl/ssl-dns-names.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-    "template-id": "ssl-dns-names",
+    "template": "miscellaneous/google-floc-disabled.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
+    "template-id": "google-floc-disabled",
     "info": {
-      "name": "SSL DNS Names",
+      "name": "Google FLoC Disabled",
       "author": [
-        "pdteam"
+        "geeknik"
       ],
       "tags": [
-        "ssl"
-      ],
-      "reference": null,
-      "severity": "info"
-    },
-    "type": "ssl",
-    "host": "https://arthur.lutz.im",
-    "matched-at": "https://arthur.lutz.im",
-    "extracted-results": [
-      "arthur.lutz.im"
-    ],
-    "ip": "82.65.202.15",
-    "timestamp": "2022-06-08T04:41:50.796222602Z",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "ssl/tls-version.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-    "template-id": "tls-version",
-    "info": {
-      "name": "TLS Version",
-      "author": [
-        "pdteam"
-      ],
-      "tags": [
-        "ssl"
-      ],
-      "reference": null,
-      "severity": "info"
-    },
-    "type": "ssl",
-    "host": "https://arthur.lutz.im",
-    "matched-at": "https://arthur.lutz.im",
-    "extracted-results": [
-      "TLS13"
-    ],
-    "ip": "82.65.202.15",
-    "timestamp": "2022-06-08T04:43:05.458777924Z",
-    "matcher-status": true,
-    "matched-line": null
-  },
-  {
-    "template": "technologies/waf-detect.yaml",
-    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
-    "template-id": "waf-detect",
-    "info": {
-      "name": "WAF Detection",
-      "author": [
-        "dwisiswant0",
-        "lu4nx"
-      ],
-      "tags": [
-        "waf",
-        "tech",
+        "google",
+        "floc",
         "misc"
       ],
-      "description": "A web application firewall was detected.",
+      "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
       "reference": [
-        "https://github.com/ekultek/whatwaf"
+        "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
       ],
-      "severity": "info",
-      "classification": {
-        "cve-id": null,
-        "cwe-id": [
-          "cwe-200"
-        ]
-      }
+      "severity": "info"
     },
-    "matcher-name": "nginxgeneric",
     "type": "http",
     "host": "https://arthur.lutz.im",
-    "matched-at": "https://arthur.lutz.im/",
-    "request": "POST / HTTP/1.1\r\nHost: arthur.lutz.im\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
-    "response": "HTTP/1.1 302 Moved Temporarily\r\nConnection: close\r\nContent-Length: 154\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/html\r\nDate: Wed, 08 Jun 2022 04:43:28 GMT\r\nLocation: https://arthur.lutz.im/intro\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "matched-at": "https://arthur.lutz.im",
+    "request": "GET / HTTP/1.1\r\nHost: arthur.lutz.im\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 302 Moved Temporarily\r\nConnection: close\r\nContent-Length: 154\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/html\r\nDate: Thu, 09 Jun 2022 04:39:27 GMT\r\nLocation: https://arthur.lutz.im/intro\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\n<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
     "ip": "82.65.202.15",
-    "timestamp": "2022-06-08T04:43:28.808562771Z",
-    "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: arthur.lutz.im' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://arthur.lutz.im/'",
+    "timestamp": "2022-06-09T04:39:28.006369122Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://arthur.lutz.im'",
     "matcher-status": true,
     "matched-line": null
   }
