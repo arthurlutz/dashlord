@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org</pre>
-<p class="lead">Thu Jun 30 04:52:43 2022 – Thu Jun 30 04:55:35 2022<br>1 hosts scanned.
+<p class="lead">Fri Jul  1 05:07:59 2022 – Fri Jul  1 05:10:52 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -219,8 +219,7 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    capabilities: 
-    compression_methods: 
+    unknown: 
     features: 
     errors: 
       host-unknown
@@ -228,12 +227,13 @@
         text: This server does not serve www.festivalparminous.org
       stream:stream
       (timeout)
+    compression_methods: 
+    stream_id: b4bec2ee-710d-475e-a25b-4f33a980bf51
+    capabilities: 
+    auth_mechanisms: 
     xmpp: 
       lang: en
-      version: 1.0
-    unknown: 
-    auth_mechanisms: 
-    stream_id: 8eaabde1-b019-4e43-b4fb-646221a8a476</pre>
+      version: 1.0</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -249,16 +249,11 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
-<h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    capabilities: 
-    compression_methods: 
+    unknown: 
     features: 
     errors: 
       host-unknown
@@ -266,12 +261,17 @@
         text: This host does not serve www.festivalparminous.org
       stream:stream
       (timeout)
+    compression_methods: 
+    stream_id: 1f9b858d-9610-4be4-95ca-be14f628c27d
+    capabilities: 
+    auth_mechanisms: 
     xmpp: 
       lang: en
-      version: 1.0
-    unknown: 
-    auth_mechanisms: 
-    stream_id: 782da3b7-9930-4c39-87b7-fd851480c4d1</pre>
+      version: 1.0</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
