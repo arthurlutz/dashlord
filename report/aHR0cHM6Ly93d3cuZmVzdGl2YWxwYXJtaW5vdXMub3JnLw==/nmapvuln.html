@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org</pre>
-<p class="lead">Fri Jul 15 05:14:34 2022 – Fri Jul 15 05:17:22 2022<br>1 hosts scanned.
+<p class="lead">Sat Jul 16 04:43:01 2022 – Sat Jul 16 04:45:51 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -215,63 +215,59 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+<h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
     unknown: 
-    capabilities: 
+    compression_methods: 
+    xmpp: 
+      lang: en
+      version: 1.0
     features: 
+    auth_mechanisms: 
     errors: 
       host-unknown
       
         text: This server does not serve www.festivalparminous.org
       stream:stream
       (timeout)
-    compression_methods: 
-    auth_mechanisms: 
-    stream_id: e9f319eb-cae2-4015-a770-4e2e0827354d
-    xmpp: 
-      lang: en
-      version: 1.0</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+    stream_id: 15bc5a42-dcfd-4559-a59a-8264dfacc934
+    capabilities: </pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">xmpp-server</td>
-<td title="Product"></td>
+<td title="Service">jabber</td>
+<td title="Product">ejabberd</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:process-one:ejabberd">cpe:/a:process-one:ejabberd</a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
     unknown: 
-    capabilities: 
+    compression_methods: 
+    xmpp: 
+      lang: en
+      version: 1.0
     features: 
+    auth_mechanisms: 
     errors: 
       host-unknown
       
         text: This host does not serve www.festivalparminous.org
       stream:stream
       (timeout)
-    compression_methods: 
-    auth_mechanisms: 
-    stream_id: 3073746b-eb8b-44ec-8aac-a2020aeb8d6c
-    xmpp: 
-      lang: en
-      version: 1.0</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+    stream_id: b92ad11b-474a-4f8d-aebd-c44ff09e6f7a
+    capabilities: </pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -384,10 +380,10 @@
 <td>51.159.70.213 - www.festivalparminous.org</td>
 <td>5269</td>
 <td>tcp</td>
-<td>xmpp-server</td>
+<td>jabber</td>
+<td>ejabberd</td>
 <td></td>
-<td></td>
-<td></td>
+<td>cpe:/a:process-one:ejabberd</td>
 <td></td>
 </tr>
 </tbody>
