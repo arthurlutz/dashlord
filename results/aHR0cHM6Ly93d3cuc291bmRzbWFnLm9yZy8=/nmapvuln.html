@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org</pre>
-<p class="lead">Fri Jul 15 05:24:36 2022 – Fri Jul 15 05:27:23 2022<br>1 hosts scanned.
+<p class="lead">Sat Jul 16 04:51:29 2022 – Sat Jul 16 04:54:15 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -216,21 +216,21 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
+    features: 
+    capabilities: 
+    unknown: 
+    stream_id: f9c597af-9054-48f9-be78-8c4323a20be5
     errors: 
       host-unknown
       
         text: This server does not serve www.soundsmag.org
       stream:stream
       (timeout)
-    stream_id: 63c315a6-27fd-4bd6-8fcf-372fa329ebbd
-    unknown: 
-    capabilities: 
-    xmpp: 
-      lang: en
-      version: 1.0
     compression_methods: 
     auth_mechanisms: 
-    features: </pre>
+    xmpp: 
+      lang: en
+      version: 1.0</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -240,35 +240,31 @@
 <td title="Port">5269</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">xmpp-server</td>
-<td title="Product"></td>
+<td title="Service">jabber</td>
+<td title="Product">ejabberd</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:process-one:ejabberd">cpe:/a:process-one:ejabberd</a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
+    features: 
+    capabilities: 
+    unknown: 
+    stream_id: 098518c6-4074-42f0-837c-5a9e563918aa
     errors: 
       host-unknown
       
         text: This host does not serve www.soundsmag.org
       stream:stream
       (timeout)
-    stream_id: b933ab07-6cff-4e97-b298-2a7bed6943c2
-    unknown: 
-    capabilities: 
-    xmpp: 
-      lang: en
-      version: 1.0
     compression_methods: 
     auth_mechanisms: 
-    features: </pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+    xmpp: 
+      lang: en
+      version: 1.0</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -381,10 +377,10 @@
 <td>51.159.70.213 - www.soundsmag.org</td>
 <td>5269</td>
 <td>tcp</td>
-<td>xmpp-server</td>
+<td>jabber</td>
+<td>ejabberd</td>
 <td></td>
-<td></td>
-<td></td>
+<td>cpe:/a:process-one:ejabberd</td>
 <td></td>
 </tr>
 </tbody>

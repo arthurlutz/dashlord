@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Jul 15 05:24:36 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Sat Jul 16 04:51:29 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.083s latency).
+Host is up (0.084s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,49 +27,45 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     features: 
+|     capabilities: 
+|     unknown: 
+|     stream_id: f9c597af-9054-48f9-be78-8c4323a20be5
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     stream_id: 63c315a6-27fd-4bd6-8fcf-372fa329ebbd
-|     unknown: 
-|     capabilities: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
 |     auth_mechanisms: 
-|_    features: 
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
-5269/tcp open  xmpp-server?
+5269/tcp open  jabber       ejabberd
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     features: 
+|     capabilities: 
+|     unknown: 
+|     stream_id: 098518c6-4074-42f0-837c-5a9e563918aa
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     stream_id: b933ab07-6cff-4e97-b298-2a7bed6943c2
-|     unknown: 
-|     capabilities: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
 |     auth_mechanisms: 
-|_    features: 
-| fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-|_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns='jabber:server' from='' xmlns:db='jabber:server:dialback' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=7/15%Time=62D0FA20%P=x86_64-alpine-linux-musl
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5222-TCP:V=7.92%I=7%D=7/16%Time=62D243DD%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -101,42 +97,7 @@ SF:ion='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org
 SF:/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=7/15%Time=62D0FA20%P=x86_64-alpine-linux-musl
-SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
-SF:tream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:se
-SF:rver'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'>
-SF:<stream:error><not-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-st
-SF:reams'/></stream:error></stream:stream>")%r(HTTPOptions,113,"<\?xml\x20
-SF:version='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\
-SF:.org/streams'\x20to=''\x20xmlns='jabber:server'\x20from=''\x20xmlns:db=
-SF:'jabber:server:dialback'\x20xml:lang='en'><stream:error><not-well-forme
-SF:d\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stre
-SF:am:stream>")%r(RTSPRequest,113,"<\?xml\x20version='1\.0'\?><stream:stre
-SF:am\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20to=''\x20xml
-SF:ns='jabber:server'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20x
-SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
-SF:ml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(RPCCheck,113,"
-SF:<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://ether
-SF:x\.jabber\.org/streams'\x20to=''\x20xmlns='jabber:server'\x20from=''\x2
-SF:0xmlns:db='jabber:server:dialback'\x20xml:lang='en'><stream:error><not-
-SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
-SF:ror></stream:stream>")%r(DNSVersionBindReqTCP,113,"<\?xml\x20version='1
-SF:\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org/strea
-SF:ms'\x20to=''\x20xmlns='jabber:server'\x20from=''\x20xmlns:db='jabber:se
-SF:rver:dialback'\x20xml:lang='en'><stream:error><not-well-formed\x20xmlns
-SF:='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
-SF:")%r(DNSStatusRequestTCP,113,"<\?xml\x20version='1\.0'\?><stream:stream
-SF:\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20to=''\x20xmlns
-SF:='jabber:server'\x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml
-SF::lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xml
-SF::ns:xmpp-streams'/></stream:error></stream:stream>")%r(Help,113,"<\?xml
-SF:\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jab
-SF:ber\.org/streams'\x20to=''\x20xmlns='jabber:server'\x20from=''\x20xmlns
-SF::db='jabber:server:dialback'\x20xml:lang='en'><stream:error><not-well-f
-SF:ormed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></
-SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Jul 15 05:27:23 2022 -- 1 IP address (1 host up) scanned in 166.43 seconds
+# Nmap done at Sat Jul 16 04:54:15 2022 -- 1 IP address (1 host up) scanned in 166.86 seconds
