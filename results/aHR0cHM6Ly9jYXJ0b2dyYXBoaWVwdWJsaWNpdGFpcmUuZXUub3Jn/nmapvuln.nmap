@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Jul 27 05:20:44 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Thu Jul 28 05:17:01 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.087s latency).
+Host is up (0.16s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -11,11 +11,11 @@ PORT     STATE SERVICE      VERSION
 |     	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
 |     	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
 |     	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
-|     	EDB-ID:46193	5.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
 |     	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
 |     	1337DAY-ID-32328	5.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
 |     	1337DAY-ID-32009	5.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
-|_    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+|     	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+|_    	EDB-ID:46193	0.0	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
 25/tcp   open  smtp         Postfix smtpd
 53/tcp   open  tcpwrapped
 80/tcp   open  http         nginx
@@ -27,7 +27,11 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     stream_id: efbadc22-d6ce-40ce-8c79-54f6e208393b
+|     unknown: 
 |     capabilities: 
 |     errors: 
 |       host-unknown
@@ -35,13 +39,9 @@ PORT     STATE SERVICE      VERSION
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
 |     auth_mechanisms: 
-|     stream_id: 7cc5ff02-566f-4c6f-bc91-f3a42e65fadb
-|_    unknown: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,7 +49,11 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     stream_id: de7fcc91-e5ef-4213-9ad9-46e74d5bd8c5
+|     unknown: 
 |     capabilities: 
 |     errors: 
 |       host-unknown
@@ -57,15 +61,11 @@ PORT     STATE SERVICE      VERSION
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
 |     auth_mechanisms: 
-|     stream_id: c5b3d7c7-a344-4356-a035-334fb30faec9
-|_    unknown: 
+|_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=7/27%Time=62E0CB39%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=7/28%Time=62E21BDC%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -100,4 +100,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Jul 27 05:23:33 2022 -- 1 IP address (1 host up) scanned in 168.21 seconds
+# Nmap done at Thu Jul 28 05:19:54 2022 -- 1 IP address (1 host up) scanned in 173.48 seconds
