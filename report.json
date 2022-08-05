@@ -4115,7 +4115,7 @@
     "http": {
       "url": "https://www.festivalparminous.org/",
       "algorithm_version": 2,
-      "end_time": "Wed, 03 Aug 2022 05:47:11 GMT",
+      "end_time": "Fri, 05 Aug 2022 04:53:48 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -4124,7 +4124,7 @@
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 03 Aug 2022 05:47:07 GMT",
+        "Date": "Fri, 05 Aug 2022 04:53:46 GMT",
         "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -4137,9 +4137,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 28404327,
+      "scan_id": 28449311,
       "score": 80,
-      "start_time": "Wed, 03 Aug 2022 05:10:44 GMT",
+      "start_time": "Fri, 05 Aug 2022 04:53:43 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -4338,15 +4338,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2022-08-04T04:40:27Z",
-      "next_check_at": "2022-08-04T05:10:26Z",
+      "last_check_at": "2022-08-05T04:32:38Z",
+      "next_check_at": "2022-08-05T05:02:28Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-32x32.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2022-08-04T03:40:45Z",
+        "tested_at": "2022-08-05T04:32:38Z",
         "expires_at": "2022-08-27T16:18:46Z",
         "valid": true,
         "error": null
@@ -4355,11 +4355,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 50,
-          "connection": 157,
-          "handshake": 187,
-          "response": 240,
-          "total": 634
+          "namelookup": 19,
+          "connection": 122,
+          "handshake": 141,
+          "response": 208,
+          "total": 490
         }
       },
       "uptimeGrade": "A",
@@ -4751,7 +4751,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "MEDIUM",
-        "finding": "expires < 30 days (23)"
+        "finding": "expires < 30 days (22)"
       },
       {
         "id": "cert_notBefore",
@@ -4961,7 +4961,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1659588810"
+        "finding": "1659675349"
       },
       {
         "id": "HSTS_time",
@@ -5559,7 +5559,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "94"
+        "finding": "152"
       }
     ],
     "thirdparties": {
@@ -5569,7 +5569,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 04 Aug 2022 04:52:24 GMT",
+        "date": "Fri, 05 Aug 2022 04:54:24 GMT",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -5803,6 +5803,35 @@
     "zap": null,
     "nuclei": [
       {
+        "template": "miscellaneous/google-floc-disabled.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
+        "template-id": "google-floc-disabled",
+        "info": {
+          "name": "Google FLoC Disabled",
+          "author": [
+            "geeknik"
+          ],
+          "tags": [
+            "google",
+            "floc",
+            "misc"
+          ],
+          "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
+          "reference": [
+            "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
+          ],
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:58:24.990687434Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
         "template": "misconfiguration/xss-deprecated-header.yaml",
         "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/xss-deprecated-header.yaml",
         "template-id": "xss-deprecated-header-detect",
@@ -5830,7 +5859,7 @@
           "1; mode=block"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:28.79507679Z",
+        "timestamp": "2022-08-05T04:58:25.051583576Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -5858,67 +5887,32 @@
         "host": "https://www.festivalparminous.org/",
         "matched-at": "https://www.festivalparminous.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:28.833590852Z",
+        "timestamp": "2022-08-05T04:58:25.099420659Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "miscellaneous/google-floc-disabled.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
-        "template-id": "google-floc-disabled",
+        "template": "technologies/tech-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
+        "template-id": "tech-detect",
         "info": {
-          "name": "Google FLoC Disabled",
+          "name": "Wappalyzer Technology Detection",
           "author": [
-            "geeknik"
+            "hakluke"
           ],
           "tags": [
-            "google",
-            "floc",
-            "misc"
-          ],
-          "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
-          "reference": [
-            "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
-          ],
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:28.886433098Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "technologies/wordpress-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/wordpress-detect.yaml",
-        "template-id": "wordpress-detect",
-        "info": {
-          "name": "WordPress Detection",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "tech",
-            "wordpress"
+            "tech"
           ],
           "reference": null,
-          "severity": "info",
-          "metadata": {
-            "shodan-query": "http.component:\"WordPress\""
-          }
+          "severity": "info"
         },
+        "matcher-name": "nginx",
         "type": "http",
         "host": "https://www.festivalparminous.org/",
         "matched-at": "https://www.festivalparminous.org/",
-        "extracted-results": [
-          "6.0.1"
-        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:32.078060563Z",
+        "timestamp": "2022-08-05T04:58:38.989671085Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -5949,120 +5943,39 @@
           "WordPress 6.0.1"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:32.079708696Z",
+        "timestamp": "2022-08-05T04:58:39.540197739Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-        "template-id": "tls-version",
+        "template": "technologies/wordpress-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/wordpress-detect.yaml",
+        "template-id": "wordpress-detect",
         "info": {
-          "name": "TLS Version",
+          "name": "WordPress Detection",
           "author": [
             "pdteam"
           ],
           "tags": [
-            "ssl"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "ssl",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "extracted-results": [
-          "TLS13"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:35.073547174Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "technologies/tech-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
-        "template-id": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "nginx",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:39.52274555Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "technologies/waf-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
-        "template-id": "waf-detect",
-        "info": {
-          "name": "WAF Detection",
-          "author": [
-            "dwisiswant0",
-            "lu4nx"
-          ],
-          "tags": [
-            "waf",
             "tech",
-            "misc"
-          ],
-          "description": "A web application firewall was detected.",
-          "reference": [
-            "https://github.com/ekultek/whatwaf"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "matcher-name": "nginxgeneric",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:51.354524653Z",
-        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.festivalparminous.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
-        "template-id": "wordpress-xmlrpc-listmethods",
-        "info": {
-          "name": "Wordpress XML-RPC List System Methods",
-          "author": [
-            "0ut0fb4nd"
-          ],
-          "tags": [
             "wordpress"
           ],
           "reference": null,
-          "severity": "info"
+          "severity": "info",
+          "metadata": {
+            "shodan-query": "http.component:\"WordPress\""
+          }
         },
         "type": "http",
         "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/xmlrpc.php",
+        "matched-at": "https://www.festivalparminous.org/",
+        "extracted-results": [
+          "6.0.1"
+        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:55:57.064259507Z",
-        "curl-command": "curl -X 'POST' -d '<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>system.listMethods</methodName><params></params></methodCall>' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/xmlrpc.php'",
+        "timestamp": "2022-08-05T04:58:39.54435449Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -6098,7 +6011,541 @@
           "SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:04.258964419Z",
+        "timestamp": "2022-08-05T04:58:40.304448614Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "miscellaneous/robots-txt-endpoint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
+        "template-id": "robots-txt-endpoint",
+        "info": {
+          "name": "robots.txt endpoint prober",
+          "author": [
+            "caspergn",
+            "pdteam"
+          ],
+          "tags": null,
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/robots.txt",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:58:47.259642564Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/robots.txt'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "technologies/waf-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/waf-detect.yaml",
+        "template-id": "waf-detect",
+        "info": {
+          "name": "WAF Detection",
+          "author": [
+            "dwisiswant0",
+            "lu4nx"
+          ],
+          "tags": [
+            "waf",
+            "tech",
+            "misc"
+          ],
+          "description": "A web application firewall was detected.",
+          "reference": [
+            "https://github.com/ekultek/whatwaf"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "matcher-name": "nginxgeneric",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:01.823449725Z",
+        "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.festivalparminous.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-origin",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.518437532Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-credentials",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.519493246Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-expose-headers",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.521809074Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-max-age",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.523188291Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.526207629Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "permission-policy",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.527475044Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "referrer-policy",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.52870876Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.529962675Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-headers",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.531198791Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.532401605Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.535417243Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:02.536672058Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wp-xmlrpc.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-xmlrpc.yaml",
+        "template-id": "wordpress-xmlrpc-file",
+        "info": {
+          "name": "WordPress xmlrpc",
+          "author": [
+            "udit_thakkur"
+          ],
+          "tags": [
+            "wordpress"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/xmlrpc.php",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:15.608156168Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/xmlrpc.php'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+        "template-id": "ssl-dns-names",
+        "info": {
+          "name": "SSL DNS Names",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/",
+        "extracted-results": [
+          "www.festivalparminous.org"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:23.361272511Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wordpress-rdf-user-enum.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-rdf-user-enum.yaml",
+        "template-id": "wordpress-rdf-user-enum",
+        "info": {
+          "name": "Wordpress RDF User Enumeration",
+          "author": [
+            "r3dg33k"
+          ],
+          "tags": [
+            "wordpress",
+            "enum"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/feed/rdf/",
+        "extracted-results": [
+          "arthur"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T04:59:31.639318659Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'Referer: https://www.festivalparminous.org/feed/rdf' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/feed/rdf/'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -6148,16 +6595,16 @@
         "host": "https://www.festivalparminous.org/",
         "matched-at": "https://www.festivalparminous.org/wp-json/wp/v2/users/",
         "extracted-results": [
-          "Joseph",
           "Z Ben",
           "arthur_lutz",
           "joseph",
           "thomas",
           "benjamin",
-          "arthur"
+          "arthur",
+          "Joseph"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:12.64606728Z",
+        "timestamp": "2022-08-05T04:59:46.859774089Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/wp-json/wp/v2/users/'",
         "matcher-status": true,
         "matched-line": null
@@ -6187,487 +6634,16 @@
         "host": "https://www.festivalparminous.org/",
         "matched-at": "www.festivalparminous.org:5222",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:19.051183299Z",
+        "timestamp": "2022-08-05T04:59:57.633430793Z",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "vulnerabilities/wordpress/wordpress-rdf-user-enum.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-rdf-user-enum.yaml",
-        "template-id": "wordpress-rdf-user-enum",
+        "template": "ssl/tls-version.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+        "template-id": "tls-version",
         "info": {
-          "name": "Wordpress RDF User Enumeration",
-          "author": [
-            "r3dg33k"
-          ],
-          "tags": [
-            "wordpress",
-            "enum"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/feed/rdf/",
-        "extracted-results": [
-          "arthur"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:22.735483587Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'Referer: https://www.festivalparminous.org/feed/rdf' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/feed/rdf/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-origin",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.070473349Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-credentials",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.07157197Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-expose-headers",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.076970076Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-methods",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.0781573Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "permission-policy",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.079528126Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "referrer-policy",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.080673149Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.08174487Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-max-age",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.082941594Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-headers",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.084014315Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.085106936Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.086125356Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:23.094689624Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "vulnerabilities/wordpress/wp-xmlrpc.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-xmlrpc.yaml",
-        "template-id": "wordpress-xmlrpc-file",
-        "info": {
-          "name": "WordPress xmlrpc",
-          "author": [
-            "udit_thakkur"
-          ],
-          "tags": [
-            "wordpress"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/xmlrpc.php",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:24.49091744Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/xmlrpc.php'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "miscellaneous/robots-txt-endpoint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
-        "template-id": "robots-txt-endpoint",
-        "info": {
-          "name": "robots.txt endpoint prober",
-          "author": [
-            "caspergn",
-            "pdteam"
-          ],
-          "tags": null,
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://www.festivalparminous.org/",
-        "matched-at": "https://www.festivalparminous.org/robots.txt",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:37.30453789Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/robots.txt'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-        "template-id": "ssl-dns-names",
-        "info": {
-          "name": "SSL DNS Names",
+          "name": "TLS Version",
           "author": [
             "pdteam"
           ],
@@ -6681,10 +6657,34 @@
         "host": "https://www.festivalparminous.org/",
         "matched-at": "https://www.festivalparminous.org/",
         "extracted-results": [
-          "www.festivalparminous.org"
+          "TLS13"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T04:56:57.620691786Z",
+        "timestamp": "2022-08-05T05:00:06.23627955Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
+        "template-id": "wordpress-xmlrpc-listmethods",
+        "info": {
+          "name": "Wordpress XML-RPC List System Methods",
+          "author": [
+            "0ut0fb4nd"
+          ],
+          "tags": [
+            "wordpress"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.festivalparminous.org/",
+        "matched-at": "https://www.festivalparminous.org/xmlrpc.php",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:00:24.891157338Z",
+        "curl-command": "curl -X 'POST' -d '<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>system.listMethods</methodName><params></params></methodCall>' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.festivalparminous.org/xmlrpc.php'",
         "matcher-status": true,
         "matched-line": null
       }
@@ -6693,7 +6693,7 @@
       {
         "requestedUrl": "https://www.festivalparminous.org/",
         "finalUrl": "https://www.festivalparminous.org/",
-        "fetchTime": "2022-08-04T04:51:57.928Z",
+        "fetchTime": "2022-08-05T04:53:31.387Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -6735,49 +6735,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3366,
+            "numericValue": 3860,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3366,
-                  "firstMeaningfulPaint": 3366,
-                  "largestContentfulPaint": 8325,
-                  "firstCPUIdle": 3366,
-                  "interactive": 3366,
-                  "speedIndex": 3366,
+                  "firstContentfulPaint": 3454,
+                  "firstMeaningfulPaint": 3454,
+                  "largestContentfulPaint": 8851,
+                  "firstCPUIdle": 3454,
+                  "interactive": 3860,
+                  "speedIndex": 4481,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 0,
-                  "maxPotentialFID": 44,
+                  "totalBlockingTime": 6,
+                  "maxPotentialFID": 61,
                   "cumulativeLayoutShift": 0.0006490071614583333,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 169728252,
+                  "observedTimeOriginTs": 327365991,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 169728252,
-                  "observedFirstPaint": 969,
-                  "observedFirstPaintTs": 170697059,
-                  "observedFirstContentfulPaint": 969,
-                  "observedFirstContentfulPaintTs": 170697059,
-                  "observedFirstMeaningfulPaint": 1011,
-                  "observedFirstMeaningfulPaintTs": 170739574,
-                  "observedLargestContentfulPaint": 1011,
-                  "observedLargestContentfulPaintTs": 170739574,
-                  "observedTraceEnd": 2111,
-                  "observedTraceEndTs": 171839092,
-                  "observedLoad": 1054,
-                  "observedLoadTs": 170781878,
-                  "observedDomContentLoaded": 975,
-                  "observedDomContentLoadedTs": 170703441,
+                  "observedNavigationStartTs": 327365991,
+                  "observedFirstPaint": 1759,
+                  "observedFirstPaintTs": 329124899,
+                  "observedFirstContentfulPaint": 1759,
+                  "observedFirstContentfulPaintTs": 329124899,
+                  "observedFirstMeaningfulPaint": 1791,
+                  "observedFirstMeaningfulPaintTs": 329157344,
+                  "observedLargestContentfulPaint": 1791,
+                  "observedLargestContentfulPaintTs": 329157344,
+                  "observedTraceEnd": 2961,
+                  "observedTraceEndTs": 330326736,
+                  "observedLoad": 1903,
+                  "observedLoadTs": 329268787,
+                  "observedDomContentLoaded": 1745,
+                  "observedDomContentLoadedTs": 329110599,
                   "observedCumulativeLayoutShift": 0.0006490071614583333,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 981,
-                  "observedFirstVisualChangeTs": 170709252,
-                  "observedLastVisualChange": 1281,
-                  "observedLastVisualChangeTs": 171009252,
-                  "observedSpeedIndex": 999,
-                  "observedSpeedIndexTs": 170727171
+                  "observedFirstVisualChange": 1754,
+                  "observedFirstVisualChangeTs": 329119991,
+                  "observedLastVisualChange": 2087,
+                  "observedLastVisualChangeTs": 329452991,
+                  "observedSpeedIndex": 1775,
+                  "observedSpeedIndexTs": 329141334
                 },
                 {
                   "lcpInvalidated": false
@@ -6799,18 +6799,18 @@
                   "numScripts": 4,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 263,
-                  "numTasksOver10ms": 4,
+                  "numTasks": 281,
+                  "numTasksOver10ms": 6,
                   "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
-                  "numTasksOver100ms": 0,
+                  "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 80.60000000000001,
-                  "throughput": 37800155.059139155,
-                  "maxRtt": 80.60000000000001,
-                  "maxServerLatency": 85.77900000000001,
+                  "rtt": 146.74,
+                  "throughput": 21404980.744545948,
+                  "maxRtt": 146.74,
+                  "maxServerLatency": 150.81599999999997,
                   "totalByteWeight": 2086058,
-                  "totalTaskTime": 225.12099999999964,
+                  "totalTaskTime": 283.85299999999995,
                   "mainDocumentTransferSize": 131865
                 }
               ]
@@ -6858,7 +6858,7 @@
     "http": {
       "url": "https://www.soundsmag.org/",
       "algorithm_version": 2,
-      "end_time": "Thu, 04 Aug 2022 05:03:02 GMT",
+      "end_time": "Fri, 05 Aug 2022 05:06:20 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -6868,7 +6868,7 @@
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Thu, 04 Aug 2022 05:02:59 GMT",
+        "Date": "Fri, 05 Aug 2022 05:06:17 GMT",
         "Link": "<https://www.soundsmag.org/local/cache-css/e0d05f94f3aadccae3c8318a4bb83073.css?1629039128>;rel=\"preload\";as=\"style\";",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -6884,9 +6884,9 @@
         "X-Spip-Cache": "86400",
         "X-XSS-Protection": "1, mode=block"
       },
-      "scan_id": 28429212,
+      "scan_id": 28449428,
       "score": 70,
-      "start_time": "Thu, 04 Aug 2022 05:02:56 GMT",
+      "start_time": "Fri, 05 Aug 2022 05:04:13 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -7454,7 +7454,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "MEDIUM",
-        "finding": "expires < 30 days (23)"
+        "finding": "expires < 30 days (22)"
       },
       {
         "id": "cert_notBefore",
@@ -7657,14 +7657,14 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "0 seconds from localtime"
+        "finding": "-1 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1659589497"
+        "finding": "1659676100"
       },
       {
         "id": "HSTS_time",
@@ -8262,7 +8262,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "136"
+        "finding": "152"
       }
     ],
     "thirdparties": {
@@ -8273,7 +8273,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Thu, 04 Aug 2022 05:03:37 GMT",
+        "date": "Fri, 05 Aug 2022 05:06:57 GMT",
         "link": "<https://www.soundsmag.org/local/cache-css/e0d05f94f3aadccae3c8318a4bb83073.css?1629039128>;rel=\"preload\";as=\"style\";",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -8470,6 +8470,35 @@
     "zap": null,
     "nuclei": [
       {
+        "template": "miscellaneous/google-floc-disabled.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
+        "template-id": "google-floc-disabled",
+        "info": {
+          "name": "Google FLoC Disabled",
+          "author": [
+            "geeknik"
+          ],
+          "tags": [
+            "google",
+            "floc",
+            "misc"
+          ],
+          "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
+          "reference": [
+            "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
+          ],
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:59.215277403Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
         "template": "misconfiguration/xss-deprecated-header.yaml",
         "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/xss-deprecated-header.yaml",
         "template-id": "xss-deprecated-header-detect",
@@ -8497,69 +8526,63 @@
           "1, mode=block"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:12.288222712Z",
+        "timestamp": "2022-08-05T05:10:59.38040512Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "miscellaneous/google-floc-disabled.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/google-floc-disabled.yaml",
-        "template-id": "google-floc-disabled",
+        "template": "technologies/metatag-cms.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/metatag-cms.yaml",
+        "template-id": "metatag-cms",
         "info": {
-          "name": "Google FLoC Disabled",
+          "name": "Metatag CMS Detection",
           "author": [
-            "geeknik"
+            "dadevel"
           ],
           "tags": [
-            "google",
-            "floc",
-            "misc"
+            "tech",
+            "cms"
           ],
-          "description": "The detected website has decided to explicitly exclude itself from Google FLoC tracking.",
+          "description": "Generic CMS Detection using html meta generator tag",
           "reference": [
-            "https://www.bleepingcomputer.com/news/security/github-disables-google-floc-user-tracking-on-its-website/"
+            "https://www.w3schools.com/tags/att_meta_name.asp"
           ],
           "severity": "info"
         },
         "type": "http",
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
+        "extracted-results": [
+          "SPIP 4.0.0"
+        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:12.324737974Z",
+        "timestamp": "2022-08-05T05:10:59.673065252Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
+        "template": "technologies/tech-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
+        "template-id": "tech-detect",
         "info": {
-          "name": "HTTP Missing Security Headers",
+          "name": "Wappalyzer Technology Detection",
           "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
+            "hakluke"
           ],
           "tags": [
-            "misconfig",
-            "generic"
+            "tech"
           ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "matcher-name": "cross-origin-embedder-policy",
+        "matcher-name": "nginx",
         "type": "http",
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.753825861Z",
+        "timestamp": "2022-08-05T05:11:00.252623472Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8592,7 +8615,7 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.754074167Z",
+        "timestamp": "2022-08-05T05:11:19.739157014Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8625,7 +8648,7 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.754247371Z",
+        "timestamp": "2022-08-05T05:11:19.739385316Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8658,139 +8681,7 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.754403475Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-expose-headers",
-        "type": "http",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.755123692Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-max-age",
-        "type": "http",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.755411099Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "permission-policy",
-        "type": "http",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.75589811Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.756162517Z",
+        "timestamp": "2022-08-05T05:11:19.74380705Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8823,40 +8714,7 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.756637728Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-headers",
-        "type": "http",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.756902234Z",
+        "timestamp": "2022-08-05T05:11:19.744103853Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8889,7 +8747,40 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.757379145Z",
+        "timestamp": "2022-08-05T05:11:19.744323554Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:11:19.744546756Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -8922,234 +8813,173 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:17.757638151Z",
+        "timestamp": "2022-08-05T05:11:19.744775058Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "technologies/tech-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
-        "template-id": "tech-detect",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "Wappalyzer Technology Detection",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "hakluke"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "tech"
+            "misconfig",
+            "generic"
           ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "matcher-name": "nginx",
+        "matcher-name": "access-control-expose-headers",
         "type": "http",
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:21.685564022Z",
+        "timestamp": "2022-08-05T05:11:19.74503306Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "technologies/metatag-cms.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/metatag-cms.yaml",
-        "template-id": "metatag-cms",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "Metatag CMS Detection",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "dadevel"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "tech",
-            "cms"
+            "misconfig",
+            "generic"
           ],
-          "description": "Generic CMS Detection using html meta generator tag",
-          "reference": [
-            "https://www.w3schools.com/tags/att_meta_name.asp"
-          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
           "severity": "info"
         },
+        "matcher-name": "access-control-max-age",
         "type": "http",
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
-        "extracted-results": [
-          "SPIP 4.0.0"
-        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:22.534039968Z",
+        "timestamp": "2022-08-05T05:11:19.745248262Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-        "template-id": "ssl-dns-names",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "SSL DNS Names",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "pdteam"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "ssl"
+            "misconfig",
+            "generic"
           ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "type": "ssl",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/",
-        "extracted-results": [
-          "www.soundsmag.org"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:08:24.090774498Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "network/openssh-detection.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/network/openssh-detection.yaml",
-        "template-id": "openssh-detection",
-        "info": {
-          "name": "OpenSSH Detection",
-          "author": [
-            "r3dg33k",
-            "daffainfo",
-            "iamthefrogy"
-          ],
-          "tags": [
-            "network",
-            "ssh",
-            "openssh"
-          ],
-          "reference": [
-            "http://www.openwall.com/lists/oss-security/2016/08/01/2",
-            "http://www.openwall.com/lists/oss-security/2018/08/15/5",
-            "https://nvd.nist.gov/vuln/detail/cve-2016-6210",
-            "https://nvd.nist.gov/vuln/detail/cve-2018-15473",
-            "http://seclists.org/fulldisclosure/2016/jul/51"
-          ],
-          "severity": "info"
-        },
-        "type": "network",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "www.soundsmag.org:22",
-        "extracted-results": [
-          "SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:09:27.357221234Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "network/detect-jabber-xmpp.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/network/detect-jabber-xmpp.yaml",
-        "template-id": "detect-jabber-xmpp",
-        "info": {
-          "name": "Detects Jabber XMPP Instance",
-          "author": [
-            "geeknik"
-          ],
-          "tags": [
-            "network",
-            "jabber",
-            "xmpp",
-            "messaging"
-          ],
-          "description": "Jabber is the original name of the Extensible Messaging and Presence Protocol (XMPP), the open technology for instant messaging and presence.",
-          "reference": [
-            "https://datatracker.ietf.org/doc/html/rfc6120"
-          ],
-          "severity": "info"
-        },
-        "type": "network",
-        "host": "https://www.soundsmag.org/",
-        "matched-at": "www.soundsmag.org:5222",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:09:37.196382447Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "miscellaneous/robots-txt-endpoint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
-        "template-id": "robots-txt-endpoint",
-        "info": {
-          "name": "robots.txt endpoint prober",
-          "author": [
-            "caspergn",
-            "pdteam"
-          ],
-          "tags": null,
-          "reference": null,
-          "severity": "info"
-        },
+        "matcher-name": "access-control-allow-headers",
         "type": "http",
         "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/robots.txt",
+        "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:09:38.772222054Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/robots.txt'",
+        "timestamp": "2022-08-05T05:11:19.745465663Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-        "template-id": "tls-version",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "TLS Version",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "pdteam"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "ssl"
+            "misconfig",
+            "generic"
           ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
           "reference": null,
           "severity": "info"
         },
-        "type": "ssl",
+        "matcher-name": "permission-policy",
+        "type": "http",
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
-        "extracted-results": [
-          "TLS13"
-        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:19.01001086Z",
+        "timestamp": "2022-08-05T05:11:19.745676965Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "exposures/configs/exposed-gitignore.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/exposures/configs/exposed-gitignore.yaml",
-        "template-id": "exposed-gitignore",
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
         "info": {
-          "name": "Exposed Gitignore",
+          "name": "HTTP Missing Security Headers",
           "author": [
-            "thezakman",
-            "geeknik"
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
           ],
           "tags": [
-            "config",
-            "git",
-            "exposure"
+            "misconfig",
+            "generic"
           ],
-          "reference": [
-            "https://twitter.com/pratiky9967/status/1230001391701086208",
-            "https://www.tenable.com/plugins/was/98595"
-          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
           "severity": "info"
         },
+        "matcher-name": "cross-origin-embedder-policy",
         "type": "http",
         "host": "https://www.soundsmag.org/",
-        "matched-at": "https://www.soundsmag.org/.gitignore",
+        "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:24.144686715Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/.gitignore'",
+        "timestamp": "2022-08-05T05:11:19.745983867Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -9185,7 +9015,7 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:24.785848109Z",
+        "timestamp": "2022-08-05T05:11:43.755208747Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.soundsmag.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -9222,8 +9052,178 @@
         "host": "https://www.soundsmag.org/",
         "matched-at": "https://www.soundsmag.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:24.786087615Z",
+        "timestamp": "2022-08-05T05:11:43.755471948Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.soundsmag.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "network/openssh-detection.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/network/openssh-detection.yaml",
+        "template-id": "openssh-detection",
+        "info": {
+          "name": "OpenSSH Detection",
+          "author": [
+            "r3dg33k",
+            "daffainfo",
+            "iamthefrogy"
+          ],
+          "tags": [
+            "network",
+            "ssh",
+            "openssh"
+          ],
+          "reference": [
+            "http://www.openwall.com/lists/oss-security/2016/08/01/2",
+            "http://www.openwall.com/lists/oss-security/2018/08/15/5",
+            "https://nvd.nist.gov/vuln/detail/cve-2016-6210",
+            "https://nvd.nist.gov/vuln/detail/cve-2018-15473",
+            "http://seclists.org/fulldisclosure/2016/jul/51"
+          ],
+          "severity": "info"
+        },
+        "type": "network",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "www.soundsmag.org:22",
+        "extracted-results": [
+          "SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:11:47.768784601Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "miscellaneous/robots-txt-endpoint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
+        "template-id": "robots-txt-endpoint",
+        "info": {
+          "name": "robots.txt endpoint prober",
+          "author": [
+            "caspergn",
+            "pdteam"
+          ],
+          "tags": null,
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/robots.txt",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:11:49.535554105Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/robots.txt'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "exposures/configs/exposed-gitignore.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/exposures/configs/exposed-gitignore.yaml",
+        "template-id": "exposed-gitignore",
+        "info": {
+          "name": "Exposed Gitignore",
+          "author": [
+            "thezakman",
+            "geeknik"
+          ],
+          "tags": [
+            "config",
+            "git",
+            "exposure"
+          ],
+          "reference": [
+            "https://twitter.com/pratiky9967/status/1230001391701086208",
+            "https://www.tenable.com/plugins/was/98595"
+          ],
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/.gitignore",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:11:53.867735631Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.soundsmag.org/.gitignore'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "network/detect-jabber-xmpp.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/network/detect-jabber-xmpp.yaml",
+        "template-id": "detect-jabber-xmpp",
+        "info": {
+          "name": "Detects Jabber XMPP Instance",
+          "author": [
+            "geeknik"
+          ],
+          "tags": [
+            "network",
+            "jabber",
+            "xmpp",
+            "messaging"
+          ],
+          "description": "Jabber is the original name of the Extensible Messaging and Presence Protocol (XMPP), the open technology for instant messaging and presence.",
+          "reference": [
+            "https://datatracker.ietf.org/doc/html/rfc6120"
+          ],
+          "severity": "info"
+        },
+        "type": "network",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "www.soundsmag.org:5222",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:13:53.476974278Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/tls-version.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+        "template-id": "tls-version",
+        "info": {
+          "name": "TLS Version",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/",
+        "extracted-results": [
+          "TLS13"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:13:58.351564108Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+        "template-id": "ssl-dns-names",
+        "info": {
+          "name": "SSL DNS Names",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://www.soundsmag.org/",
+        "matched-at": "https://www.soundsmag.org/",
+        "extracted-results": [
+          "www.soundsmag.org"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:13:58.664164812Z",
         "matcher-status": true,
         "matched-line": null
       }
@@ -9232,7 +9232,7 @@
       {
         "requestedUrl": "https://www.soundsmag.org/",
         "finalUrl": "https://www.soundsmag.org/",
-        "fetchTime": "2022-08-04T05:02:47.603Z",
+        "fetchTime": "2022-08-05T05:04:03.389Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -9274,49 +9274,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3541,
+            "numericValue": 3551,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3091,
-                  "firstMeaningfulPaint": 3091,
-                  "largestContentfulPaint": 3541,
-                  "firstCPUIdle": 3091,
-                  "interactive": 3541,
-                  "speedIndex": 3922,
+                  "firstContentfulPaint": 3101,
+                  "firstMeaningfulPaint": 3101,
+                  "largestContentfulPaint": 3551,
+                  "firstCPUIdle": 3101,
+                  "interactive": 3551,
+                  "speedIndex": 4194,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 13,
-                  "maxPotentialFID": 75,
+                  "totalBlockingTime": 21,
+                  "maxPotentialFID": 92,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 350357749,
+                  "observedTimeOriginTs": 150409400,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 350357749,
-                  "observedFirstPaint": 1541,
-                  "observedFirstPaintTs": 351899087,
-                  "observedFirstContentfulPaint": 1541,
-                  "observedFirstContentfulPaintTs": 351899087,
-                  "observedFirstMeaningfulPaint": 1541,
-                  "observedFirstMeaningfulPaintTs": 351899087,
-                  "observedLargestContentfulPaint": 1541,
-                  "observedLargestContentfulPaintTs": 351899087,
-                  "observedTraceEnd": 2694,
-                  "observedTraceEndTs": 353052197,
-                  "observedLoad": 1636,
-                  "observedLoadTs": 351994153,
-                  "observedDomContentLoaded": 1365,
-                  "observedDomContentLoadedTs": 351723056,
+                  "observedNavigationStartTs": 150409400,
+                  "observedFirstPaint": 1727,
+                  "observedFirstPaintTs": 152136169,
+                  "observedFirstContentfulPaint": 1727,
+                  "observedFirstContentfulPaintTs": 152136169,
+                  "observedFirstMeaningfulPaint": 1727,
+                  "observedFirstMeaningfulPaintTs": 152136169,
+                  "observedLargestContentfulPaint": 1727,
+                  "observedLargestContentfulPaintTs": 152136169,
+                  "observedTraceEnd": 2909,
+                  "observedTraceEndTs": 153318477,
+                  "observedLoad": 1850,
+                  "observedLoadTs": 152259278,
+                  "observedDomContentLoaded": 1508,
+                  "observedDomContentLoadedTs": 151917242,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1544,
-                  "observedFirstVisualChangeTs": 351901749,
-                  "observedLastVisualChange": 1544,
-                  "observedLastVisualChangeTs": 351901749,
-                  "observedSpeedIndex": 1545,
-                  "observedSpeedIndexTs": 351902590
+                  "observedFirstVisualChange": 1734,
+                  "observedFirstVisualChangeTs": 152143400,
+                  "observedLastVisualChange": 1734,
+                  "observedLastVisualChangeTs": 152143400,
+                  "observedSpeedIndex": 1735,
+                  "observedSpeedIndexTs": 152143914
                 },
                 {
                   "lcpInvalidated": false
@@ -9338,18 +9338,18 @@
                   "numScripts": 3,
                   "numStylesheets": 5,
                   "numFonts": 0,
-                  "numTasks": 204,
-                  "numTasksOver10ms": 3,
+                  "numTasks": 203,
+                  "numTasksOver10ms": 2,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 121.38,
-                  "throughput": 7392044.314683383,
-                  "maxRtt": 121.38,
-                  "maxServerLatency": 5.422999999999988,
+                  "rtt": 154.77,
+                  "throughput": 5937093.852368184,
+                  "maxRtt": 154.77,
+                  "maxServerLatency": 3.1129999999999995,
                   "totalByteWeight": 475366,
-                  "totalTaskTime": 117.99999999999997,
+                  "totalTaskTime": 137.99599999999992,
                   "mainDocumentTransferSize": 20568
                 }
               ]
@@ -9393,7 +9393,7 @@
     "http": {
       "url": "https://cartographiepublicitaire.eu.org",
       "algorithm_version": 2,
-      "end_time": "Wed, 03 Aug 2022 05:50:43 GMT",
+      "end_time": "Fri, 05 Aug 2022 05:06:26 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -9402,7 +9402,7 @@
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 03 Aug 2022 05:50:28 GMT",
+        "Date": "Fri, 05 Aug 2022 05:06:17 GMT",
         "Link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -9415,9 +9415,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 28404464,
+      "scan_id": 28449425,
       "score": 75,
-      "start_time": "Wed, 03 Aug 2022 05:27:34 GMT",
+      "start_time": "Fri, 05 Aug 2022 05:03:54 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -9994,7 +9994,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "62 >= 30 days"
+        "finding": "61 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -10197,14 +10197,14 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "0 seconds from localtime"
+        "finding": "-1 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1659589687"
+        "finding": "1659676084"
       },
       {
         "id": "HSTS_time",
@@ -10802,7 +10802,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "143"
+        "finding": "93"
       }
     ],
     "thirdparties": {
@@ -10853,7 +10853,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=ae61821d1d0f205e48f463a40e60e1e395cf1d55",
+          "url": "https://syndication.twitter.com/settings?session_id=bb8e7ec6b2e4d34452283b3016d0dfa699057139",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10877,7 +10877,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://cdn.syndication.twimg.com/timeline/profile?callback=__twttr.callbacks.tl_i0_profile_carto_des_pubs_old&dnt=false&domain=cartographiepublicitaire.eu.org&lang=fr&screen_name=carto_des_pubs&suppress_response_codes=true&t=1843988&tz=GMT%2B0000&with_replies=false",
+          "url": "https://cdn.syndication.twimg.com/timeline/profile?callback=__twttr.callbacks.tl_i0_profile_carto_des_pubs_old&dnt=false&domain=cartographiepublicitaire.eu.org&lang=fr&screen_name=carto_des_pubs&suppress_response_codes=true&t=1844084&tz=GMT%2B0000&with_replies=false",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -11205,7 +11205,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot?l=%7B%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3Afalse%2C%22widget_data_source%22%3A%22profile%3Acarto_des_pubs%22%2C%22query%22%3Anull%2C%22profile_id%22%3Anull%2C%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1659589608904%2C%22dnt%22%3Afalse%2C%22client_version%22%3A%22b7df0f50e1ec1%3A1659558317797%22%2C%22format_version%22%3A1%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline%22%2C%22component%22%3A%22timeline%22%2C%22element%22%3A%22initial%22%2C%22action%22%3A%22results%22%7D%7D&session_id=ae61821d1d0f205e48f463a40e60e1e395cf1d55",
+          "url": "https://syndication.twitter.com/i/jot?l=%7B%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3Afalse%2C%22widget_data_source%22%3A%22profile%3Acarto_des_pubs%22%2C%22query%22%3Anull%2C%22profile_id%22%3Anull%2C%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1659676014108%2C%22dnt%22%3Afalse%2C%22client_version%22%3A%22b7df0f50e1ec1%3A1659558317797%22%2C%22format_version%22%3A1%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline%22%2C%22component%22%3A%22timeline%22%2C%22element%22%3A%22initial%22%2C%22action%22%3A%22results%22%7D%7D&session_id=bb8e7ec6b2e4d34452283b3016d0dfa699057139",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -11217,7 +11217,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 04 Aug 2022 05:06:46 GMT",
+        "date": "Fri, 05 Aug 2022 05:06:52 GMT",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -11327,7 +11327,7 @@
         },
         {
           "hostname": "unpkg.com",
-          "ip": "104.16.122.175",
+          "ip": "104.16.126.175",
           "geoip": null
         },
         {
@@ -11391,7 +11391,7 @@
         },
         {
           "hostname": "syndication.twitter.com",
-          "ip": "104.244.42.200",
+          "ip": "104.244.42.72",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -11445,7 +11445,7 @@
         },
         {
           "hostname": "cdn.syndication.twimg.com",
-          "ip": "192.229.173.16",
+          "ip": "72.21.91.70",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -11499,8 +11499,15 @@
         },
         {
           "hostname": "pbs.twimg.com",
-          "ip": "146.75.104.159",
+          "ip": "146.75.28.159",
           "geoip": {
+            "city": {
+              "geoname_id": 4744870,
+              "names": {
+                "en": "Ashburn",
+                "ru": "Ашберн"
+              }
+            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -11530,10 +11537,14 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
+              "accuracy_radius": 20,
+              "latitude": 39.018,
+              "longitude": -77.539,
+              "metro_code": 511,
+              "time_zone": "America/New_York"
+            },
+            "postal": {
+              "code": "20147"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -11548,7 +11559,21 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 6254928,
+                "iso_code": "VA",
+                "names": {
+                  "en": "Virginia",
+                  "fr": "Virginie",
+                  "ja": "バージニア州",
+                  "pt-BR": "Virgínia",
+                  "ru": "Вирджиния",
+                  "zh-CN": "弗吉尼亚州"
+                }
+              }
+            ]
           }
         },
         {
@@ -11892,35 +11917,63 @@
           "6.0.1"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:41.249541125Z",
+        "timestamp": "2022-08-05T05:09:59.658025139Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "miscellaneous/addeventlistener-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/addeventlistener-detect.yaml",
-        "template-id": "addeventlistener-detect",
+        "template": "technologies/tech-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
+        "template-id": "tech-detect",
         "info": {
-          "name": "DOM EventListener detection",
+          "name": "Wappalyzer Technology Detection",
           "author": [
-            "yavolo",
-            "dwisiswant0"
+            "hakluke"
           ],
           "tags": [
-            "xss",
-            "misc"
+            "tech"
           ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "nginx",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:09:59.873287286Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "technologies/metatag-cms.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/metatag-cms.yaml",
+        "template-id": "metatag-cms",
+        "info": {
+          "name": "Metatag CMS Detection",
+          "author": [
+            "dadevel"
+          ],
+          "tags": [
+            "tech",
+            "cms"
+          ],
+          "description": "Generic CMS Detection using html meta generator tag",
           "reference": [
-            "https://portswigger.net/web-security/dom-based/controlling-the-web-message-source"
+            "https://www.w3schools.com/tags/att_meta_name.asp"
           ],
           "severity": "info"
         },
         "type": "http",
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "WordPress 6.0.1"
+        ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:41.266955678Z",
+        "timestamp": "2022-08-05T05:09:59.877125301Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -11949,31 +12002,36 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:41.270894913Z",
+        "timestamp": "2022-08-05T05:09:59.906388817Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "miscellaneous/robots-txt-endpoint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
-        "template-id": "robots-txt-endpoint",
+        "template": "miscellaneous/addeventlistener-detect.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/addeventlistener-detect.yaml",
+        "template-id": "addeventlistener-detect",
         "info": {
-          "name": "robots.txt endpoint prober",
+          "name": "DOM EventListener detection",
           "author": [
-            "caspergn",
-            "pdteam"
+            "yavolo",
+            "dwisiswant0"
           ],
-          "tags": null,
-          "reference": null,
+          "tags": [
+            "xss",
+            "misc"
+          ],
+          "reference": [
+            "https://portswigger.net/web-security/dom-based/controlling-the-web-message-source"
+          ],
           "severity": "info"
         },
         "type": "http",
         "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org/robots.txt",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:41.395773909Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/robots.txt'",
+        "timestamp": "2022-08-05T05:10:00.113517132Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12005,96 +12063,7 @@
           "1; mode=block"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:41.516990172Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "technologies/metatag-cms.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/metatag-cms.yaml",
-        "template-id": "metatag-cms",
-        "info": {
-          "name": "Metatag CMS Detection",
-          "author": [
-            "dadevel"
-          ],
-          "tags": [
-            "tech",
-            "cms"
-          ],
-          "description": "Generic CMS Detection using html meta generator tag",
-          "reference": [
-            "https://www.w3schools.com/tags/att_meta_name.asp"
-          ],
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "WordPress 6.0.1"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:42.037087235Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "technologies/tech-detect.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/tech-detect.yaml",
-        "template-id": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "nginx",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:45.729347114Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-origin",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.417646757Z",
+        "timestamp": "2022-08-05T05:10:00.160220016Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12127,172 +12096,7 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.418113861Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "access-control-allow-methods",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.425326123Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-embedder-policy",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.429786261Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.43079237Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "clear-site-data",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.431663978Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "misconfiguration/http-missing-security-headers.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
-        "template-id": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki",
-            "forgedhallpass"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher-name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.432725587Z",
+        "timestamp": "2022-08-05T05:10:11.371140739Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12325,7 +12129,7 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.433443293Z",
+        "timestamp": "2022-08-05T05:10:11.371611724Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12358,7 +12162,40 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.4342996Z",
+        "timestamp": "2022-08-05T05:10:11.372734889Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.407477096Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12391,7 +12228,7 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.435198208Z",
+        "timestamp": "2022-08-05T05:10:11.442693787Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12424,7 +12261,106 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.435902414Z",
+        "timestamp": "2022-08-05T05:10:11.477832182Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.513026274Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.548404661Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "access-control-allow-origin",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.583716349Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
         "matcher-status": true,
         "matched-line": null
@@ -12457,8 +12393,132 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:10:46.43653042Z",
+        "timestamp": "2022-08-05T05:10:11.618757447Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "clear-site-data",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.653892341Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "misconfiguration/http-missing-security-headers.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/misconfiguration/http-missing-security-headers.yaml",
+        "template-id": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki",
+            "forgedhallpass"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher-name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:11.68917943Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "miscellaneous/robots-txt-endpoint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/miscellaneous/robots-txt-endpoint.yaml",
+        "template-id": "robots-txt-endpoint",
+        "info": {
+          "name": "robots.txt endpoint prober",
+          "author": [
+            "caspergn",
+            "pdteam"
+          ],
+          "tags": null,
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org/robots.txt",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:18.646236107Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/robots.txt'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/txt-fingerprint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/txt-fingerprint.yaml",
+        "template-id": "txt-fingerprint",
+        "info": {
+          "name": "DNS TXT Record Detected",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "txt"
+          ],
+          "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
+          "reference": [
+            "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "\"v=spf1 a mx -all\""
+        ],
+        "timestamp": "2022-08-05T05:10:22.025111604Z",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12487,41 +12547,58 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "cartographiepublicitaire.eu.org:5222",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:11:10.29725125Z",
+        "timestamp": "2022-08-05T05:10:29.606002428Z",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "dns/nameserver-fingerprint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/nameserver-fingerprint.yaml",
-        "template-id": "nameserver-fingerprint",
+        "template": "vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
+        "template-id": "wordpress-xmlrpc-listmethods",
         "info": {
-          "name": "NS Record Detection",
+          "name": "Wordpress XML-RPC List System Methods",
           "author": [
-            "pdteam"
+            "0ut0fb4nd"
           ],
           "tags": [
-            "dns",
-            "ns"
+            "wordpress"
           ],
-          "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
           "reference": null,
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
+          "severity": "info"
         },
-        "type": "dns",
+        "type": "http",
         "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org/xmlrpc.php",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:36.214403927Z",
+        "curl-command": "curl -X 'POST' -d '<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>system.listMethods</methodName><params></params></methodCall>' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/xmlrpc.php'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wordpress-user-enum.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-user-enum.yaml",
+        "template-id": "wordpress-user-enum",
+        "info": {
+          "name": "Wordpress User Enumeration",
+          "author": [
+            "r3dg33k"
+          ],
+          "tags": [
+            "wordpress"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org/?author=1",
         "extracted-results": [
-          "ns1.dns-witch.net.eu.org.",
-          "ns2.dns-witch.net.eu.org."
+          "author/admin"
         ],
-        "timestamp": "2022-08-04T05:11:36.230592659Z",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:10:40.927376376Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/?author=1'",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12576,121 +12653,8 @@
           "Arthur"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:11:40.989633196Z",
+        "timestamp": "2022-08-05T05:10:47.336300023Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/wp-json/wp/v2/users/'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "dns/mx-fingerprint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/mx-fingerprint.yaml",
-        "template-id": "mx-fingerprint",
-        "info": {
-          "name": "MX Record Detection",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "mx"
-          ],
-          "description": "An MX record was detected. MX records direct emails to a mail exchange server.",
-          "reference": [
-            "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
-            "https://mxtoolbox.com/"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "10 cartographiepublicitaire.eu.org."
-        ],
-        "timestamp": "2022-08-04T05:11:44.917915732Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-xmlrpc-listmethods.yaml",
-        "template-id": "wordpress-xmlrpc-listmethods",
-        "info": {
-          "name": "Wordpress XML-RPC List System Methods",
-          "author": [
-            "0ut0fb4nd"
-          ],
-          "tags": [
-            "wordpress"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org/xmlrpc.php",
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:11:57.802933293Z",
-        "curl-command": "curl -X 'POST' -d '<?xml version=\"1.0\" encoding=\"utf-8\"?><methodCall><methodName>system.listMethods</methodName><params></params></methodCall>' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/xmlrpc.php'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "vulnerabilities/wordpress/wordpress-user-enum.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wordpress-user-enum.yaml",
-        "template-id": "wordpress-user-enum",
-        "info": {
-          "name": "Wordpress User Enumeration",
-          "author": [
-            "r3dg33k"
-          ],
-          "tags": [
-            "wordpress"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org/?author=1",
-        "extracted-results": [
-          "author/admin"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:12:25.376961871Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/?author=1'",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "ssl/tls-version.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
-        "template-id": "tls-version",
-        "info": {
-          "name": "TLS Version",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "ssl",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "TLS13"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:12:28.545003059Z",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12718,19 +12682,80 @@
           "admin"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:12:28.528627461Z",
+        "timestamp": "2022-08-05T05:10:50.769971517Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'Referer: https://cartographiepublicitaire.eu.org/feed/rdf' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/feed/rdf/'",
         "matcher-status": true,
         "matched-line": null
       },
       {
-        "template": "vulnerabilities/wordpress/wp-xmlrpc.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-xmlrpc.yaml",
-        "template-id": "wordpress-xmlrpc-file",
+        "template": "ssl/ssl-dns-names.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
+        "template-id": "ssl-dns-names",
         "info": {
-          "name": "WordPress xmlrpc",
+          "name": "SSL DNS Names",
           "author": [
-            "udit_thakkur"
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "cartographiepublicitaire.eu.org"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:11:17.609406862Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/caa-fingerprint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/caa-fingerprint.yaml",
+        "template-id": "caa-fingerprint",
+        "info": {
+          "name": "CAA Record",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "caa"
+          ],
+          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+          "reference": [
+            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "letsencrypt.org"
+        ],
+        "timestamp": "2022-08-05T05:11:21.196843463Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wp-license-file.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-license-file.yaml",
+        "template-id": "wp-license-file",
+        "info": {
+          "name": "WordPress license file disclosure",
+          "author": [
+            "yashgoti"
           ],
           "tags": [
             "wordpress"
@@ -12740,10 +12765,81 @@
         },
         "type": "http",
         "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org/xmlrpc.php",
+        "matched-at": "https://cartographiepublicitaire.eu.org/license.txt",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:13:04.074549885Z",
-        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/xmlrpc.php'",
+        "timestamp": "2022-08-05T05:11:39.152776467Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/license.txt'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/dnssec-detection.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/dnssec-detection.yaml",
+        "template-id": "dnssec-detection",
+        "info": {
+          "name": "DNSSEC Detection",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "dnssec"
+          ],
+          "description": "Domain Name System Security Extensions (DNSSEC) are enabled. The Delegation of Signing (DS) record provides information about a signed zone file when DNSSEC enabled.",
+          "reference": [
+            "https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en",
+            "https://www.cyberciti.biz/faq/unix-linux-test-and-validate-dnssec-using-dig-command-line/"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "30822 13 2 B2DE50057573AE6C481BB3705679FF1C585C7C3653408311DF9740F5094D0029",
+          "30822 13 4 7E7F70B713C4BF0705C60B4C60055BD7DE5F80D965404CD22B7D0AA908EA0CE2F710D5B7F0000729D0AD94B32A50EB36"
+        ],
+        "timestamp": "2022-08-05T05:11:45.414825454Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/nameserver-fingerprint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/nameserver-fingerprint.yaml",
+        "template-id": "nameserver-fingerprint",
+        "info": {
+          "name": "NS Record Detection",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "ns"
+          ],
+          "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
+          "reference": null,
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "ns2.dns-witch.net.eu.org.",
+          "ns1.dns-witch.net.eu.org."
+        ],
+        "timestamp": "2022-08-05T05:12:39.339994021Z",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12779,7 +12875,7 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:13:06.09014599Z",
+        "timestamp": "2022-08-05T05:12:40.969138665Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: cartographiepublicitaire.eu.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/'",
         "matcher-status": true,
         "matched-line": null
@@ -12816,8 +12912,94 @@
         "host": "https://cartographiepublicitaire.eu.org",
         "matched-at": "https://cartographiepublicitaire.eu.org/",
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:13:06.090799795Z",
+        "timestamp": "2022-08-05T05:12:40.969652166Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: cartographiepublicitaire.eu.org' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "vulnerabilities/wordpress/wp-xmlrpc.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-xmlrpc.yaml",
+        "template-id": "wordpress-xmlrpc-file",
+        "info": {
+          "name": "WordPress xmlrpc",
+          "author": [
+            "udit_thakkur"
+          ],
+          "tags": [
+            "wordpress"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org/xmlrpc.php",
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:12:45.71551363Z",
+        "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://cartographiepublicitaire.eu.org/xmlrpc.php'",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "ssl/tls-version.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/tls-version.yaml",
+        "template-id": "tls-version",
+        "info": {
+          "name": "TLS Version",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "ssl"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "ssl",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "TLS13"
+        ],
+        "ip": "51.159.70.213",
+        "timestamp": "2022-08-05T05:12:53.091116298Z",
+        "matcher-status": true,
+        "matched-line": null
+      },
+      {
+        "template": "dns/mx-fingerprint.yaml",
+        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/mx-fingerprint.yaml",
+        "template-id": "mx-fingerprint",
+        "info": {
+          "name": "MX Record Detection",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "mx"
+          ],
+          "description": "An MX record was detected. MX records direct emails to a mail exchange server.",
+          "reference": [
+            "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
+            "https://mxtoolbox.com/"
+          ],
+          "severity": "info",
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "https://cartographiepublicitaire.eu.org",
+        "matched-at": "https://cartographiepublicitaire.eu.org",
+        "extracted-results": [
+          "10 cartographiepublicitaire.eu.org."
+        ],
+        "timestamp": "2022-08-05T05:13:06.789308336Z",
         "matcher-status": true,
         "matched-line": null
       },
@@ -12853,140 +13035,7 @@
           "SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2"
         ],
         "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:13:06.365200889Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "dns/txt-fingerprint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/txt-fingerprint.yaml",
-        "template-id": "txt-fingerprint",
-        "info": {
-          "name": "DNS TXT Record Detected",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "txt"
-          ],
-          "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
-          "reference": [
-            "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "\"v=spf1 a mx -all\""
-        ],
-        "timestamp": "2022-08-04T05:13:07.408624312Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "ssl/ssl-dns-names.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/ssl/ssl-dns-names.yaml",
-        "template-id": "ssl-dns-names",
-        "info": {
-          "name": "SSL DNS Names",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "ssl"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "ssl",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "cartographiepublicitaire.eu.org"
-        ],
-        "ip": "51.159.70.213",
-        "timestamp": "2022-08-04T05:13:25.997431588Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "dns/caa-fingerprint.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/caa-fingerprint.yaml",
-        "template-id": "caa-fingerprint",
-        "info": {
-          "name": "CAA Record",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "caa"
-          ],
-          "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
-          "reference": [
-            "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "letsencrypt.org"
-        ],
-        "timestamp": "2022-08-04T05:13:28.077786578Z",
-        "matcher-status": true,
-        "matched-line": null
-      },
-      {
-        "template": "dns/dnssec-detection.yaml",
-        "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/dns/dnssec-detection.yaml",
-        "template-id": "dnssec-detection",
-        "info": {
-          "name": "DNSSEC Detection",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "dnssec"
-          ],
-          "description": "Domain Name System Security Extensions (DNSSEC) are enabled. The Delegation of Signing (DS) record provides information about a signed zone file when DNSSEC enabled.",
-          "reference": [
-            "https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en",
-            "https://www.cyberciti.biz/faq/unix-linux-test-and-validate-dnssec-using-dig-command-line/"
-          ],
-          "severity": "info",
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "https://cartographiepublicitaire.eu.org",
-        "matched-at": "https://cartographiepublicitaire.eu.org",
-        "extracted-results": [
-          "30822 13 4 7E7F70B713C4BF0705C60B4C60055BD7DE5F80D965404CD22B7D0AA908EA0CE2F710D5B7F0000729D0AD94B32A50EB36",
-          "30822 13 2 B2DE50057573AE6C481BB3705679FF1C585C7C3653408311DF9740F5094D0029"
-        ],
-        "timestamp": "2022-08-04T05:13:32.278242998Z",
+        "timestamp": "2022-08-05T05:13:10.685038583Z",
         "matcher-status": true,
         "matched-line": null
       }
@@ -12995,13 +13044,13 @@
       {
         "requestedUrl": "https://cartographiepublicitaire.eu.org/",
         "finalUrl": "https://cartographiepublicitaire.eu.org/",
-        "fetchTime": "2022-08-04T05:06:17.417Z",
+        "fetchTime": "2022-08-05T05:03:42.949Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.06363964080810547
+            "score": 0.06360511779785157
           },
           "accessibility": {
             "title": "Accessibility",
@@ -13037,49 +13086,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 11030,
+            "numericValue": 10784,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 7361,
-                  "firstMeaningfulPaint": 7361,
-                  "largestContentfulPaint": 7992,
-                  "firstCPUIdle": 7361,
-                  "interactive": 11030,
-                  "speedIndex": 7624,
+                  "firstContentfulPaint": 7151,
+                  "firstMeaningfulPaint": 7151,
+                  "largestContentfulPaint": 7293,
+                  "firstCPUIdle": 7151,
+                  "interactive": 10784,
+                  "speedIndex": 7151,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 15,
-                  "maxPotentialFID": 77,
+                  "totalBlockingTime": 14,
+                  "maxPotentialFID": 73,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0.07833333333333334,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 186564626,
+                  "observedTimeOriginTs": 406106016,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 186564626,
-                  "observedFirstPaint": 1866,
-                  "observedFirstPaintTs": 188430641,
-                  "observedFirstContentfulPaint": 1866,
-                  "observedFirstContentfulPaintTs": 188430641,
-                  "observedFirstMeaningfulPaint": 1866,
-                  "observedFirstMeaningfulPaintTs": 188430641,
-                  "observedLargestContentfulPaint": 1866,
-                  "observedLargestContentfulPaintTs": 188430641,
-                  "observedTraceEnd": 3399,
-                  "observedTraceEndTs": 189963147,
-                  "observedLoad": 1985,
-                  "observedLoadTs": 188549284,
-                  "observedDomContentLoaded": 1857,
-                  "observedDomContentLoadedTs": 188421814,
+                  "observedNavigationStartTs": 406106016,
+                  "observedFirstPaint": 1424,
+                  "observedFirstPaintTs": 407529604,
+                  "observedFirstContentfulPaint": 1424,
+                  "observedFirstContentfulPaintTs": 407529604,
+                  "observedFirstMeaningfulPaint": 1424,
+                  "observedFirstMeaningfulPaintTs": 407529604,
+                  "observedLargestContentfulPaint": 1424,
+                  "observedLargestContentfulPaintTs": 407529604,
+                  "observedTraceEnd": 2865,
+                  "observedTraceEndTs": 408970866,
+                  "observedLoad": 1516,
+                  "observedLoadTs": 407621823,
+                  "observedDomContentLoaded": 1419,
+                  "observedDomContentLoadedTs": 407525455,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0.07833333333333334,
-                  "observedFirstVisualChange": 1877,
-                  "observedFirstVisualChangeTs": 188441626,
-                  "observedLastVisualChange": 2494,
-                  "observedLastVisualChangeTs": 189058626,
-                  "observedSpeedIndex": 1888,
-                  "observedSpeedIndexTs": 188452128
+                  "observedFirstVisualChange": 1427,
+                  "observedFirstVisualChangeTs": 407533016,
+                  "observedLastVisualChange": 2044,
+                  "observedLastVisualChangeTs": 408150016,
+                  "observedSpeedIndex": 1447,
+                  "observedSpeedIndexTs": 407552697
                 },
                 {
                   "lcpInvalidated": false
@@ -13101,18 +13150,18 @@
                   "numScripts": 15,
                   "numStylesheets": 14,
                   "numFonts": 1,
-                  "numTasks": 912,
-                  "numTasksOver10ms": 11,
-                  "numTasksOver25ms": 1,
+                  "numTasks": 928,
+                  "numTasksOver10ms": 12,
+                  "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 7.282,
-                  "throughput": 29713652.977040194,
-                  "maxRtt": 119.108,
-                  "maxServerLatency": 206.601,
-                  "totalByteWeight": 3336361,
-                  "totalTaskTime": 471.8489999999989,
+                  "rtt": 5.183999999999999,
+                  "throughput": 36536952.64785921,
+                  "maxRtt": 83.189,
+                  "maxServerLatency": 153.317,
+                  "totalByteWeight": 3336542,
+                  "totalTaskTime": 416.5839999999979,
                   "mainDocumentTransferSize": 72621
                 }
               ]
@@ -13138,7 +13187,7 @@
       "cookiesCount": 0,
       "trackersGrade": "F",
       "trackersCount": 51,
-      "lighthouse_performance": 0.06363964080810547,
+      "lighthouse_performance": 0.06360511779785157,
       "lighthouse_performanceGrade": "F",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
