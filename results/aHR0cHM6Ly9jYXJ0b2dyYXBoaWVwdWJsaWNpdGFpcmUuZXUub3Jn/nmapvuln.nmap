@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Aug  9 05:13:51 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Wed Aug 10 04:52:46 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.13s latency).
+Host is up (0.15s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -24,20 +24,17 @@ PORT     STATE SERVICE      VERSION
 993/tcp  open  imaps?
 1935/tcp open  rtmp?
 5222/tcp open  xmpp-client?
-| fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-|_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     compression_methods: 
-|     stream_id: 0a8c8b52-55ce-4d02-b69c-ba2cd6a20823
-|     capabilities: 
 |     unknown: 
-|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
+|     compression_methods: 
+|     stream_id: 53fc9873-6990-4c64-93d0-8e8d3ac59333
+|     capabilities: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
@@ -45,18 +42,21 @@ PORT     STATE SERVICE      VERSION
 |       stream:stream
 |       (timeout)
 |_    features: 
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+|_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 5269/tcp open  jabber       ejabberd
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     compression_methods: 
-|     stream_id: 05edbd39-cf0f-4626-9d99-23ac8abbb310
-|     capabilities: 
 |     unknown: 
-|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
+|     compression_methods: 
+|     stream_id: 378f720d-d5c4-4bd9-93ea-089ff886b500
+|     capabilities: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
@@ -65,39 +65,39 @@ PORT     STATE SERVICE      VERSION
 |       (timeout)
 |_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=8/9%Time=62F1ED1D%P=x86_64-alpine-linux-musl%
-SF:r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:str
-SF:eam='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xm
-SF:l:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xm
-SF:l:ns:xmpp-streams'/></stream:error></stream:stream>")%r(HTTPOptions,E3,
-SF:"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://ethe
-SF:rx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><str
-SF:eam:error><not-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-stream
-SF:s'/></stream:error></stream:stream>")%r(RTSPRequest,E3,"<\?xml\x20versi
-SF:on='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org/
-SF:streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-w
-SF:ell-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:err
-SF:or></stream:stream>")%r(RPCCheck,E3,"<\?xml\x20version='1\.0'\?><stream
-SF::stream\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20xmlns='
-SF:jabber:client'\x20xml:lang='en'><stream:error><not-well-formed\x20xmlns
-SF:='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
-SF:")%r(DNSVersionBindReqTCP,E3,"<\?xml\x20version='1\.0'\?><stream:stream
-SF:\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:
-SF:client'\x20xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:i
-SF:etf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(DN
-SF:SStatusRequestTCP,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmln
-SF:s:stream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\
-SF:x20xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:para
-SF:ms:xml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(Help,E3,"<
-SF:\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx
-SF:\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><strea
-SF:m:error><not-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'
-SF:/></stream:error></stream:stream>")%r(SSLSessionReq,E3,"<\?xml\x20versi
-SF:on='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org/
-SF:streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-w
-SF:ell-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:err
-SF:or></stream:stream>");
+SF-Port5222-TCP:V=7.92%I=7%D=8/10%Time=62F339AD%P=x86_64-alpine-linux-musl
+SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
+SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
+SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
+SF:ml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(HTTPOptions,E3
+SF:,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://eth
+SF:erx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><st
+SF:ream:error><not-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-strea
+SF:ms'/></stream:error></stream:stream>")%r(RTSPRequest,E3,"<\?xml\x20vers
+SF:ion='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org
+SF:/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-
+SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
+SF:ror></stream:stream>")%r(RPCCheck,E3,"<\?xml\x20version='1\.0'\?><strea
+SF:m:stream\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20xmlns=
+SF:'jabber:client'\x20xml:lang='en'><stream:error><not-well-formed\x20xmln
+SF:s='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream
+SF:>")%r(DNSVersionBindReqTCP,E3,"<\?xml\x20version='1\.0'\?><stream:strea
+SF:m\x20xmlns:stream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber
+SF::client'\x20xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:
+SF:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(D
+SF:NSStatusRequestTCP,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml
+SF:ns:stream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'
+SF:\x20xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:par
+SF:ams:xml:ns:xmpp-streams'/></stream:error></stream:stream>")%r(Help,E3,"
+SF:<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:stream='http://ether
+SF:x\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stre
+SF:am:error><not-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams
+SF:'/></stream:error></stream:stream>")%r(SSLSessionReq,E3,"<\?xml\x20vers
+SF:ion='1\.0'\?><stream:stream\x20xmlns:stream='http://etherx\.jabber\.org
+SF:/streams'\x20xmlns='jabber:client'\x20xml:lang='en'><stream:error><not-
+SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
+SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Aug  9 05:16:42 2022 -- 1 IP address (1 host up) scanned in 171.48 seconds
+# Nmap done at Wed Aug 10 04:55:41 2022 -- 1 IP address (1 host up) scanned in 174.57 seconds
