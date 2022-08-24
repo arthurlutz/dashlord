@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "template": "vulnerabilities/wordpress/wp-xmlrpc.yaml",
+    "template-url": "https://github.com/projectdiscovery/nuclei-templates/blob/master/vulnerabilities/wordpress/wp-xmlrpc.yaml",
+    "template-id": "wordpress-xmlrpc-file",
+    "info": {
+      "name": "WordPress xmlrpc",
+      "author": [
+        "udit_thakkur"
+      ],
+      "tags": [
+        "wordpress"
+      ],
+      "reference": null,
+      "severity": "info"
+    },
+    "type": "http",
+    "host": "https://arthur.lutz.im/blog/",
+    "matched-at": "https://arthur.lutz.im/blog/xmlrpc.php",
+    "request": "GET /blog/xmlrpc.php HTTP/1.1\r\nHost: arthur.lutz.im\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 405 Method Not Allowed\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAllow: POST\r\nContent-Security-Policy: upgrade-insecure-requests\r\nContent-Security-Policy-Report-Only: default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'\r\nContent-Type: text/plain;charset=UTF-8\r\nDate: Wed, 24 Aug 2022 05:18:29 GMT\r\nPermissions-Policy: interest-cohort=()\r\nServer: nginx\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Content-Type-Options: nosniff\r\nX-Download-Options: noopen\r\nX-Frame-Options: SAMEORIGIN\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Sso-Wat: You've just been SSOed\r\nX-Xss-Protection: 1; mode=block\r\n\r\nXML-RPC server accepts POST requests only.",
+    "ip": "82.65.202.15",
+    "timestamp": "2022-08-24T05:18:29.799533651Z",
+    "curl-command": "curl -X 'GET' -d '' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://arthur.lutz.im/blog/xmlrpc.php'",
+    "matcher-status": true,
+    "matched-line": null
+  }
+]
