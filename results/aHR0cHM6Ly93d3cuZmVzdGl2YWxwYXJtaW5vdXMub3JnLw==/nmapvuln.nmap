@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Sep 16 05:43:53 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
+# Nmap 7.92 scan initiated Sat Sep 17 05:13:59 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
 Nmap scan report for www.festivalparminous.org (51.159.70.213)
-Host is up (0.15s latency).
+Host is up (0.11s latency).
 Other addresses for www.festivalparminous.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -28,21 +28,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     auth_mechanisms: 
 |     capabilities: 
+|     stream_id: 83ddb10d-297e-4e06-9730-5a05ed183dbe
 |     compression_methods: 
+|     features: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
 |     unknown: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.festivalparminous.org
 |       stream:stream
-|       (timeout)
-|     stream_id: 1e822ea7-67ef-4162-b717-d0befa97612f
-|_    features: 
+|_      (timeout)
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -50,23 +50,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     auth_mechanisms: 
 |     capabilities: 
+|     stream_id: ab502f29-3147-40b5-8fc7-75e05ba46951
 |     compression_methods: 
+|     features: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
 |     unknown: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.festivalparminous.org
 |       stream:stream
-|       (timeout)
-|     stream_id: d51906ef-9496-42c1-bb5f-4cfa9b0a5ef8
-|_    features: 
+|_      (timeout)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=9/16%Time=63240D28%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=9/17%Time=632557A5%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -101,4 +101,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Sep 16 05:46:47 2022 -- 1 IP address (1 host up) scanned in 174.29 seconds
+# Nmap done at Sat Sep 17 05:16:49 2022 -- 1 IP address (1 host up) scanned in 170.44 seconds
