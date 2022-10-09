@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Oct  8 05:01:03 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Sun Oct  9 05:17:23 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.084s latency).
+Host is up (0.088s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,21 +27,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     stream_id: 9044bdbc-b87e-4e18-a1e4-3438aa01b53a
+|     stream_id: d81ee667-9f80-445f-b4c1-b26c9d3fe400
+|     auth_mechanisms: 
+|     compression_methods: 
+|     capabilities: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
+|     unknown: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     auth_mechanisms: 
-|     features: 
-|     compression_methods: 
-|_    capabilities: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,23 +49,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     stream_id: 4b010b43-0aa7-4522-a60e-82ba8d6d2998
+|     stream_id: 6a160751-2ad0-4ec1-a203-e7ac9ce61a9a
+|     auth_mechanisms: 
+|     compression_methods: 
+|     capabilities: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
+|     unknown: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     auth_mechanisms: 
-|     features: 
-|     compression_methods: 
-|_    capabilities: 
+|_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=10/8%Time=6341041B%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=10/9%Time=6342596F%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -100,4 +100,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Oct  8 05:03:50 2022 -- 1 IP address (1 host up) scanned in 166.67 seconds
+# Nmap done at Sun Oct  9 05:20:10 2022 -- 1 IP address (1 host up) scanned in 166.86 seconds
