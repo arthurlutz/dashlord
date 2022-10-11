@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon Oct 10 05:51:10 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Tue Oct 11 05:40:36 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.16s latency).
+Host is up (0.15s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,21 +27,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     unknown: 
+|     stream_id: 3d87ba84-5adf-4250-8c70-b679751bdbca
+|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
-|     capabilities: 
+|     compression_methods: 
 |     features: 
-|     stream_id: 14c3365a-eb00-447e-9ee8-7266b6ad51fd
-|_    compression_methods: 
+|_    capabilities: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,23 +49,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     unknown: 
+|     stream_id: 2c0d7b70-bfa0-4fe1-83a4-01fba4949bda
+|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
-|     capabilities: 
+|     compression_methods: 
 |     features: 
-|     stream_id: de8dc94b-0415-4f2f-98f6-339855aa8e17
-|_    compression_methods: 
+|_    capabilities: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=10/10%Time=6343B2DD%P=x86_64-alpine-linux-mus
+SF-Port5222-TCP:V=7.92%I=7%D=10/11%Time=634501E2%P=x86_64-alpine-linux-mus
 SF:l%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
 SF:tream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20
 SF:xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:
@@ -100,4 +100,4 @@ SF:rror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Oct 10 05:54:04 2022 -- 1 IP address (1 host up) scanned in 173.16 seconds
+# Nmap done at Tue Oct 11 05:43:29 2022 -- 1 IP address (1 host up) scanned in 173.13 seconds
