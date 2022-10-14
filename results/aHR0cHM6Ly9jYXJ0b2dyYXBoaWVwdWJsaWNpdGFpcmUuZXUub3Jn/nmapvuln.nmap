@@ -1,11 +1,21 @@
-# Nmap 7.92 scan initiated Thu Oct 13 05:53:45 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Fri Oct 14 05:48:54 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.11s latency).
+Host is up (0.12s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
 PORT     STATE SERVICE      VERSION
 22/tcp   open  ssh          OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:7.9p1: 
+|     	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
+|     	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
+|     	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
+|     	EDB-ID:46193	5.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
+|     	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
+|     	1337DAY-ID-32328	5.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
+|     	1337DAY-ID-32009	5.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
+|_    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
 25/tcp   open  smtp         Postfix smtpd
 53/tcp   open  tcpwrapped
 80/tcp   open  http         nginx
@@ -17,45 +27,45 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     stream_id: 11ae50b5-a8fa-4eb1-bd8b-ada7c3303972
+|     capabilities: 
+|     features: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     features: 
+|     unknown: 
+|     auth_mechanisms: 
+|     stream_id: 2fd68917-718a-4449-b8ff-d73a58c29904
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
-|       (timeout)
-|     auth_mechanisms: 
-|     compression_methods: 
-|_    capabilities: 
+|_      (timeout)
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
-5269/tcp open  tcpwrapped
+5269/tcp open  jabber       ejabberd
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     stream_id: 5b659fba-c0a4-4da4-9728-9de505afec63
+|     capabilities: 
+|     features: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     features: 
+|     unknown: 
+|     auth_mechanisms: 
+|     stream_id: 25e2ace2-2a56-487d-bb57-258588ed960f
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
-|       (timeout)
-|     auth_mechanisms: 
-|     compression_methods: 
-|_    capabilities: 
+|_      (timeout)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=10/13%Time=6347A7F6%P=x86_64-alpine-linux-mus
+SF-Port5222-TCP:V=7.92%I=7%D=10/14%Time=6348F854%P=x86_64-alpine-linux-mus
 SF:l%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
 SF:tream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20
 SF:xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:
@@ -90,4 +100,4 @@ SF:rror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Oct 13 05:56:51 2022 -- 1 IP address (1 host up) scanned in 186.26 seconds
+# Nmap done at Fri Oct 14 05:51:45 2022 -- 1 IP address (1 host up) scanned in 170.59 seconds
