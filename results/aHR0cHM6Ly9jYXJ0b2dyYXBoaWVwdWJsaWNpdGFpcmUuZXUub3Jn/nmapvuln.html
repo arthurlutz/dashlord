@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org</pre>
-<p class="lead">Fri Oct 21 05:28:15 2022 – Fri Oct 21 05:31:09 2022<br>1 hosts scanned.
+<p class="lead">Sat Oct 22 05:19:20 2022 – Sat Oct 22 05:22:08 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -212,15 +212,10 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
-<h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    compression_methods: 
     unknown: 
     errors: 
       host-unknown
@@ -228,13 +223,18 @@
         text: This server does not serve cartographiepublicitaire.eu.org
       stream:stream
       (timeout)
+    auth_mechanisms: 
+    compression_methods: 
+    stream_id: a74153f2-9bf0-4e17-b097-05b51fce6e48
     features: 
     capabilities: 
-    auth_mechanisms: 
-    stream_id: db921aa9-cb28-4910-81e3-fc2a2a7bd169
     xmpp: 
       lang: en
       version: 1.0</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
@@ -250,7 +250,6 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    compression_methods: 
     unknown: 
     errors: 
       host-unknown
@@ -258,10 +257,11 @@
         text: This host does not serve cartographiepublicitaire.eu.org
       stream:stream
       (timeout)
+    auth_mechanisms: 
+    compression_methods: 
+    stream_id: 4ae0b9a7-2e8c-4920-8014-acc58b5d0ff4
     features: 
     capabilities: 
-    auth_mechanisms: 
-    stream_id: e18ba827-f072-40b9-bba3-2a9bc704cd04
     xmpp: 
       lang: en
       version: 1.0</pre>
