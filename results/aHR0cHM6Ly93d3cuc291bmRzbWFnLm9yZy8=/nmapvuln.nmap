@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  4 05:01:33 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Sat Nov  5 04:43:09 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.11s latency).
+Host is up (0.086s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,21 +27,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     auth_mechanisms: 
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
+|     stream_id: afcbe021-bc42-4792-9b45-2b19559b7a36
+|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
+|     compression_methods: 
+|     auth_mechanisms: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
 |     capabilities: 
-|     stream_id: 56a12d3c-b881-4723-91fa-730d2a31e59a
-|_    unknown: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,23 +49,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     auth_mechanisms: 
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
+|     stream_id: a32d2982-ed1e-4a1a-bfde-cb1254f1dc24
+|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
+|     compression_methods: 
+|     auth_mechanisms: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
 |     capabilities: 
-|     stream_id: d7a4a558-2adb-463a-9439-98b859d4f7ff
-|_    unknown: 
+|_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=11/4%Time=63649CB9%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=11/5%Time=6365E9EA%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -100,4 +100,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  4 05:04:21 2022 -- 1 IP address (1 host up) scanned in 168.52 seconds
+# Nmap done at Sat Nov  5 04:45:56 2022 -- 1 IP address (1 host up) scanned in 167.13 seconds
