@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Sun Nov  6 04:39:29 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
+# Nmap 7.92 scan initiated Mon Nov  7 04:52:55 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
 Nmap scan report for www.festivalparminous.org (51.159.70.213)
 Host is up (0.11s latency).
 Other addresses for www.festivalparminous.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
@@ -28,9 +28,11 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
 |     unknown: 
+|     stream_id: 16be73bf-aa23-4b45-be0c-37a3cff7ac08
 |     capabilities: 
+|     compression_methods: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
@@ -40,9 +42,7 @@ PORT     STATE SERVICE      VERSION
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     auth_mechanisms: 
-|     compression_methods: 
-|_    stream_id: 5783e4e8-0437-40c7-ab9f-69bf07298733
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -50,9 +50,11 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
 |     unknown: 
+|     stream_id: 56906dfd-aebc-4424-a637-411af20db80f
 |     capabilities: 
+|     compression_methods: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
@@ -62,11 +64,9 @@ PORT     STATE SERVICE      VERSION
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     auth_mechanisms: 
-|     compression_methods: 
-|_    stream_id: f2725546-e69a-4339-a4ad-b7b80c28d3c3
+|_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=11/6%Time=63673A8F%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=11/7%Time=63688F35%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -101,4 +101,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  6 04:42:20 2022 -- 1 IP address (1 host up) scanned in 170.73 seconds
+# Nmap done at Mon Nov  7 04:55:45 2022 -- 1 IP address (1 host up) scanned in 169.90 seconds
