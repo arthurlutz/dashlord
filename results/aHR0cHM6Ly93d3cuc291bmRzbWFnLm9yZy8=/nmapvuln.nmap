@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov 11 04:52:52 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Sat Nov 12 04:45:46 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.084s latency).
+Host is up (0.087s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,14 +27,14 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
+|     stream_id: abdad37f-805d-4ed1-91df-32e8dad953ff
 |     capabilities: 
+|     unknown: 
 |     auth_mechanisms: 
-|     stream_id: fb71c091-2647-4131-85e9-e7bda30c5bc2
+|     compression_methods: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
@@ -49,14 +49,14 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
+|     stream_id: d84ce85b-e3b4-481b-8a1a-45059d372426
 |     capabilities: 
+|     unknown: 
 |     auth_mechanisms: 
-|     stream_id: ce221d47-dfeb-4333-be51-b010f6bd6e90
+|     compression_methods: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
@@ -65,7 +65,7 @@ PORT     STATE SERVICE      VERSION
 |       (timeout)
 |_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=11/11%Time=636DD530%P=x86_64-alpine-linux-mus
+SF-Port5222-TCP:V=7.92%I=7%D=11/12%Time=636F2506%P=x86_64-alpine-linux-mus
 SF:l%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:s
 SF:tream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20
 SF:xml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:
@@ -100,4 +100,4 @@ SF:rror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov 11 04:55:39 2022 -- 1 IP address (1 host up) scanned in 167.29 seconds
+# Nmap done at Sat Nov 12 04:48:33 2022 -- 1 IP address (1 host up) scanned in 167.38 seconds
