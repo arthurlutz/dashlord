@@ -5,17 +5,16 @@
     "http": {
       "url": "https://arthur.lutz.im",
       "algorithm_version": 2,
-      "end_time": "Sun, 08 Jan 2023 04:24:10 GMT",
+      "end_time": "Mon, 09 Jan 2023 04:24:19 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
       "response_headers": {
         "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html",
-        "Date": "Sun, 08 Jan 2023 04:24:06 GMT",
-        "Permissions-Policy": "interest-cohort=()",
+        "Date": "Mon, 09 Jan 2023 04:24:16 GMT",
+        "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
         "Transfer-Encoding": "chunked",
@@ -26,9 +25,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 32883432,
+      "scan_id": 32914347,
       "score": 80,
-      "start_time": "Sun, 08 Jan 2023 04:24:03 GMT",
+      "start_time": "Mon, 09 Jan 2023 04:24:12 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -40,6 +39,27 @@
           "name": "content-security-policy",
           "output": {
             "data": {
+              "default-src": [
+                "data:",
+                "https:",
+                "blob:"
+              ],
+              "object-src": [
+                "https:",
+                "data:",
+                "'unsafe-inline'"
+              ],
+              "script-src": [
+                "https:",
+                "data:",
+                "'unsafe-eval'",
+                "'unsafe-inline'"
+              ],
+              "style-src": [
+                "https:",
+                "data:",
+                "'unsafe-inline'"
+              ],
               "upgrade-insecure-requests": [
                 "'none'"
               ]
@@ -55,7 +75,7 @@
               "insecureSchemeActive": false,
               "insecureSchemePassive": false,
               "strictDynamic": false,
-              "unsafeEval": false,
+              "unsafeEval": true,
               "unsafeInline": true,
               "unsafeInlineStyle": true,
               "unsafeObjects": true
@@ -230,15 +250,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-01-08T04:26:25Z",
-      "next_check_at": "2023-01-08T04:56:12Z",
+      "last_check_at": "2023-01-09T04:20:22Z",
+      "next_check_at": "2023-01-09T04:50:09Z",
       "mute_until": null,
       "favicon_url": null,
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-01-08T04:26:26Z",
+        "tested_at": "2023-01-09T00:21:35Z",
         "expires_at": "2023-03-06T04:34:44Z",
         "valid": true,
         "error": null
@@ -246,12 +266,12 @@
       "metrics": {
         "apdex": 1,
         "timings": {
-          "redirect": 730,
+          "redirect": 957,
           "namelookup": 0,
           "connection": 0,
           "handshake": 0,
-          "response": 155,
-          "total": 885
+          "response": 199,
+          "total": 1156
         }
       },
       "uptimeGrade": "A",
@@ -304,123 +324,123 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
+                "type": "exploitpack",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack",
                 "cvss": "5.8"
               },
               {
+                "type": "exploitpack",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack",
                 "cvss": "5.8"
               },
               {
+                "type": "exploitdb",
                 "is_exploit": "true",
                 "id": "EDB-ID:46516",
-                "type": "exploitdb",
                 "cvss": "5.8"
               },
               {
+                "type": "exploitdb",
                 "is_exploit": "true",
                 "id": "EDB-ID:46193",
-                "type": "exploitdb",
                 "cvss": "5.8"
               },
               {
+                "type": "cve",
                 "is_exploit": "false",
                 "id": "CVE-2019-6111",
-                "type": "cve",
                 "cvss": "5.8"
               },
               {
+                "type": "zdt",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-32328",
-                "type": "zdt",
                 "cvss": "5.8"
               },
               {
+                "type": "zdt",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-32009",
-                "type": "zdt",
                 "cvss": "5.8"
               },
               {
+                "type": "canvas",
                 "is_exploit": "true",
                 "id": "SSH_ENUM",
-                "type": "canvas",
                 "cvss": "5.0"
               },
               {
+                "type": "packetstorm",
                 "is_exploit": "true",
                 "id": "PACKETSTORM:150621",
-                "type": "packetstorm",
                 "cvss": "5.0"
               },
               {
+                "type": "exploitpack",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "type": "exploitpack",
                 "cvss": "5.0"
               },
               {
+                "type": "exploitpack",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "type": "exploitpack",
                 "cvss": "5.0"
               },
               {
+                "type": "exploitdb",
                 "is_exploit": "true",
                 "id": "EDB-ID:45939",
-                "type": "exploitdb",
                 "cvss": "5.0"
               },
               {
+                "type": "exploitdb",
                 "is_exploit": "true",
                 "id": "EDB-ID:45233",
-                "type": "exploitdb",
                 "cvss": "5.0"
               },
               {
+                "type": "cve",
                 "is_exploit": "false",
                 "id": "CVE-2018-15919",
-                "type": "cve",
                 "cvss": "5.0"
               },
               {
+                "type": "cve",
                 "is_exploit": "false",
                 "id": "CVE-2018-15473",
-                "type": "cve",
                 "cvss": "5.0"
               },
               {
+                "type": "cve",
                 "is_exploit": "false",
                 "id": "CVE-2017-15906",
-                "type": "cve",
                 "cvss": "5.0"
               },
               {
+                "type": "zdt",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-31730",
-                "type": "zdt",
                 "cvss": "5.0"
               },
               {
+                "type": "packetstorm",
                 "is_exploit": "true",
                 "id": "PACKETSTORM:151227",
-                "type": "packetstorm",
                 "cvss": "0.0"
               },
               {
+                "type": "metasploit",
                 "is_exploit": "true",
                 "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
-                "type": "metasploit",
                 "cvss": "0.0"
               },
               {
+                "type": "zdt",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-30937",
-                "type": "zdt",
                 "cvss": "0.0"
               }
             ]
@@ -807,7 +827,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "56 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -1017,7 +1037,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "1673151968"
+        "finding": "1673238375"
       },
       {
         "id": "HSTS_time",
@@ -1087,21 +1107,14 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "upgrade-insecure-requests"
-      },
-      {
-        "id": "Content-Security-Policy-Report-Only",
-        "ip": "arthur.lutz.im/82.65.202.15",
-        "port": "443",
-        "severity": "OK",
-        "finding": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'"
+        "finding": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'"
       },
       {
         "id": "Permissions-Policy",
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "interest-cohort=()"
+        "finding": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()"
       },
       {
         "id": "X-XSS-Protection",
@@ -1615,7 +1628,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "157"
+        "finding": "144"
       }
     ],
     "thirdparties": {
@@ -1663,11 +1676,10 @@
       ],
       "cookies": [],
       "headers": {
-        "content-security-policy": "upgrade-insecure-requests",
-        "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html",
-        "date": "Sun, 08 Jan 2023 04:24:37 GMT",
-        "permissions-policy": "interest-cohort=()",
+        "date": "Mon, 09 Jan 2023 04:24:52 GMT",
+        "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
         "x-content-type-options": "nosniff",
@@ -1775,7 +1787,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.250.189.234",
+          "ip": "64.233.182.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1885,42 +1897,8 @@
         },
         {
           "hostname": "i.creativecommons.org",
-          "ip": "172.67.34.140",
+          "ip": "104.20.151.16",
           "geoip": {
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
-            },
             "registered_country": {
               "geoname_id": 6252001,
               "iso_code": "US",
@@ -2080,7 +2058,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.250.189.227",
+          "ip": "142.250.128.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2228,7 +2206,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/",
         "finalUrl": "https://arthur.lutz.im/intro/",
-        "fetchTime": "2023-01-08T04:24:02.023Z",
+        "fetchTime": "2023-01-09T04:24:02.276Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://arthur.lutz.im/) was redirected to https://arthur.lutz.im/intro/. Try testing the second URL directly."
         ],
@@ -2248,7 +2226,7 @@
           "best-practices": {
             "title": "Best Practices",
             "id": "best-practices",
-            "score": 0.73
+            "score": 0.8
           },
           "seo": {
             "title": "SEO",
@@ -2272,49 +2250,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4029,
+            "numericValue": 2717,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3916,
-                  "firstMeaningfulPaint": 4029,
-                  "largestContentfulPaint": 4336,
-                  "firstCPUIdle": 4029,
-                  "interactive": 4029,
-                  "speedIndex": 6267,
+                  "firstContentfulPaint": 2717,
+                  "firstMeaningfulPaint": 2717,
+                  "largestContentfulPaint": 3768,
+                  "firstCPUIdle": 2717,
+                  "interactive": 2717,
+                  "speedIndex": 4882,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 49,
+                  "maxPotentialFID": 42,
                   "cumulativeLayoutShift": 0.08075313568115235,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 213300458,
+                  "observedTimeOriginTs": 260904157,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 213300458,
-                  "observedFirstPaint": 2534,
-                  "observedFirstPaintTs": 215834794,
-                  "observedFirstContentfulPaint": 2534,
-                  "observedFirstContentfulPaintTs": 215834794,
-                  "observedFirstMeaningfulPaint": 2539,
-                  "observedFirstMeaningfulPaintTs": 215839386,
-                  "observedLargestContentfulPaint": 2534,
-                  "observedLargestContentfulPaintTs": 215834794,
-                  "observedTraceEnd": 3731,
-                  "observedTraceEndTs": 217030971,
-                  "observedLoad": 2671,
-                  "observedLoadTs": 215971148,
-                  "observedDomContentLoaded": 2528,
-                  "observedDomContentLoadedTs": 215828916,
+                  "observedNavigationStartTs": 260904157,
+                  "observedFirstPaint": 1941,
+                  "observedFirstPaintTs": 262845283,
+                  "observedFirstContentfulPaint": 1941,
+                  "observedFirstContentfulPaintTs": 262845283,
+                  "observedFirstMeaningfulPaint": 2013,
+                  "observedFirstMeaningfulPaintTs": 262917427,
+                  "observedLargestContentfulPaint": 1941,
+                  "observedLargestContentfulPaintTs": 262845283,
+                  "observedTraceEnd": 3121,
+                  "observedTraceEndTs": 264025171,
+                  "observedLoad": 2063,
+                  "observedLoadTs": 262967340,
+                  "observedDomContentLoaded": 1928,
+                  "observedDomContentLoadedTs": 262832652,
                   "observedCumulativeLayoutShift": 0.08075313568115235,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 2507,
-                  "observedFirstVisualChangeTs": 215807458,
-                  "observedLastVisualChange": 3090,
-                  "observedLastVisualChangeTs": 216390458,
-                  "observedSpeedIndex": 2523,
-                  "observedSpeedIndexTs": 215823200
+                  "observedFirstVisualChange": 1935,
+                  "observedFirstVisualChangeTs": 262839157,
+                  "observedLastVisualChange": 2518,
+                  "observedLastVisualChangeTs": 263422157,
+                  "observedSpeedIndex": 1960,
+                  "observedSpeedIndexTs": 262864318
                 },
                 {
                   "lcpInvalidated": false
@@ -2336,19 +2314,19 @@
                   "numScripts": 8,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 267,
-                  "numTasksOver10ms": 6,
-                  "numTasksOver25ms": 1,
-                  "numTasksOver50ms": 1,
+                  "numTasks": 307,
+                  "numTasksOver10ms": 4,
+                  "numTasksOver25ms": 0,
+                  "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.5580000000000003,
-                  "throughput": 10228678.850833895,
-                  "maxRtt": 164.659,
-                  "maxServerLatency": 61.988,
-                  "totalByteWeight": 471806,
-                  "totalTaskTime": 236.7019999999997,
-                  "mainDocumentTransferSize": 14890
+                  "rtt": 13.709,
+                  "throughput": 17693996.71206201,
+                  "maxRtt": 124.01399999999998,
+                  "maxServerLatency": 63.122000000000014,
+                  "totalByteWeight": 473158,
+                  "totalTaskTime": 128.43599999999998,
+                  "mainDocumentTransferSize": 14942
                 }
               ]
             }
@@ -2385,7 +2363,7 @@
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.64,
       "lighthouse_accessibilityGrade": "C",
-      "lighthouse_best-practices": 0.73,
+      "lighthouse_best-practices": 0.8,
       "lighthouse_best-practicesGrade": "B",
       "lighthouse_seo": 0.85,
       "lighthouse_seoGrade": "A",
@@ -2399,17 +2377,16 @@
     "http": {
       "url": "https://arthur.lutz.im/blog/",
       "algorithm_version": 2,
-      "end_time": "Sun, 08 Jan 2023 04:24:10 GMT",
+      "end_time": "Mon, 09 Jan 2023 04:24:19 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
       "response_headers": {
         "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html",
-        "Date": "Sun, 08 Jan 2023 04:24:06 GMT",
-        "Permissions-Policy": "interest-cohort=()",
+        "Date": "Mon, 09 Jan 2023 04:24:16 GMT",
+        "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
         "Transfer-Encoding": "chunked",
@@ -2420,9 +2397,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 32883432,
+      "scan_id": 32914347,
       "score": 80,
-      "start_time": "Sun, 08 Jan 2023 04:24:03 GMT",
+      "start_time": "Mon, 09 Jan 2023 04:24:12 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -2434,6 +2411,27 @@
           "name": "content-security-policy",
           "output": {
             "data": {
+              "default-src": [
+                "data:",
+                "https:",
+                "blob:"
+              ],
+              "object-src": [
+                "https:",
+                "data:",
+                "'unsafe-inline'"
+              ],
+              "script-src": [
+                "https:",
+                "data:",
+                "'unsafe-eval'",
+                "'unsafe-inline'"
+              ],
+              "style-src": [
+                "https:",
+                "data:",
+                "'unsafe-inline'"
+              ],
               "upgrade-insecure-requests": [
                 "'none'"
               ]
@@ -2449,7 +2447,7 @@
               "insecureSchemeActive": false,
               "insecureSchemePassive": false,
               "strictDynamic": false,
-              "unsafeEval": false,
+              "unsafeEval": true,
               "unsafeInline": true,
               "unsafeInlineStyle": true,
               "unsafeObjects": true
@@ -2654,124 +2652,124 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
-                "is_exploit": "true",
+                "type": "exploitpack",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitpack",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitdb",
+                "cvss": "5.8",
                 "id": "EDB-ID:46516",
-                "type": "exploitdb",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitdb",
+                "cvss": "5.8",
                 "id": "EDB-ID:46193",
-                "type": "exploitdb",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "false",
+                "type": "cve",
+                "cvss": "5.8",
                 "id": "CVE-2019-6111",
-                "type": "cve",
-                "cvss": "5.8"
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "true",
+                "type": "zdt",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32328",
-                "type": "zdt",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "zdt",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32009",
-                "type": "zdt",
-                "cvss": "5.8"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
-                "id": "SSH_ENUM",
                 "type": "canvas",
-                "cvss": "5.0"
+                "cvss": "5.0",
+                "id": "SSH_ENUM",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "packetstorm",
+                "cvss": "5.0",
                 "id": "PACKETSTORM:150621",
-                "type": "packetstorm",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitpack",
+                "cvss": "5.0",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "type": "exploitpack",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitpack",
+                "cvss": "5.0",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "type": "exploitpack",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitdb",
+                "cvss": "5.0",
                 "id": "EDB-ID:45939",
-                "type": "exploitdb",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "type": "exploitdb",
+                "cvss": "5.0",
                 "id": "EDB-ID:45233",
-                "type": "exploitdb",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "false",
+                "type": "cve",
+                "cvss": "5.0",
                 "id": "CVE-2018-15919",
-                "type": "cve",
-                "cvss": "5.0"
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "false",
+                "type": "cve",
+                "cvss": "5.0",
                 "id": "CVE-2018-15473",
-                "type": "cve",
-                "cvss": "5.0"
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "false",
+                "type": "cve",
+                "cvss": "5.0",
                 "id": "CVE-2017-15906",
-                "type": "cve",
-                "cvss": "5.0"
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "true",
+                "type": "zdt",
+                "cvss": "5.0",
                 "id": "1337DAY-ID-31730",
-                "type": "zdt",
-                "cvss": "5.0"
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
-                "id": "PACKETSTORM:151227",
                 "type": "packetstorm",
-                "cvss": "0.0"
+                "cvss": "0.0",
+                "id": "PACKETSTORM:151227",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
-                "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
                 "type": "metasploit",
-                "cvss": "0.0"
+                "cvss": "0.0",
+                "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
-                "id": "1337DAY-ID-30937",
                 "type": "zdt",
-                "cvss": "0.0"
+                "cvss": "0.0",
+                "id": "1337DAY-ID-30937",
+                "is_exploit": "true"
               }
             ]
           }
@@ -3157,7 +3155,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "57 >= 30 days"
+        "finding": "56 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -3367,7 +3365,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "1673151954"
+        "finding": "1673238366"
       },
       {
         "id": "HSTS_time",
@@ -3437,21 +3435,14 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "upgrade-insecure-requests"
-      },
-      {
-        "id": "Content-Security-Policy-Report-Only",
-        "ip": "arthur.lutz.im/82.65.202.15",
-        "port": "443",
-        "severity": "OK",
-        "finding": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'"
+        "finding": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'"
       },
       {
         "id": "Permissions-Policy",
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "OK",
-        "finding": "interest-cohort=()"
+        "finding": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()"
       },
       {
         "id": "X-XSS-Protection",
@@ -3965,7 +3956,7 @@
         "ip": "arthur.lutz.im/82.65.202.15",
         "port": "443",
         "severity": "INFO",
-        "finding": "102"
+        "finding": "142"
       }
     ],
     "thirdparties": {
@@ -3993,12 +3984,11 @@
       ],
       "cookies": [],
       "headers": {
-        "content-security-policy": "upgrade-insecure-requests",
-        "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
+        "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 08 Jan 2023 04:24:41 GMT",
+        "date": "Mon, 09 Jan 2023 04:24:42 GMT",
         "link": "<https://arthur.lutz.im/blog/wp-json/>; rel=\"https://api.w.org/\"",
-        "permissions-policy": "interest-cohort=()",
+        "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
         "x-content-type-options": "nosniff",
@@ -4371,7 +4361,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/blog/",
         "finalUrl": "https://arthur.lutz.im/blog/",
-        "fetchTime": "2023-01-08T04:23:48.330Z",
+        "fetchTime": "2023-01-09T04:24:10.763Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -4413,49 +4403,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 2923,
+            "numericValue": 3015,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2923,
-                  "firstMeaningfulPaint": 2923,
-                  "largestContentfulPaint": 12400,
-                  "firstCPUIdle": 2923,
-                  "interactive": 2923,
-                  "speedIndex": 6265,
+                  "firstContentfulPaint": 3015,
+                  "firstMeaningfulPaint": 3015,
+                  "largestContentfulPaint": 4181,
+                  "firstCPUIdle": 3015,
+                  "interactive": 3015,
+                  "speedIndex": 5915,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 25,
+                  "maxPotentialFID": 24,
                   "cumulativeLayoutShift": 0.04453304121229384,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 123075126,
+                  "observedTimeOriginTs": 219687019,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 123075126,
-                  "observedFirstPaint": 3103,
-                  "observedFirstPaintTs": 126177916,
-                  "observedFirstContentfulPaint": 3103,
-                  "observedFirstContentfulPaintTs": 126177916,
-                  "observedFirstMeaningfulPaint": 3103,
-                  "observedFirstMeaningfulPaintTs": 126177916,
-                  "observedLargestContentfulPaint": 3253,
-                  "observedLargestContentfulPaintTs": 126328354,
-                  "observedTraceEnd": 4288,
-                  "observedTraceEndTs": 127363120,
-                  "observedLoad": 3229,
-                  "observedLoadTs": 126304202,
-                  "observedDomContentLoaded": 3089,
-                  "observedDomContentLoadedTs": 126164429,
+                  "observedNavigationStartTs": 219687019,
+                  "observedFirstPaint": 2443,
+                  "observedFirstPaintTs": 222130287,
+                  "observedFirstContentfulPaint": 2443,
+                  "observedFirstContentfulPaintTs": 222130287,
+                  "observedFirstMeaningfulPaint": 2443,
+                  "observedFirstMeaningfulPaintTs": 222130287,
+                  "observedLargestContentfulPaint": 2840,
+                  "observedLargestContentfulPaintTs": 222527158,
+                  "observedTraceEnd": 3934,
+                  "observedTraceEndTs": 223621412,
+                  "observedLoad": 2878,
+                  "observedLoadTs": 222565164,
+                  "observedDomContentLoaded": 2418,
+                  "observedDomContentLoadedTs": 222105168,
                   "observedCumulativeLayoutShift": 0.04453304121229384,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 3103,
-                  "observedFirstVisualChangeTs": 126178126,
-                  "observedLastVisualChange": 3703,
-                  "observedLastVisualChangeTs": 126778126,
-                  "observedSpeedIndex": 3185,
-                  "observedSpeedIndexTs": 126260116
+                  "observedFirstVisualChange": 2437,
+                  "observedFirstVisualChangeTs": 222124019,
+                  "observedLastVisualChange": 3054,
+                  "observedLastVisualChangeTs": 222741019,
+                  "observedSpeedIndex": 2743,
+                  "observedSpeedIndexTs": 222430269
                 },
                 {
                   "lcpInvalidated": false
@@ -4477,19 +4467,19 @@
                   "numScripts": 9,
                   "numStylesheets": 8,
                   "numFonts": 0,
-                  "numTasks": 902,
-                  "numTasksOver10ms": 3,
+                  "numTasks": 799,
+                  "numTasksOver10ms": 4,
                   "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.529,
-                  "throughput": 17429503.495249916,
-                  "maxRtt": 98.523,
-                  "maxServerLatency": 193.21,
-                  "totalByteWeight": 3771349,
-                  "totalTaskTime": 181.0829999999993,
-                  "mainDocumentTransferSize": 38423
+                  "rtt": 8.678,
+                  "throughput": 25974685.157957897,
+                  "maxRtt": 150.08700000000002,
+                  "maxServerLatency": 92.19399999999999,
+                  "totalByteWeight": 3773150,
+                  "totalTaskTime": 191.3419999999991,
+                  "mainDocumentTransferSize": 38475
                 }
               ]
             }
@@ -4536,7 +4526,7 @@
     "http": {
       "url": "https://www.festivalparminous.org/",
       "algorithm_version": 2,
-      "end_time": "Sun, 08 Jan 2023 04:23:54 GMT",
+      "end_time": "Mon, 09 Jan 2023 04:24:35 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -4545,7 +4535,7 @@
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Sun, 08 Jan 2023 04:23:52 GMT",
+        "Date": "Mon, 09 Jan 2023 04:24:32 GMT",
         "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -4558,9 +4548,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 32883430,
+      "scan_id": 32914350,
       "score": 80,
-      "start_time": "Sun, 08 Jan 2023 04:23:49 GMT",
+      "start_time": "Mon, 09 Jan 2023 04:24:29 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -4760,16 +4750,16 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-01-08T04:12:49Z",
-      "next_check_at": "2023-01-08T04:42:32Z",
+      "last_check_at": "2023-01-09T04:05:12Z",
+      "next_check_at": "2023-01-09T04:35:01Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-32x32.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-01-08T02:13:10Z",
-        "expires_at": "2023-01-23T11:30:45Z",
+        "tested_at": "2023-01-09T03:05:18Z",
+        "expires_at": "2023-04-08T04:27:18Z",
         "valid": true,
         "error": null
       },
@@ -4777,11 +4767,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 110,
-          "connection": 183,
-          "handshake": 203,
-          "response": 252,
-          "total": 748
+          "namelookup": 63,
+          "connection": 99,
+          "handshake": 122,
+          "response": 167,
+          "total": 450
         }
       },
       "uptimeGrade": "A",
@@ -5089,7 +5079,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "039DB51D9D48792B816C5F0977A3082C7B28"
+        "finding": "039E54F7F68E197222BF438F45362D75736D"
       },
       {
         "id": "cert_serialNumberLen",
@@ -5103,21 +5093,21 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "7D97089AB10D21FD6485403D2F95E0271C301E0E"
+        "finding": "E323BB2818F8F6903B1526D2E14A3690F9D3C0FB"
       },
       {
         "id": "cert_fingerprintSHA256",
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "DF86516409FE0B8BE7F3F8EBFB3C8247F580DC58494D7F214C972DD9DA0C380A"
+        "finding": "26251F9E2FB2E92CB047C0EB7BFCE59C345D201599F34B8F03CE7787245AA4AF"
       },
       {
         "id": "cert",
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\nMIIFujCCBKKgAwIBAgISA521HZ1IeSuBbF8Jd6MILHsoMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMjEwMjUxMTMwNDZaFw0yMzAxMjMxMTMwNDVaMCQxIjAgBgNVBAMTGXd3dy5mZXN0aXZhbHBhcm1pbm91cy5vcmcwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDkPTj7H/rr1nzMZDeRsMnRcazToB0Ukd3hQvRi9MuP4C8gSFBgK7d7Y+615ovi57WxXaJflyTtU76U/w37Z8OKvDXtjaV5+oo4Uz+X4UN4TSsbzvMGNmNWlj1NDWXWcRSk/4U6NSR+/zpb8o6LE/Mv23JWPnzqHffCNqSCJZDq4y8xtQAiHnM2CLWOHUODB6PBCfU+Qt7s9eRBv9530Oz0CN+sOBEMAX9R1so9hUHXkGmXKLIH4tEnvF2MkidaUnoE7j1hJPVBA+90oAzNjC7iGiTNNbmUFWi7vXPAIWdOX0Ip07/A82OK9ESw+XFBAd1m2O5xbpnhGFxA8Pp0dzz7Do/D9pYe4gZ4SAVu+t/yHIKTtEyfvHD1OWeaxscNeLwy9ORB2fvt5DZ6B32CE5N8lAuVZkiOH/in/XFdom+M0Wbt9IfjX+eCykaMyz9SkelEjaNZTmANw+njFMRPf7xU+NWdiSTTVM2unzufI1Av/g4x2pDfiLrw20nIvUyJXIkCAwEAAaOCAlYwggJSMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU8pvaQiNqpcuvKwaLH7Kq3xUOCtAwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wJAYDVR0RBB0wG4IZd3d3LmZlc3RpdmFscGFybWlub3VzLm9yZzBMBgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQYGCisGAQQB1nkCBAIEgfcEgfQA8gB3AHoyjFTYty22IOo44FIe6YQWcDIThU070ivBOlejUutSAAABhA8fspQAAAQDAEgwRgIhAN0+Xdr9eFaRzo0Mh+PLnfuMw3VCHu/mOZMEhNMMLctDAiEAj15P767FUnzBIzFEPljvyaI/Wd9v9Trv6HBa5Bo3HtEAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYQPH7SlAAAEAwBIMEYCIQDCgJa9eF7M7f+gN3hwDrFmVMCNfEa8ovGO98X9DcmGJAIhAKn2eoLfRD0aCE+GMd7blNY8eYPDHZtBfssHNcdPS2inMA0GCSqGSIb3DQEBCwUAA4IBAQB4QvnOjwHGAsOmEfaV9RjD/ra7HQ8EvSOlXQq8Wkah7McHLEMQEq1rD/ls6xK5jVvfgXwvAx0UzROVjJ2QmJ3kcJ7UpZiiCxIxpptzhR3h1BXKrUsk4VxXVTwlQnsySVHFWq/YaPj8bE4sIjjupmxiDmofXWjtIUMou8qUWjhXz0sxaRY0AUCvMRRoke7RvlcrkOSQF2eurdNlRXMX9mbQVdacl3ag3i5tWGzEA5tSe7MYdSK67xsyJa1CoZm92JqnlN1ze0UJP9pcHU+kxQEDwxpjZFKtpBxUQbON4HN6WTy3UO72FC8MB1gfPG+tkJK9muIcIb+TeeHnNzSqIfvH\n-----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIFuTCCBKGgAwIBAgISA55U9/aOGXIiv0OPRTYtdXNtMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzAxMDgwNDI3MTlaFw0yMzA0MDgwNDI3MThaMCQxIjAgBgNVBAMTGXd3dy5mZXN0aXZhbHBhcm1pbm91cy5vcmcwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQC8Qvy7akQMyC6KOdxOlEwdGPW+Ybsg9CNJSQhxa62ms5MEt2cZJuxkBU+RQdBWUcKsIxV6sl1MCumFPi6Y9EB3K3VSA7ADie+91CARaDA+bub7KPoP2wZG6tnI9KMthTSRli2jUf1ydxC5JxT3eZO2Sem2OVqZgkdgW6V1DVqL8eNfeJVe2S2YN/BWABCM3aPmGLw1w6Afbiac39oHT41rvQknL4GFYe14QQMoECiJsLtfIPDUWPG6VKNw8obqiO+SjWAZ6ClemxuXlE1Vqc2FF4rfqVNZw9VKJ9apSs+a72hSH9cVhNrUkQcclaEg6QTf8yPo/Qvcps3B00cCFokQDwvGtRBro+8PNgqILCWcAMIscXPI/UjuovdTQE/+tQcSO997SXD5/PjaMq9qSbCiWh90MJnntxgwcbqBIIiqpyAXkWvibDxqvMX6+iRdAmoKINWwM42ESqX0xvfkUXSFngpNqWWxoovd3TdEz+oNi6+bjgPXZHT5atonLTD15zcCAwEAAaOCAlUwggJRMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUnZlFO8YzD0xAUo6Fnbg89fqhbr4wHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wJAYDVR0RBB0wG4IZd3d3LmZlc3RpdmFscGFybWlub3VzLm9yZzBMBgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQUGCisGAQQB1nkCBAIEgfYEgfMA8QB2AHoyjFTYty22IOo44FIe6YQWcDIThU070ivBOlejUutSAAABhY/Y+WAAAAQDAEcwRQIgXklq7fi14h6ahWuDPrJU9WCwMSiuxEKz2BW0yMrkPZkCIQC4xXLZQPj789J3YSl4sna3HHlx23oVnxKKhyi8zGfNeQB3AK33vvp8/xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABhY/Y+WAAAAQDAEgwRgIhAIO+bH0zSVUmkmnXhlvo/ERfgVtD8PjnhCyKli2yESjKAiEA5ENeDGR7jB1RbioG6MjssMt+du47GyTocGMzpQOdYJIwDQYJKoZIhvcNAQELBQADggEBAH4Zvv4n7wtTlmCLNuOPYePJ6/b2vCh8MOJ88R3/F71BAvSBelMWpj68wGi2aOb6uFBXGdNK9C+WXqzHS8aZZBIfFuhpqjzjf8XW6795PvsPale98rWLOTBLj1H79mNfcnoPiqBWRb/XGOpCF5Wp4+iHk+GTUMV+eHD13O5Js6K9y3LlRmx4vBQtXwS8gtBoq9wu6YOtdDCht/579ry38J/Rb9CVj+5Tj3YvbZLoQg5d0Xe25iTIrDjQWxSSdFMoA2JT3C6Z/kkvMbhJLiacUBULRu1GyuaNVJ/Z1thblGRYBrKT3IKvWMSj6zME41SqiKfL52aKKFSF3eNoOMnkeCg=\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -5165,22 +5155,22 @@
         "id": "cert_expirationStatus",
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
-        "severity": "MEDIUM",
-        "finding": "expires < 30 days (15)"
+        "severity": "OK",
+        "finding": "89 >= 30 days"
       },
       {
         "id": "cert_notBefore",
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "2022-10-25 11:30"
+        "finding": "2023-01-08 04:27"
       },
       {
         "id": "cert_notAfter",
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
-        "severity": "MEDIUM",
-        "finding": "2023-01-23 11:30"
+        "severity": "OK",
+        "finding": "2023-04-08 04:27"
       },
       {
         "id": "cert_extlifeSpan",
@@ -5376,7 +5366,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1673151932"
+        "finding": "1673238396"
       },
       {
         "id": "HSTS_time",
@@ -5598,7 +5588,7 @@
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
         "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=DF86516409FE0B8BE7F3F8EBFB3C8247F580DC58494D7F214C972DD9DA0C380A"
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=26251F9E2FB2E92CB047C0EB7BFCE59C345D201599F34B8F03CE7787245AA4AF"
       },
       {
         "id": "LOGJAM-common_primes",
@@ -5974,7 +5964,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "97"
+        "finding": "159"
       }
     ],
     "thirdparties": {
@@ -5984,7 +5974,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 08 Jan 2023 04:24:25 GMT",
+        "date": "Mon, 09 Jan 2023 04:25:09 GMT",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -6261,8 +6251,10 @@
       {
         "requestedUrl": "https://www.festivalparminous.org/",
         "finalUrl": "https://www.festivalparminous.org/",
-        "fetchTime": "2023-01-08T04:23:39.809Z",
-        "runWarnings": [],
+        "fetchTime": "2023-01-09T04:24:17.477Z",
+        "runWarnings": [
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
+        ],
         "categories": {
           "performance": {
             "title": "Performance",
@@ -6303,49 +6295,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3438,
+            "numericValue": 3434,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3438,
-                  "firstMeaningfulPaint": 3438,
-                  "largestContentfulPaint": 4134,
-                  "firstCPUIdle": 3438,
-                  "interactive": 3438,
-                  "speedIndex": 3495,
+                  "firstContentfulPaint": 3434,
+                  "firstMeaningfulPaint": 3434,
+                  "largestContentfulPaint": 4121,
+                  "firstCPUIdle": 3434,
+                  "interactive": 3434,
+                  "speedIndex": 4384,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.0006490071614583333,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 186214527,
+                  "observedTimeOriginTs": 164037640,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 186214527,
-                  "observedFirstPaint": 1001,
-                  "observedFirstPaintTs": 187215958,
-                  "observedFirstContentfulPaint": 1001,
-                  "observedFirstContentfulPaintTs": 187215958,
-                  "observedFirstMeaningfulPaint": 1022,
-                  "observedFirstMeaningfulPaintTs": 187236246,
-                  "observedLargestContentfulPaint": 1022,
-                  "observedLargestContentfulPaintTs": 187236246,
-                  "observedTraceEnd": 2209,
-                  "observedTraceEndTs": 188423712,
-                  "observedLoad": 1153,
-                  "observedLoadTs": 187367310,
-                  "observedDomContentLoaded": 1010,
-                  "observedDomContentLoadedTs": 187224441,
+                  "observedNavigationStartTs": 164037640,
+                  "observedFirstPaint": 1644,
+                  "observedFirstPaintTs": 165681186,
+                  "observedFirstContentfulPaint": 1644,
+                  "observedFirstContentfulPaintTs": 165681186,
+                  "observedFirstMeaningfulPaint": 1668,
+                  "observedFirstMeaningfulPaintTs": 165705298,
+                  "observedLargestContentfulPaint": 1668,
+                  "observedLargestContentfulPaintTs": 165705298,
+                  "observedTraceEnd": 2976,
+                  "observedTraceEndTs": 167013311,
+                  "observedLoad": 1917,
+                  "observedLoadTs": 165954749,
+                  "observedDomContentLoaded": 1652,
+                  "observedDomContentLoadedTs": 165690076,
                   "observedCumulativeLayoutShift": 0.0006490071614583333,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1011,
-                  "observedFirstVisualChangeTs": 187225527,
-                  "observedLastVisualChange": 1194,
-                  "observedLastVisualChangeTs": 187408527,
-                  "observedSpeedIndex": 1024,
-                  "observedSpeedIndexTs": 187238843
+                  "observedFirstVisualChange": 1639,
+                  "observedFirstVisualChangeTs": 165676640,
+                  "observedLastVisualChange": 1922,
+                  "observedLastVisualChangeTs": 165959640,
+                  "observedSpeedIndex": 1661,
+                  "observedSpeedIndexTs": 165699038
                 },
                 {
                   "lcpInvalidated": false
@@ -6367,18 +6359,18 @@
                   "numScripts": 4,
                   "numStylesheets": 8,
                   "numFonts": 2,
-                  "numTasks": 269,
-                  "numTasksOver10ms": 4,
-                  "numTasksOver25ms": 1,
-                  "numTasksOver50ms": 0,
+                  "numTasks": 291,
+                  "numTasksOver10ms": 7,
+                  "numTasksOver25ms": 3,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 90.38000000000001,
-                  "throughput": 30014945.174732428,
-                  "maxRtt": 90.38000000000001,
-                  "maxServerLatency": 84.36899999999996,
+                  "rtt": 155.66899999999998,
+                  "throughput": 17683159.615863204,
+                  "maxRtt": 155.66899999999998,
+                  "maxServerLatency": 82.90500000000003,
                   "totalByteWeight": 2094435,
-                  "totalTaskTime": 179.74599999999953,
+                  "totalTaskTime": 284.70999999999964,
                   "mainDocumentTransferSize": 133617
                 }
               ]
@@ -6402,8 +6394,8 @@
       "apdexGrade": "A",
       "uptime": 100,
       "uptimeGrade": "A",
-      "testsslExpireSoon": true,
-      "testsslExpireDate": "2023-01-23T11:30:00.000Z",
+      "testsslExpireSoon": false,
+      "testsslExpireDate": "2023-04-08T04:27:00.000Z",
       "testsslGrade": "A+",
       "cookiesGrade": "A",
       "cookiesCount": 0,
@@ -6424,219 +6416,7 @@
   {
     "404": null,
     "url": "https://www.soundsmag.org/",
-    "http": {
-      "url": "https://www.soundsmag.org/",
-      "algorithm_version": 2,
-      "end_time": "Sun, 08 Jan 2023 04:28:55 GMT",
-      "grade": "B",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Composed-By": "SPIP 4.1.5 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Security-Policy-Report-Only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
-        "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 08 Jan 2023 04:28:53 GMT",
-        "Link": "<https://www.soundsmag.org/local/cache-css/e2d9bf1c04dae5d42ff83b92205a01f5.css?1668420708>;rel=\"preload\";as=\"style\";",
-        "Permissions-Policy": "interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=15768000",
-        "Transfer-Encoding": "chunked",
-        "Vary": "Cookie, Accept-Encoding",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-Robots-Tag": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-Spip-Cache": "86400",
-        "X-XSS-Protection": "1, mode=block"
-      },
-      "scan_id": 32883502,
-      "score": 70,
-      "start_time": "Sun, 08 Jan 2023 04:28:50 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 2,
-      "tests_passed": 10,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "upgrade-insecure-requests": [
-                "'none'"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": false,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://www.soundsmag.org/",
-            "redirects": true,
-            "route": [
-              "http://www.soundsmag.org/",
-              "https://www.soundsmag.org/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=15768000",
-            "includeSubDomains": false,
-            "max-age": 15768000,
-            "preload": false,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
-          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1, mode=block"
-          },
-          "pass": false,
-          "result": "x-xss-protection-header-invalid",
-          "score_description": "X-XSS-Protection header cannot be recognized",
-          "score_modifier": -10
-        }
-      }
-    },
+    "http": null,
     "updownio": null,
     "nmap": null,
     "dependabot": null,
@@ -6940,7 +6720,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "03D9F81456753618FADF1C95C473067DEE61"
+        "finding": "04753525D466E4F9069677DD977FC615E03C"
       },
       {
         "id": "cert_serialNumberLen",
@@ -6954,21 +6734,21 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "16A6EF80ECA849CC8A51877D2A93B55F735BA1DD"
+        "finding": "EBD9EF3A62424AF41F2A35D384A92362F4729B99"
       },
       {
         "id": "cert_fingerprintSHA256",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1EDC7C8A6AFB995F1C4089609D7660CD73FDF7496F0709F8D82D6D5156F7B356"
+        "finding": "301F8F74C83783D1699B137B070C02D422683C088A5C9CB51481300A302CD93D"
       },
       {
         "id": "cert",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\nMIIFqTCCBJGgAwIBAgISA9n4FFZ1Nhj63xyVxHMGfe5hMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMjEwMjUxMTM2MDNaFw0yMzAxMjMxMTM2MDJaMBwxGjAYBgNVBAMTEXd3dy5zb3VuZHNtYWcub3JnMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAozhPolObhuSZ8gvsfeRgGS2XdOxKf7yYOMRuH8TlBQmT8P9Zv6Xc+hslqRNzmUg84jVQPJB64+hay9Aq4clZI8IvF5s+/ubeYBY5sIe8T8ygodWWVKPC7nkUmVtprxNkqRq08LrttPIJpJWUjlNCZWAK9QMDsvwdhgUR1sVCpTvKV4KzT0rlE7mN0ikRohSQwfdiotAC+aeRreO0TGEiuwS7igGwm+SwWHZrN2MrQZqebzmfUEpZQKQLcC40vGziT6nXMFlj8owJ20pcpk5E1Khijtb24dnBaG8xKfn0FI1ECIofuO3a4qig/aFaRrHepADnfUGyVluz3vhT3Xs6fgmDcAYbvqifh9BsJZYU6B2NjVMcwbP46qenaBKb9qxm3uOntYIWtzqtJbm2LWV1FYK5MTY7NcfIlgYkV53CRJH+o//3cLDOKi863KzHl5hKkuWZuknFFCRZ1aq9L23fWctFFbcJXv7u6C3ioNGJNv3vtf/l8tnhBrgJCAhj7yPHAgMBAAGjggJNMIICSTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFDDPzaa5NnN4Aa2J3ORNkXDN9QU0MB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3IzLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcvMBwGA1UdEQQVMBOCEXd3dy5zb3VuZHNtYWcub3JnMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHcAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGEDySIMgAABAMASDBGAiEAlk6tF5yzYTY+LNko7s8FCKGT+qgInSzYcKckO7/xV3ACIQCu96lUQ6x4fSCt/7Xc7QCXnz3h9bk1mPKQDaF8DVv+kgB2AOg+0No+9QY1MudXKLyJa8kD08vREWvs62nhd31tBr1uAAABhA8kiLkAAAQDAEcwRQIhANf6u9YNa6uKerwUuq1sp/DHKBOhID7MkLldD7KrMd0rAiBUXNFs21sRh6bOiUQ7HEX9jLhJXtkI8KiE5qeWXNbJUjANBgkqhkiG9w0BAQsFAAOCAQEAIL8/5o94qPSNnhUBh3zfgArkzJACudKHXI/3qpWIaxEcOLjrbq9S2ZJ4rayGUdAzj649YFbD71HqZ1rlcwHJQYoy3Y0+DUTEEXtsLlscej6T5c21ZiV9TufZx7NYRmpeO52rAf+du81TzJwVp+1YT94EkveU53DW3ITmyXqA8S8qnzLsYelGdDYtRLfKevkkTOPeyOIxqIGrydaX2QZbdMsNPG2J4AJwiaBkboZ+XJlm8bzu3FQb5bhyx5f7An6weA08+lNqaV9dl47+2EltDiS9eF/AeF5xCHtdA7xZ9WYHkHoN/3sKyWk0YeF3pVFZfiGHIQLdcSe755ll1G3NNA==\n-----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIFqDCCBJCgAwIBAgISBHU1JdRm5PkGlnfdl3/GFeA8MA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzAxMDgwNDMyNTBaFw0yMzA0MDgwNDMyNDlaMBwxGjAYBgNVBAMTEXd3dy5zb3VuZHNtYWcub3JnMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA3ow1ns2tyEcFPNB2Une6QDlZO2XJmkIUUuOIAgsoSLXgwk/fbs4FFGfRvS3QtMMBnn/Z2z3IGNjKF5stGdvIh5j5puj2jSciDK2ivzmtGJ9kPUBu7dKlXuc2rWGUlrdWE6FBwXkJhNzZQYlRmWXjbW3sPUBkFKSssgz6OucL6NoRx/P5eMugKCN/Ztaszpt0mUsl0IrI4v1wpK1DlAmHecSuKsp80r9RgAUek+iI+SjoGrBRbzTpJYNPOGj2vAUmmTzylpnPPqElrSg15AVi58I2yKszVCFMSWfilnGYrn/wYRu/gXiBtHr7bHT27bZBJB4W96DFsCDTIQ1+DOlrOBWVNrAGPwT97X+piptOjBPhbIyxi5GPJA5y2GOPY1ZsxONy35FOAOSt6lLpmzTRSNkXhiDPb04KH4yyyVNqiQgn3e3Q5IkEcPjw9tufiDSDT5unU55xSbtM0i3w5TITRTsnBTW43SBx220I1mNhDX3wZ3rE/0yNbP8kgUIs6o/NAgMBAAGjggJMMIICSDAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFBYSBfuwdnn+CTE819z7E8x2pXzdMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3IzLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcvMBwGA1UdEQQVMBOCEXd3dy5zb3VuZHNtYWcub3JnMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHUAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJkAAAGFj94E3AAABAMARjBEAiBYudCQfmW6fUFahUlndV0PGoNp5FRelC4bA7ohjSlT/gIgB+kRITXOmzqaUfQTSLqW8iw1xB8T0ALn5NF98oicv9wAdwCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYWP3gUAAAAEAwBIMEYCIQCKk0IwJVTbZt1gAm61Deg1Cf5wfUyzRAaJIvLNbcDzngIhAMBj5cJV5Zsi/hIr2KTqQKO9Mx//dQWYQHkz5J6nPoepMA0GCSqGSIb3DQEBCwUAA4IBAQBORNORphE7ekKpHpq/uJcKDQJZqpMl7dpzleWfq1lW6hj9vyM0JUZKWtqn6138vthsaNnb2QGweQWjzsIhtAK4XV+2R+kbGIkhrUn1cACjtHGg/xP0rPlF+mJcTgY1DJuvzt9SCUNYI2naStOxTcOPVIaGt/OsXcDnyAsxDY/dZfjfdf4mbSmxA84+LwFtJ7dKmWLbkaFJKsif9aaqVapSusWUMM8JDWnK9TMLIgDWSTTd/PPNhHNIJ0UVGm3G70dyX74HtRv34HFrF1zglP7+C3t2u7/dFvI8xlTch5F9O1AUg0aiHy1busWGlD7XpHTq/QlL4sa0wirkggET+nc4\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -7016,22 +6796,22 @@
         "id": "cert_expirationStatus",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
-        "severity": "MEDIUM",
-        "finding": "expires < 30 days (15)"
+        "severity": "OK",
+        "finding": "89 >= 30 days"
       },
       {
         "id": "cert_notBefore",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "2022-10-25 11:36"
+        "finding": "2023-01-08 04:32"
       },
       {
         "id": "cert_notAfter",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
-        "severity": "MEDIUM",
-        "finding": "2023-01-23 11:36"
+        "severity": "OK",
+        "finding": "2023-04-08 04:32"
       },
       {
         "id": "cert_extlifeSpan",
@@ -7227,7 +7007,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1673152233"
+        "finding": "1673238704"
       },
       {
         "id": "HSTS_time",
@@ -7449,7 +7229,7 @@
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
         "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1EDC7C8A6AFB995F1C4089609D7660CD73FDF7496F0709F8D82D6D5156F7B356"
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=301F8F74C83783D1699B137B070C02D422683C088A5C9CB51481300A302CD93D"
       },
       {
         "id": "LOGJAM-common_primes",
@@ -7825,7 +7605,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "94"
+        "finding": "145"
       }
     ],
     "thirdparties": {
@@ -7836,7 +7616,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 08 Jan 2023 04:29:27 GMT",
+        "date": "Mon, 09 Jan 2023 04:30:29 GMT",
         "link": "<https://www.soundsmag.org/local/cache-css/e2d9bf1c04dae5d42ff83b92205a01f5.css?1668420708>;rel=\"preload\";as=\"style\";",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -8076,7 +7856,7 @@
       {
         "requestedUrl": "https://www.soundsmag.org/",
         "finalUrl": "https://www.soundsmag.org/",
-        "fetchTime": "2023-01-08T04:28:42.484Z",
+        "fetchTime": "2023-01-09T04:29:40.927Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -8094,7 +7874,7 @@
           "best-practices": {
             "title": "Best Practices",
             "id": "best-practices",
-            "score": 0.87
+            "score": 0.93
           },
           "seo": {
             "title": "SEO",
@@ -8118,49 +7898,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3752,
+            "numericValue": 4219,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3227,
-                  "firstMeaningfulPaint": 3227,
-                  "largestContentfulPaint": 3677,
-                  "firstCPUIdle": 3227,
-                  "interactive": 3752,
-                  "speedIndex": 3227,
+                  "firstContentfulPaint": 3244,
+                  "firstMeaningfulPaint": 3244,
+                  "largestContentfulPaint": 4219,
+                  "firstCPUIdle": 3244,
+                  "interactive": 4219,
+                  "speedIndex": 3547,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 10,
-                  "maxPotentialFID": 69,
+                  "totalBlockingTime": 11,
+                  "maxPotentialFID": 72,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 97548454,
+                  "observedTimeOriginTs": 105223161,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 97548454,
-                  "observedFirstPaint": 905,
-                  "observedFirstPaintTs": 98453462,
-                  "observedFirstContentfulPaint": 905,
-                  "observedFirstContentfulPaintTs": 98453462,
-                  "observedFirstMeaningfulPaint": 905,
-                  "observedFirstMeaningfulPaintTs": 98453462,
-                  "observedLargestContentfulPaint": 905,
-                  "observedLargestContentfulPaintTs": 98453462,
-                  "observedTraceEnd": 2025,
-                  "observedTraceEndTs": 99573454,
-                  "observedLoad": 958,
-                  "observedLoadTs": 98506508,
-                  "observedDomContentLoaded": 770,
-                  "observedDomContentLoadedTs": 98318258,
+                  "observedNavigationStartTs": 105223161,
+                  "observedFirstPaint": 1210,
+                  "observedFirstPaintTs": 106433438,
+                  "observedFirstContentfulPaint": 1210,
+                  "observedFirstContentfulPaintTs": 106433438,
+                  "observedFirstMeaningfulPaint": 1210,
+                  "observedFirstMeaningfulPaintTs": 106433438,
+                  "observedLargestContentfulPaint": 1210,
+                  "observedLargestContentfulPaintTs": 106433438,
+                  "observedTraceEnd": 2327,
+                  "observedTraceEndTs": 107550334,
+                  "observedLoad": 1258,
+                  "observedLoadTs": 106481221,
+                  "observedDomContentLoaded": 1006,
+                  "observedDomContentLoadedTs": 106229573,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 897,
-                  "observedFirstVisualChangeTs": 98445454,
-                  "observedLastVisualChange": 897,
-                  "observedLastVisualChangeTs": 98445454,
-                  "observedSpeedIndex": 898,
-                  "observedSpeedIndexTs": 98446062
+                  "observedFirstVisualChange": 1205,
+                  "observedFirstVisualChangeTs": 106428161,
+                  "observedLastVisualChange": 1205,
+                  "observedLastVisualChangeTs": 106428161,
+                  "observedSpeedIndex": 1206,
+                  "observedSpeedIndexTs": 106429076
                 },
                 {
                   "lcpInvalidated": false
@@ -8182,19 +7962,19 @@
                   "numScripts": 3,
                   "numStylesheets": 5,
                   "numFonts": 0,
-                  "numTasks": 192,
+                  "numTasks": 213,
                   "numTasksOver10ms": 3,
-                  "numTasksOver25ms": 2,
+                  "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 85.54899999999999,
-                  "throughput": 13661412.855460221,
-                  "maxRtt": 85.54899999999999,
-                  "maxServerLatency": 2.7960000000000065,
-                  "totalByteWeight": 494585,
-                  "totalTaskTime": 175.61399999999972,
-                  "mainDocumentTransferSize": 20387
+                  "rtt": 114.104,
+                  "throughput": 9340581.505298158,
+                  "maxRtt": 114.104,
+                  "maxServerLatency": 7.477999999999994,
+                  "totalByteWeight": 670219,
+                  "totalTaskTime": 144.2429999999999,
+                  "mainDocumentTransferSize": 20317
                 }
               ]
             }
@@ -8212,9 +7992,8 @@
     "betagouv": null,
     "ecoindex": null,
     "summary": {
-      "httpGrade": "B",
-      "testsslExpireSoon": true,
-      "testsslExpireDate": "2023-01-23T11:36:00.000Z",
+      "testsslExpireSoon": false,
+      "testsslExpireDate": "2023-04-08T04:32:00.000Z",
       "testsslGrade": "A+",
       "cookiesGrade": "A",
       "cookiesCount": 0,
@@ -8224,7 +8003,7 @@
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.95,
       "lighthouse_accessibilityGrade": "A",
-      "lighthouse_best-practices": 0.87,
+      "lighthouse_best-practices": 0.93,
       "lighthouse_best-practicesGrade": "A",
       "lighthouse_seo": 0.68,
       "lighthouse_seoGrade": "B",
@@ -8833,7 +8612,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "53 >= 30 days"
+        "finding": "52 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -9043,7 +8822,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1673152356"
+        "finding": "1673238694"
       },
       {
         "id": "HSTS_time",
@@ -9641,7 +9420,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "153"
+        "finding": "139"
       }
     ],
     "thirdparties": {
@@ -9692,7 +9471,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=6fa10a1acdae12f3019b320b01a701e6b7130b53",
+          "url": "https://syndication.twitter.com/settings?session_id=2caa4a4607279010df15cc90154bb236ef76ef7e",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9708,7 +9487,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22experiment_key%22%3A%22tfw_horizon_timeline_12034%22%2C%22bucket%22%3A%22treatment%22%2C%22version%22%3Anull%2C%22data%22%3A%7B%7D%2C%22context%22%3A%22rufous-eol%22%2C%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1673152267319%2C%22dnt%22%3Afalse%2C%22client_version%22%3A%22a3525f077c700%3A1667415560940%22%2C%22format_version%22%3A1%2C%22widget_origin%22%3A%22%22%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22ddg%22%2C%22section%22%3A%22tfw_horizon_timeline_12034%22%2C%22action%22%3A%22experiment%22%7D%7D&session_id=6fa10a1acdae12f3019b320b01a701e6b7130b53",
+          "url": "https://syndication.twitter.com/i/jot/embeds?l=%7B%22experiment_key%22%3A%22tfw_horizon_timeline_12034%22%2C%22bucket%22%3A%22treatment%22%2C%22version%22%3Anull%2C%22data%22%3A%7B%7D%2C%22context%22%3A%22rufous-eol%22%2C%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1673238618608%2C%22dnt%22%3Afalse%2C%22client_version%22%3A%22a3525f077c700%3A1667415560940%22%2C%22format_version%22%3A1%2C%22widget_origin%22%3A%22%22%2C%22event_namespace%22%3A%7B%22client%22%3A%22tfw%22%2C%22page%22%3A%22ddg%22%2C%22section%22%3A%22tfw_horizon_timeline_12034%22%2C%22action%22%3A%22experiment%22%7D%7D&session_id=2caa4a4607279010df15cc90154bb236ef76ef7e",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9716,7 +9495,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2J1c2luZXNzX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19zZW5zaXRpdmVfbWVkaWFfaW50ZXJzdGl0aWFsXzEzOTYzIjp7ImJ1Y2tldCI6ImludGVyc3RpdGlhbCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2R1cGxpY2F0ZV9zY3JpYmVzX3RvX3NldHRpbmdzIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd192aWRlb19obHNfZHluYW1pY19tYW5pZmVzdHNfMTUwODIiOnsiYnVja2V0IjoidHJ1ZV9iaXRyYXRlIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2JsdWVfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0IjpmYWxzZSwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2dvdl92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19idXNpbmVzc19hZmZpbGlhdGVfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=6fa10a1acdae12f3019b320b01a701e6b7130b53&showHeader=false&showReplies=false&transparent=true&widgetsVersion=a3525f077c700%3A1667415560940",
+          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2J1c2luZXNzX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19zZW5zaXRpdmVfbWVkaWFfaW50ZXJzdGl0aWFsXzEzOTYzIjp7ImJ1Y2tldCI6ImludGVyc3RpdGlhbCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2R1cGxpY2F0ZV9zY3JpYmVzX3RvX3NldHRpbmdzIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd192aWRlb19obHNfZHluYW1pY19tYW5pZmVzdHNfMTUwODIiOnsiYnVja2V0IjoidHJ1ZV9iaXRyYXRlIiwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2JsdWVfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0IjpmYWxzZSwidmVyc2lvbiI6bnVsbH0sInRmd19zaG93X2dvdl92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19idXNpbmVzc19hZmZpbGlhdGVfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=2caa4a4607279010df15cc90154bb236ef76ef7e&showHeader=false&showReplies=false&transparent=true&widgetsVersion=a3525f077c700%3A1667415560940",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9876,7 +9655,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1673152269152%2C%22event_namespace%22%3A%7B%22action%22%3A%22results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22a3525f077c700%3A1667415560940%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22f3a5f97%3A1671225985502%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=6fa10a1acdae12f3019b320b01a701e6b7130b53",
+          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1673238620223%2C%22event_namespace%22%3A%7B%22action%22%3A%22results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22a3525f077c700%3A1667415560940%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22f3a5f97%3A1671225985502%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=2caa4a4607279010df15cc90154bb236ef76ef7e",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10012,7 +9791,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/C9D5xkzWAAEcGBc?format=jpg&name=120x120",
+          "url": "https://pbs.twimg.com/media/C9D5xkzWAAEcGBc?format=jpg&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10020,7 +9799,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZruX7WMAAGEHS?format=jpg&name=360x360",
+          "url": "https://pbs.twimg.com/media/ClZruX7WMAAGEHS?format=jpg&name=medium",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10028,7 +9807,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZruciXIAEplII?format=jpg&name=120x120",
+          "url": "https://pbs.twimg.com/media/ClZruciXIAEplII?format=jpg&name=360x360",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10036,7 +9815,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZru2qXEAAdGIA?format=jpg&name=120x120",
+          "url": "https://pbs.twimg.com/media/ClZru2qXEAAdGIA?format=jpg&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10044,7 +9823,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZrxrMWgAACeth?format=jpg&name=120x120",
+          "url": "https://pbs.twimg.com/media/ClZrxrMWgAACeth?format=jpg&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10052,7 +9831,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/CUgGAJcWEAA3kf4?format=png&name=120x120",
+          "url": "https://pbs.twimg.com/media/CUgGAJcWEAA3kf4?format=png&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10100,7 +9879,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LYKtJCMAAb64G?format=png&name=120x120",
+          "url": "https://pbs.twimg.com/media/B6LYKtJCMAAb64G?format=png&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10108,7 +9887,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LYKZmCMAA9Q6j?format=png&name=120x120",
+          "url": "https://pbs.twimg.com/media/B6LYKZmCMAA9Q6j?format=png&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10132,7 +9911,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LXgTTCYAAPdwk?format=png&name=120x120",
+          "url": "https://pbs.twimg.com/media/B6LXgTTCYAAPdwk?format=png&name=240x240",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10145,6 +9924,86 @@
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
           }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1Yn4uzW0AAZufL?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YafxOWkAA3dQ0?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YahY8XcAEP_Qm?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/D1YMx4QX4AEJ-qf?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DyT2T7WX0AEOIaR?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnRvZwX0AAVVO5?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DjNIyfqX4AADPpG?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnGyYqX0AINSfv?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/DlnGzqdX0AEMIUc?format=jpg&name=240x240",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
+        },
+        {
+          "type": "twitter",
+          "url": "https://pbs.twimg.com/media/C9D5xlLXYAAwvJ3?format=png&name=360x360",
+          "details": {
+            "id": "twitter",
+            "message": "Dont embed twitter scripts, use your own tweet embed"
+          }
         }
       ],
       "cookies": [],
@@ -10152,7 +10011,7 @@
         "content-security-policy": "upgrade-insecure-requests",
         "content-security-policy-report-only": "default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 08 Jan 2023 04:31:05 GMT",
+        "date": "Mon, 09 Jan 2023 04:30:17 GMT",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -10282,7 +10141,27 @@
         },
         {
           "hostname": "www.cartographiepublicitaire.org",
-          "ip": "172.67.222.248",
+          "ip": "104.21.25.55",
+          "geoip": {
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
+        },
+        {
+          "hostname": "platform.twitter.com",
+          "ip": "72.21.91.66",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -10332,74 +10211,6 @@
                 "zh-CN": "美国"
               }
             }
-          }
-        },
-        {
-          "hostname": "platform.twitter.com",
-          "ip": "192.229.163.25",
-          "geoip": {
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 1000,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "time_zone": "America/Chicago"
-            },
-            "registered_country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
-                "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
-                }
-              }
-            ]
           }
         },
         {
@@ -10512,20 +10323,8 @@
         },
         {
           "hostname": "pbs.twimg.com",
-          "ip": "151.101.40.159",
+          "ip": "192.229.173.16",
           "geoip": {
-            "city": {
-              "geoname_id": 5392171,
-              "names": {
-                "de": "San José",
-                "en": "San Jose",
-                "es": "San José",
-                "fr": "San José",
-                "ja": "サンノゼ",
-                "pt-BR": "San José",
-                "ru": "Сан-Хосе"
-              }
-            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -10555,14 +10354,10 @@
               }
             },
             "location": {
-              "accuracy_radius": 20,
-              "latitude": 37.1835,
-              "longitude": -121.7714,
-              "metro_code": 807,
-              "time_zone": "America/Los_Angeles"
-            },
-            "postal": {
-              "code": "95141"
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -10577,23 +10372,7 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 5332921,
-                "iso_code": "CA",
-                "names": {
-                  "de": "Kalifornien",
-                  "en": "California",
-                  "es": "California",
-                  "fr": "Californie",
-                  "ja": "カリフォルニア州",
-                  "pt-BR": "Califórnia",
-                  "ru": "Калифорния",
-                  "zh-CN": "加州"
-                }
-              }
-            ]
+            }
           }
         }
       ]
@@ -10909,13 +10688,13 @@
       {
         "requestedUrl": "https://cartographiepublicitaire.eu.org/",
         "finalUrl": "https://cartographiepublicitaire.eu.org/",
-        "fetchTime": "2023-01-08T04:30:03.903Z",
+        "fetchTime": "2023-01-09T04:29:40.700Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.2561182022094727
+            "score": 0.25925312042236326
           },
           "accessibility": {
             "title": "Accessibility",
@@ -10951,49 +10730,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 16862,
+            "numericValue": 14937,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 7697,
-                  "firstMeaningfulPaint": 7697,
-                  "largestContentfulPaint": 9187,
-                  "firstCPUIdle": 14477,
-                  "interactive": 16862,
-                  "speedIndex": 12560,
-                  "estimatedInputLatency": 940,
-                  "totalBlockingTime": 4229,
-                  "maxPotentialFID": 1574,
+                  "firstContentfulPaint": 7244,
+                  "firstMeaningfulPaint": 7244,
+                  "largestContentfulPaint": 7862,
+                  "firstCPUIdle": 13792,
+                  "interactive": 14937,
+                  "speedIndex": 11101,
+                  "estimatedInputLatency": 1385,
+                  "totalBlockingTime": 3623,
+                  "maxPotentialFID": 2215,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 129742381,
+                  "observedTimeOriginTs": 210425180,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 129742381,
-                  "observedFirstPaint": 2376,
-                  "observedFirstPaintTs": 132118795,
-                  "observedFirstContentfulPaint": 2376,
-                  "observedFirstContentfulPaintTs": 132118795,
-                  "observedFirstMeaningfulPaint": 2376,
-                  "observedFirstMeaningfulPaintTs": 132118795,
-                  "observedLargestContentfulPaint": 2376,
-                  "observedLargestContentfulPaintTs": 132118795,
-                  "observedTraceEnd": 6861,
-                  "observedTraceEndTs": 136602948,
-                  "observedLoad": 5253,
-                  "observedLoadTs": 134995541,
-                  "observedDomContentLoaded": 2338,
-                  "observedDomContentLoadedTs": 132080770,
+                  "observedNavigationStartTs": 210425180,
+                  "observedFirstPaint": 1793,
+                  "observedFirstPaintTs": 212217723,
+                  "observedFirstContentfulPaint": 1793,
+                  "observedFirstContentfulPaintTs": 212217723,
+                  "observedFirstMeaningfulPaint": 1793,
+                  "observedFirstMeaningfulPaintTs": 212217723,
+                  "observedLargestContentfulPaint": 1793,
+                  "observedLargestContentfulPaintTs": 212217723,
+                  "observedTraceEnd": 5666,
+                  "observedTraceEndTs": 216090757,
+                  "observedLoad": 1896,
+                  "observedLoadTs": 212320693,
+                  "observedDomContentLoaded": 1784,
+                  "observedDomContentLoadedTs": 212208789,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 2369,
-                  "observedFirstVisualChangeTs": 132111381,
-                  "observedLastVisualChange": 2968,
-                  "observedLastVisualChangeTs": 132710381,
-                  "observedSpeedIndex": 2381,
-                  "observedSpeedIndexTs": 132123715
+                  "observedFirstVisualChange": 1799,
+                  "observedFirstVisualChangeTs": 212224180,
+                  "observedLastVisualChange": 2399,
+                  "observedLastVisualChangeTs": 212824180,
+                  "observedSpeedIndex": 1809,
+                  "observedSpeedIndexTs": 212234177
                 },
                 {
                   "lcpInvalidated": false
@@ -11011,22 +10790,22 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 87,
+                  "numRequests": 85,
                   "numScripts": 29,
                   "numStylesheets": 13,
                   "numFonts": 1,
-                  "numTasks": 3114,
-                  "numTasksOver10ms": 27,
-                  "numTasksOver25ms": 8,
-                  "numTasksOver50ms": 5,
-                  "numTasksOver100ms": 4,
-                  "numTasksOver500ms": 3,
-                  "rtt": 1.1929999999999996,
-                  "throughput": 19458403.380246382,
-                  "maxRtt": 155.226,
-                  "maxServerLatency": 297.46099999999996,
-                  "totalByteWeight": 2327219,
-                  "totalTaskTime": 3094.632000000167,
+                  "numTasks": 2309,
+                  "numTasksOver10ms": 13,
+                  "numTasksOver25ms": 5,
+                  "numTasksOver50ms": 4,
+                  "numTasksOver100ms": 3,
+                  "numTasksOver500ms": 2,
+                  "rtt": 7.042000000000002,
+                  "throughput": 21622616.194598917,
+                  "maxRtt": 114.003,
+                  "maxServerLatency": 215.59500000000003,
+                  "totalByteWeight": 2310783,
+                  "totalTaskTime": 2326.7569999999964,
                   "mainDocumentTransferSize": 74826
                 }
               ]
@@ -11052,8 +10831,8 @@
       "cookiesGrade": "A",
       "cookiesCount": 0,
       "trackersGrade": "F",
-      "trackersCount": 63,
-      "lighthouse_performance": 0.2561182022094727,
+      "trackersCount": 73,
+      "lighthouse_performance": 0.25925312042236326,
       "lighthouse_performanceGrade": "E",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
