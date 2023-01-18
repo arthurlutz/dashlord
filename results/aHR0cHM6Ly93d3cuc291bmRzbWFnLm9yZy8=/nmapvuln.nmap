@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue Jan 17 04:32:12 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Wed Jan 18 04:45:39 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
 Host is up (0.16s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
@@ -27,20 +27,20 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     capabilities: 
+|     stream_id: f53779da-a195-4ab4-8554-eb65d31da0b4
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     stream_id: c62fb2de-2cff-4bc4-9d70-b181c27010c0
-|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
+|     unknown: 
 |     compression_methods: 
+|     capabilities: 
+|     auth_mechanisms: 
 |_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -49,23 +49,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     capabilities: 
+|     stream_id: 274e421a-2532-458a-bb0c-d4589694668d
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     stream_id: b0b7b643-c16b-43d1-8213-9d9b48f804af
-|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
+|     unknown: 
 |     compression_methods: 
+|     capabilities: 
+|     auth_mechanisms: 
 |_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=1/17%Time=63C624DB%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=1/18%Time=63C77982%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:st
 SF:ream='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20x
 SF:ml:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -100,4 +100,4 @@ SF:ror></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jan 17 04:35:04 2023 -- 1 IP address (1 host up) scanned in 171.97 seconds
+# Nmap done at Wed Jan 18 04:48:31 2023 -- 1 IP address (1 host up) scanned in 172.25 seconds
