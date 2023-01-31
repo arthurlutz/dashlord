@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org</pre>
-<p class="lead">Mon Jan 30 04:33:16 2023 – Mon Jan 30 04:36:07 2023<br>1 hosts scanned.
+<p class="lead">Tue Jan 31 04:34:39 2023 – Tue Jan 31 04:37:33 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -212,19 +212,13 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
-<h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    features: 
-    capabilities: 
-    stream_id: b6c4282d-ec96-489b-8e10-e54d520a6025
-    auth_mechanisms: 
     compression_methods: 
+    auth_mechanisms: 
+    features: 
     errors: 
       host-unknown
       
@@ -234,7 +228,13 @@
     xmpp: 
       lang: en
       version: 1.0
+    capabilities: 
+    stream_id: 3f4013ce-2cd0-4c49-854c-92ecc5d187b9
     unknown: </pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
@@ -250,11 +250,9 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    features: 
-    capabilities: 
-    stream_id: f6273c85-d5bc-49fc-be34-ed59418c8b1e
-    auth_mechanisms: 
     compression_methods: 
+    auth_mechanisms: 
+    features: 
     errors: 
       host-unknown
       
@@ -264,6 +262,8 @@
     xmpp: 
       lang: en
       version: 1.0
+    capabilities: 
+    stream_id: 4b2b5e54-f42e-47ed-9001-011074213873
     unknown: </pre>
 </td></tr>
 </tbody>
