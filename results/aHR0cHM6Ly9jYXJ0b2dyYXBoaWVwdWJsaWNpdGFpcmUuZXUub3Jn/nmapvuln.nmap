@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Feb  1 04:37:12 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Thu Feb  2 04:31:22 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.091s latency).
+Host is up (0.090s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,21 +27,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     stream_id: 0c7a0193-43be-4202-9032-51a3543d2ec6
-|     unknown: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     features: 
-|     compression_methods: 
-|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|_    capabilities: 
+|     capabilities: 
+|     unknown: 
+|     compression_methods: 
+|     stream_id: 3d02cf6a-3407-4621-bdea-e39da59003ba
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     auth_mechanisms: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,23 +49,23 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     stream_id: 1451ccfd-dbc8-4836-83ec-75cf51ea1a9f
-|     unknown: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     features: 
-|     compression_methods: 
-|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
-|_    capabilities: 
+|     capabilities: 
+|     unknown: 
+|     compression_methods: 
+|     stream_id: 4648a2b3-a5de-4746-a2aa-bae33d30f332
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     auth_mechanisms: 
+|_    features: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=2/1%Time=63D9EC84%P=x86_64-alpine-linux-musl%
+SF-Port5222-TCP:V=7.92%I=7%D=2/2%Time=63DB3CA6%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:str
 SF:eam='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xm
 SF:l:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xm
@@ -100,4 +100,4 @@ SF:or></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Feb  1 04:39:59 2023 -- 1 IP address (1 host up) scanned in 167.41 seconds
+# Nmap done at Thu Feb  2 04:34:10 2023 -- 1 IP address (1 host up) scanned in 167.61 seconds
