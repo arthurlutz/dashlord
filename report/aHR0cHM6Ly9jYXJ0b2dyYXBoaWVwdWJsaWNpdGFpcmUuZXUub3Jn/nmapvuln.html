@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org</pre>
-<p class="lead">Sat Feb  4 04:32:42 2023 – Sat Feb  4 04:35:34 2023<br>1 hosts scanned.
+<p class="lead">Sun Feb  5 04:32:09 2023 – Sun Feb  5 04:34:57 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -212,15 +212,16 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+<h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    stream_id: ba0e51fe-8228-4c8e-a69d-7def5c5a9e1d
-    compression_methods: 
+    stream_id: 9d649eca-0073-4322-8e3c-678dec1d510c
     capabilities: 
-    auth_mechanisms: 
-    features: 
     errors: 
       host-unknown
       
@@ -230,11 +231,10 @@
     unknown: 
     xmpp: 
       lang: en
-      version: 1.0</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+      version: 1.0
+    auth_mechanisms: 
+    compression_methods: 
+    features: </pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
@@ -250,11 +250,8 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    stream_id: 2292609c-ebce-4a9d-9677-7d8a999ee56b
-    compression_methods: 
+    stream_id: b1d517b2-ec91-490e-916f-07c34a7cd88b
     capabilities: 
-    auth_mechanisms: 
-    features: 
     errors: 
       host-unknown
       
@@ -264,7 +261,10 @@
     unknown: 
     xmpp: 
       lang: en
-      version: 1.0</pre>
+      version: 1.0
+    auth_mechanisms: 
+    compression_methods: 
+    features: </pre>
 </td></tr>
 </tbody>
 </table></div>
