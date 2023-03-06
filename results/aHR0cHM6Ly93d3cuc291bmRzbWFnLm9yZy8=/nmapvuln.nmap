@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Mar  5 04:33:56 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Mon Mar  6 04:31:53 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.12s latency).
+Host is up (0.091s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -27,8 +27,9 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
 |     features: 
+|     stream_id: f85e8212-0f66-4ba7-a950-46bf9a9e945c
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
@@ -36,12 +37,11 @@ PORT     STATE SERVICE      VERSION
 |       stream:stream
 |       (timeout)
 |     auth_mechanisms: 
-|     capabilities: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     stream_id: 1a7ddf61-ad61-4230-936b-cd0d1980f71f
-|_    compression_methods: 
+|     capabilities: 
+|_    unknown: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -49,8 +49,9 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
 |     features: 
+|     stream_id: 712abf09-a2e0-432e-9f6f-eb1a2c8f5a19
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
@@ -58,14 +59,13 @@ PORT     STATE SERVICE      VERSION
 |       stream:stream
 |       (timeout)
 |     auth_mechanisms: 
-|     capabilities: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     stream_id: 1e1daa83-f227-4452-a988-99385a1d9382
-|_    compression_methods: 
+|     capabilities: 
+|_    unknown: 
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port5222-TCP:V=7.92%I=7%D=3/5%Time=64041BC2%P=x86_64-alpine-linux-musl%
+SF-Port5222-TCP:V=7.92%I=7%D=3/6%Time=64056CC4%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xmlns:str
 SF:eam='http://etherx\.jabber\.org/streams'\x20xmlns='jabber:client'\x20xm
 SF:l:lang='en'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:xm
@@ -100,4 +100,4 @@ SF:or></stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Mar  5 04:36:46 2023 -- 1 IP address (1 host up) scanned in 169.76 seconds
+# Nmap done at Mon Mar  6 04:34:39 2023 -- 1 IP address (1 host up) scanned in 166.35 seconds
