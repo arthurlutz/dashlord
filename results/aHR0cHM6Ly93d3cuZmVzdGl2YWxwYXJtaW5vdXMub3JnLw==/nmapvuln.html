@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org</pre>
-<p class="lead">Fri Mar 31 04:26:21 2023 – Fri Mar 31 04:29:11 2023<br>1 hosts scanned.
+<p class="lead">Sat Apr  1 04:24:20 2023 – Sat Apr  1 04:27:13 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -116,22 +116,10 @@
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">ssh</td>
 <td title="Product">OpenSSH</td>
-<td title="Version">7.9p1 Debian 10+deb10u2</td>
+<td title="Version">8.4p1 Debian 5+deb11u1</td>
 <td title="Extra Info">protocol 2.0</td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openbsd:openssh:7.9p1">cpe:/a:openbsd:openssh:7.9p1</a><h5>vulners</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  cpe:/a:openbsd:openssh:7.9p1: 
-    	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
-    	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
-    	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
-    	EDB-ID:46193	5.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
-    	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
-    	1337DAY-ID-32328	5.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
-    	1337DAY-ID-32009	5.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
-    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*</pre>
-</td></tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openbsd:openssh:8.4p1">cpe:/a:openbsd:openssh:8.4p1</a></td></tr>
 <tr class="success">
 <td title="Port">25</td>
 <td title="Protocol">tcp</td>
@@ -215,59 +203,63 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns='jabber:client' xml:lang='en' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+<h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    unknown: 
     features: 
-    xmpp: 
-      lang: en
-      version: 1.0
+    auth_mechanisms: 
     errors: 
       host-unknown
       
         text: This server does not serve www.festivalparminous.org
       stream:stream
       (timeout)
+    stream_id: ae2cf616-b53f-4bd9-88b6-edb22d529e66
+    unknown: 
     compression_methods: 
-    capabilities: 
-    auth_mechanisms: 
-    stream_id: d39a43be-3edb-49b0-8ea5-db3817f9cd44</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream xmlns:stream='http://etherx.jabber.org/streams' xmlns='jabber:client' xml:lang='en'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+    xmpp: 
+      lang: en
+      version: 1.0
+    capabilities: </pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">jabber</td>
-<td title="Product">ejabberd</td>
+<td title="Service">xmpp-server</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:process-one:ejabberd">cpe:/a:process-one:ejabberd</a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    unknown: 
     features: 
-    xmpp: 
-      lang: en
-      version: 1.0
+    auth_mechanisms: 
     errors: 
       host-unknown
       
         text: This host does not serve www.festivalparminous.org
       stream:stream
       (timeout)
+    stream_id: 5ad5a2a3-969b-4dc1-bbd3-00f371a0a2e8
+    unknown: 
     compression_methods: 
-    capabilities: 
-    auth_mechanisms: 
-    stream_id: 42109d79-f75f-4a17-b23d-718d1e09153c</pre>
+    xmpp: 
+      lang: en
+      version: 1.0
+    capabilities: </pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' xmlns='jabber:server' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns:stream='http://etherx.jabber.org/streams' from=''&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -292,8 +284,8 @@
 <td>tcp</td>
 <td>ssh</td>
 <td>OpenSSH</td>
-<td>7.9p1 Debian 10+deb10u2</td>
-<td>cpe:/a:openbsd:openssh:7.9p1</td>
+<td>8.4p1 Debian 5+deb11u1</td>
+<td>cpe:/a:openbsd:openssh:8.4p1</td>
 <td>protocol 2.0</td>
 </tr>
 <tr>
@@ -380,10 +372,10 @@
 <td>51.159.70.213 - www.festivalparminous.org</td>
 <td>5269</td>
 <td>tcp</td>
-<td>jabber</td>
-<td>ejabberd</td>
+<td>xmpp-server</td>
 <td></td>
-<td>cpe:/a:process-one:ejabberd</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
