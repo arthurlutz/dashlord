@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org</pre>
-<p class="lead">Mon May  1 04:30:49 2023 – Mon May  1 04:33:42 2023<br>1 hosts scanned.
+<p class="lead">Tue May  2 04:27:50 2023 – Tue May  2 04:30:38 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -194,31 +194,35 @@
 <td title="Port">5222</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">jabber</td>
-<td title="Product">Prosody Jabber client</td>
+<td title="Service">xmpp-client</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:prosody:prosody">cpe:/a:prosody:prosody</a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    stream_id: b03935fb-2757-4849-9e5e-b567fedf2251
+    capabilities: 
+    xmpp: 
+      lang: en
+      version: 1.0
     features: 
+    unknown: 
     errors: 
       host-unknown
       
         text: This server does not serve cartographiepublicitaire.eu.org
       stream:stream
       (timeout)
-    unknown: 
-    capabilities: 
-    auth_mechanisms: 
+    stream_id: b86d7b20-a287-4b95-be04-93f54b9a2d87
     compression_methods: 
-    xmpp: 
-      lang: en
-      version: 1.0</pre>
+    auth_mechanisms: </pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5269</td>
@@ -230,29 +234,29 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream from='' xmlns:stream='http://etherx.jabber.org/streams' to='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
-<h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    stream_id: f7bd64b8-8101-4bc7-a467-2aac661d4047
+    capabilities: 
+    xmpp: 
+      lang: en
+      version: 1.0
     features: 
+    unknown: 
     errors: 
       host-unknown
       
         text: This host does not serve cartographiepublicitaire.eu.org
       stream:stream
       (timeout)
-    unknown: 
-    capabilities: 
-    auth_mechanisms: 
+    stream_id: 6b95e75c-15d1-43d7-a570-89c7648551f3
     compression_methods: 
-    xmpp: 
-      lang: en
-      version: 1.0</pre>
+    auth_mechanisms: </pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -355,10 +359,10 @@
 <td>51.159.70.213 - cartographiepublicitaire.eu.org</td>
 <td>5222</td>
 <td>tcp</td>
-<td>jabber</td>
-<td>Prosody Jabber client</td>
+<td>xmpp-client</td>
 <td></td>
-<td>cpe:/a:prosody:prosody</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
