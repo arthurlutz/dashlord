@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org</pre>
-<p class="lead">Wed May  3 04:29:53 2023 – Wed May  3 04:32:43 2023<br>1 hosts scanned.
+<p class="lead">Fri May  5 04:30:13 2023 – Fri May  5 04:33:02 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -204,12 +204,12 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    compression_methods: 
-    unknown: 
+    stream_id: 6db00eb9-4b83-46b3-b8df-c8b338e206e1
     xmpp: 
       lang: en
       version: 1.0
-    stream_id: afe23026-8a7c-4226-99f3-7c3705b57a11
+    features: 
+    compression_methods: 
     errors: 
       host-unknown
       
@@ -217,8 +217,8 @@
       stream:stream
       (timeout)
     auth_mechanisms: 
-    features: 
-    capabilities: </pre>
+    capabilities: 
+    unknown: </pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -234,16 +234,20 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+<h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
-    compression_methods: 
-    unknown: 
+    stream_id: 8d0ffcb5-b9cc-4999-9cbe-a62d5dd1e80f
     xmpp: 
       lang: en
       version: 1.0
-    stream_id: a6bff862-2931-4196-8d93-598c7601de2a
+    features: 
+    compression_methods: 
     errors: 
       host-unknown
       
@@ -251,12 +255,8 @@
       stream:stream
       (timeout)
     auth_mechanisms: 
-    features: 
-    capabilities: </pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+    capabilities: 
+    unknown: </pre>
 </td></tr>
 </tbody>
 </table></div>
