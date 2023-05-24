@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue May 23 04:27:34 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Wed May 24 04:29:30 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.14s latency).
+Host is up (0.085s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -17,21 +17,21 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     features: 
+|     compression_methods: 
 |     capabilities: 
-|     auth_mechanisms: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
+|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     unknown: 
-|     stream_id: fef7e3a9-e190-4d39-a55f-a84e84160d5f
-|     features: 
-|_    compression_methods: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     auth_mechanisms: 
+|_    stream_id: 886a6aac-9509-4865-a037-e595c47c9dc9
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -39,27 +39,27 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     features: 
+|     compression_methods: 
 |     capabilities: 
-|     auth_mechanisms: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
+|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|     unknown: 
-|     stream_id: 03473895-c93d-4eb0-a037-f9ebe9901af6
-|     features: 
-|_    compression_methods: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     auth_mechanisms: 
+|_    stream_id: 691fe0a1-ae9c-4883-9be5-8b672e63efdf
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=5/23%Time=646C40C5%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=5/24%Time=646D92B6%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lang
 SF:='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\.
 SF:org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -92,7 +92,7 @@ SF:20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=5/23%Time=646C40C5%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.92%I=7%D=5/24%Time=646D92B6%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\x
 SF:20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xmln
 SF:s='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'>
@@ -129,4 +129,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue May 23 04:30:25 2023 -- 1 IP address (1 host up) scanned in 171.31 seconds
+# Nmap done at Wed May 24 04:32:17 2023 -- 1 IP address (1 host up) scanned in 166.97 seconds
