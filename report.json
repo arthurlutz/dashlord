@@ -5,7 +5,7 @@
     "http": {
       "url": "https://arthur.lutz.im",
       "algorithm_version": 2,
-      "end_time": "Wed, 28 Jun 2023 04:25:53 GMT",
+      "end_time": "Fri, 30 Jun 2023 04:23:55 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,7 +13,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "Content-Type": "text/html",
-        "Date": "Wed, 28 Jun 2023 04:25:49 GMT",
+        "Date": "Fri, 30 Jun 2023 04:23:52 GMT",
         "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
@@ -25,9 +25,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 39059086,
+      "scan_id": 39153112,
       "score": 80,
-      "start_time": "Wed, 28 Jun 2023 04:24:50 GMT",
+      "start_time": "Fri, 30 Jun 2023 04:23:49 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -40,32 +40,32 @@
           "output": {
             "data": {
               "default-src": [
+                "https:",
                 "blob:",
-                "data:",
-                "https:"
+                "data:"
               ],
               "object-src": [
-                "data:",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "script-src": [
-                "data:",
                 "'unsafe-eval'",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "style-src": [
-                "data:",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "upgrade-insecure-requests": [
                 "'none'"
               ],
               "worker-src": [
-                "blob:",
-                "'self'"
+                "'self'",
+                "blob:"
               ]
             },
             "http": true,
@@ -254,32 +254,32 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-06-29T04:03:27Z",
-      "next_check_at": "2023-06-29T04:33:17Z",
+      "last_check_at": "2023-06-30T03:56:08Z",
+      "next_check_at": "2023-06-30T04:26:02Z",
       "mute_until": null,
       "favicon_url": null,
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-06-28T19:50:52Z",
+        "tested_at": "2023-06-30T01:26:50Z",
         "expires_at": "2023-08-03T03:28:48Z",
         "valid": true,
         "error": null
       },
       "metrics": {
-        "apdex": 0.889,
+        "apdex": 1,
         "timings": {
-          "redirect": 823,
-          "namelookup": 25,
+          "redirect": 789,
+          "namelookup": 0,
           "connection": 0,
           "handshake": 0,
-          "response": 1254,
-          "total": 2103
+          "response": 148,
+          "total": 937
         }
       },
       "uptimeGrade": "A",
-      "apdexGrade": "F"
+      "apdexGrade": "A"
     },
     "nmap": {
       "host": "arthur.lutz.im",
@@ -310,124 +310,124 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
-                "is_exploit": "true",
                 "cvss": "5.8",
-                "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true",
+                "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19"
               },
               {
-                "is_exploit": "true",
                 "cvss": "5.8",
-                "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true",
+                "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97"
               },
               {
-                "is_exploit": "true",
                 "cvss": "5.8",
-                "id": "EDB-ID:46516",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true",
+                "id": "EDB-ID:46516"
               },
               {
-                "is_exploit": "true",
                 "cvss": "5.8",
-                "id": "EDB-ID:46193",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true",
+                "id": "EDB-ID:46193"
               },
               {
+                "cvss": "5.8",
+                "type": "cve",
                 "is_exploit": "false",
+                "id": "CVE-2019-6111"
+              },
+              {
                 "cvss": "5.8",
-                "id": "CVE-2019-6111",
-                "type": "cve"
+                "type": "zdt",
+                "is_exploit": "true",
+                "id": "1337DAY-ID-32328"
               },
               {
-                "is_exploit": "true",
                 "cvss": "5.8",
-                "id": "1337DAY-ID-32328",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true",
+                "id": "1337DAY-ID-32009"
               },
               {
-                "is_exploit": "true",
-                "cvss": "5.8",
-                "id": "1337DAY-ID-32009",
-                "type": "zdt"
-              },
-              {
-                "is_exploit": "true",
                 "cvss": "5.0",
-                "id": "SSH_ENUM",
-                "type": "canvas"
-              },
-              {
+                "type": "canvas",
                 "is_exploit": "true",
-                "cvss": "5.0",
-                "id": "PACKETSTORM:150621",
-                "type": "packetstorm"
+                "id": "SSH_ENUM"
               },
               {
+                "cvss": "5.0",
+                "type": "packetstorm",
                 "is_exploit": "true",
-                "cvss": "5.0",
-                "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "type": "exploitpack"
+                "id": "PACKETSTORM:150621"
               },
               {
+                "cvss": "5.0",
+                "type": "exploitpack",
                 "is_exploit": "true",
-                "cvss": "5.0",
-                "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "type": "exploitpack"
+                "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0"
               },
               {
+                "cvss": "5.0",
+                "type": "exploitpack",
                 "is_exploit": "true",
-                "cvss": "5.0",
-                "id": "EDB-ID:45939",
-                "type": "exploitdb"
+                "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283"
               },
               {
+                "cvss": "5.0",
+                "type": "exploitdb",
                 "is_exploit": "true",
-                "cvss": "5.0",
-                "id": "EDB-ID:45233",
-                "type": "exploitdb"
+                "id": "EDB-ID:45939"
               },
               {
+                "cvss": "5.0",
+                "type": "exploitdb",
+                "is_exploit": "true",
+                "id": "EDB-ID:45233"
+              },
+              {
+                "cvss": "5.0",
+                "type": "cve",
                 "is_exploit": "false",
-                "cvss": "5.0",
-                "id": "CVE-2018-15919",
-                "type": "cve"
+                "id": "CVE-2018-15919"
               },
               {
+                "cvss": "5.0",
+                "type": "cve",
                 "is_exploit": "false",
-                "cvss": "5.0",
-                "id": "CVE-2018-15473",
-                "type": "cve"
+                "id": "CVE-2018-15473"
               },
               {
+                "cvss": "5.0",
+                "type": "cve",
                 "is_exploit": "false",
-                "cvss": "5.0",
-                "id": "CVE-2017-15906",
-                "type": "cve"
+                "id": "CVE-2017-15906"
               },
               {
-                "is_exploit": "true",
                 "cvss": "5.0",
-                "id": "1337DAY-ID-31730",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true",
+                "id": "1337DAY-ID-31730"
               },
               {
-                "is_exploit": "true",
                 "cvss": "0.0",
-                "id": "PACKETSTORM:151227",
-                "type": "packetstorm"
+                "type": "packetstorm",
+                "is_exploit": "true",
+                "id": "PACKETSTORM:151227"
               },
               {
-                "is_exploit": "true",
                 "cvss": "0.0",
-                "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
-                "type": "metasploit"
+                "type": "metasploit",
+                "is_exploit": "true",
+                "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-"
               },
               {
-                "is_exploit": "true",
                 "cvss": "0.0",
-                "id": "1337DAY-ID-30937",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true",
+                "id": "1337DAY-ID-30937"
               }
             ]
           }
@@ -813,7 +813,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "OK",
-        "finding": "34 >= 30 days"
+        "finding": "33 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -1023,7 +1023,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688012730"
+        "finding": "1688099152"
       },
       {
         "id": "HSTS_time",
@@ -1614,7 +1614,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "63"
+        "finding": "106"
       }
     ],
     "thirdparties": {
@@ -1664,7 +1664,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html",
-        "date": "Thu, 29 Jun 2023 04:24:40 GMT",
+        "date": "Fri, 30 Jun 2023 04:24:30 GMT",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
@@ -1773,7 +1773,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "172.253.62.95",
+          "ip": "74.125.70.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1805,9 +1805,9 @@
             },
             "location": {
               "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
+              "latitude": 34.0544,
+              "longitude": -118.244,
+              "time_zone": "America/Los_Angeles"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1822,7 +1822,23 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 5332921,
+                "iso_code": "CA",
+                "names": {
+                  "de": "Kalifornien",
+                  "en": "California",
+                  "es": "California",
+                  "fr": "Californie",
+                  "ja": "カリフォルニア州",
+                  "pt-BR": "Califórnia",
+                  "ru": "Калифорния",
+                  "zh-CN": "加州"
+                }
+              }
+            ]
           }
         },
         {
@@ -1990,42 +2006,8 @@
         },
         {
           "hostname": "licensebuttons.net",
-          "ip": "172.67.7.63",
+          "ip": "104.22.10.121",
           "geoip": {
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
-            },
             "registered_country": {
               "geoname_id": 6252001,
               "iso_code": "US",
@@ -2044,7 +2026,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.163.94",
+          "ip": "173.194.194.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2226,7 +2208,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/",
         "finalUrl": "https://arthur.lutz.im/intro/",
-        "fetchTime": "2023-06-29T04:24:12.747Z",
+        "fetchTime": "2023-06-30T04:23:38.738Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://arthur.lutz.im/) was redirected to https://arthur.lutz.im/intro/. Try testing the second URL directly."
         ],
@@ -2270,49 +2252,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3450,
+            "numericValue": 2686,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2545,
-                  "firstMeaningfulPaint": 3450,
-                  "largestContentfulPaint": 3723,
-                  "firstCPUIdle": 3450,
-                  "interactive": 3450,
-                  "speedIndex": 3645,
+                  "firstContentfulPaint": 2686,
+                  "firstMeaningfulPaint": 2686,
+                  "largestContentfulPaint": 3635,
+                  "firstCPUIdle": 2686,
+                  "interactive": 2686,
+                  "speedIndex": 5020,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 47,
-                  "cumulativeLayoutShift": 0,
+                  "maxPotentialFID": 42,
+                  "cumulativeLayoutShift": 0.08075313568115235,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 232122433,
+                  "observedTimeOriginTs": 99135926,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 232122433,
-                  "observedFirstPaint": 1580,
-                  "observedFirstPaintTs": 233702462,
-                  "observedFirstContentfulPaint": 1580,
-                  "observedFirstContentfulPaintTs": 233702462,
-                  "observedFirstMeaningfulPaint": 1634,
-                  "observedFirstMeaningfulPaintTs": 233756097,
-                  "observedLargestContentfulPaint": 1580,
-                  "observedLargestContentfulPaintTs": 233702462,
-                  "observedTraceEnd": 2760,
-                  "observedTraceEndTs": 234882718,
-                  "observedLoad": 1704,
-                  "observedLoadTs": 233826240,
-                  "observedDomContentLoaded": 1592,
-                  "observedDomContentLoadedTs": 233714624,
-                  "observedCumulativeLayoutShift": 0,
+                  "observedNavigationStartTs": 99135926,
+                  "observedFirstPaint": 2046,
+                  "observedFirstPaintTs": 101181557,
+                  "observedFirstContentfulPaint": 2046,
+                  "observedFirstContentfulPaintTs": 101181557,
+                  "observedFirstMeaningfulPaint": 2062,
+                  "observedFirstMeaningfulPaintTs": 101197460,
+                  "observedLargestContentfulPaint": 2046,
+                  "observedLargestContentfulPaintTs": 101181557,
+                  "observedTraceEnd": 3251,
+                  "observedTraceEndTs": 102386758,
+                  "observedLoad": 2193,
+                  "observedLoadTs": 101328887,
+                  "observedDomContentLoaded": 2057,
+                  "observedDomContentLoadedTs": 101193117,
+                  "observedCumulativeLayoutShift": 0.08075313568115235,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1584,
-                  "observedFirstVisualChangeTs": 233706433,
-                  "observedLastVisualChange": 2184,
-                  "observedLastVisualChangeTs": 234306433,
-                  "observedSpeedIndex": 1601,
-                  "observedSpeedIndexTs": 233723317
+                  "observedFirstVisualChange": 2043,
+                  "observedFirstVisualChangeTs": 101178926,
+                  "observedLastVisualChange": 2643,
+                  "observedLastVisualChangeTs": 101778926,
+                  "observedSpeedIndex": 2056,
+                  "observedSpeedIndexTs": 101191786
                 },
                 {
                   "lcpInvalidated": false
@@ -2334,18 +2316,18 @@
                   "numScripts": 8,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 290,
-                  "numTasksOver10ms": 2,
+                  "numTasks": 282,
+                  "numTasksOver10ms": 3,
                   "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.6240000000000006,
-                  "throughput": 14805996.825205486,
-                  "maxRtt": 98.49600000000001,
-                  "maxServerLatency": 22.438999999999993,
-                  "totalByteWeight": 477325,
-                  "totalTaskTime": 110.45600000000015,
+                  "rtt": 14.535,
+                  "throughput": 18876960.1327271,
+                  "maxRtt": 128.061,
+                  "maxServerLatency": 20.24799999999999,
+                  "totalByteWeight": 477328,
+                  "totalTaskTime": 127.54300000000003,
                   "mainDocumentTransferSize": 14963
                 }
               ]
@@ -2366,8 +2348,8 @@
     "sonarcloud": null,
     "summary": {
       "httpGrade": "B+",
-      "apdex": 0.889,
-      "apdexGrade": "F",
+      "apdex": 1,
+      "apdexGrade": "A",
       "uptime": 100,
       "uptimeGrade": "A",
       "nmapGrade": "E",
@@ -2398,7 +2380,7 @@
     "http": {
       "url": "https://arthur.lutz.im/blog/",
       "algorithm_version": 2,
-      "end_time": "Wed, 28 Jun 2023 04:25:53 GMT",
+      "end_time": "Fri, 30 Jun 2023 04:23:55 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -2406,7 +2388,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "Content-Type": "text/html",
-        "Date": "Wed, 28 Jun 2023 04:25:49 GMT",
+        "Date": "Fri, 30 Jun 2023 04:23:52 GMT",
         "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
@@ -2418,9 +2400,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 39059086,
+      "scan_id": 39153112,
       "score": 80,
-      "start_time": "Wed, 28 Jun 2023 04:24:50 GMT",
+      "start_time": "Fri, 30 Jun 2023 04:23:49 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -2433,32 +2415,32 @@
           "output": {
             "data": {
               "default-src": [
+                "https:",
                 "blob:",
-                "data:",
-                "https:"
+                "data:"
               ],
               "object-src": [
-                "data:",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "script-src": [
-                "data:",
                 "'unsafe-eval'",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "style-src": [
-                "data:",
+                "https:",
                 "'unsafe-inline'",
-                "https:"
+                "data:"
               ],
               "upgrade-insecure-requests": [
                 "'none'"
               ],
               "worker-src": [
-                "blob:",
-                "'self'"
+                "'self'",
+                "blob:"
               ]
             },
             "http": true,
@@ -2659,123 +2641,123 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "cvss": "5.8",
                 "type": "exploitpack"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "cvss": "5.8",
                 "type": "exploitpack"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "EDB-ID:46516",
-                "cvss": "5.8",
                 "type": "exploitdb"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "EDB-ID:46193",
-                "cvss": "5.8",
                 "type": "exploitdb"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "false",
                 "id": "CVE-2019-6111",
-                "cvss": "5.8",
                 "type": "cve"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-32328",
-                "cvss": "5.8",
                 "type": "zdt"
               },
               {
+                "cvss": "5.8",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-32009",
-                "cvss": "5.8",
                 "type": "zdt"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "SSH_ENUM",
-                "cvss": "5.0",
                 "type": "canvas"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "PACKETSTORM:150621",
-                "cvss": "5.0",
                 "type": "packetstorm"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "cvss": "5.0",
                 "type": "exploitpack"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "cvss": "5.0",
                 "type": "exploitpack"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "EDB-ID:45939",
-                "cvss": "5.0",
                 "type": "exploitdb"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "EDB-ID:45233",
-                "cvss": "5.0",
                 "type": "exploitdb"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "false",
                 "id": "CVE-2018-15919",
-                "cvss": "5.0",
                 "type": "cve"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "false",
                 "id": "CVE-2018-15473",
-                "cvss": "5.0",
                 "type": "cve"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "false",
                 "id": "CVE-2017-15906",
-                "cvss": "5.0",
                 "type": "cve"
               },
               {
+                "cvss": "5.0",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-31730",
-                "cvss": "5.0",
                 "type": "zdt"
               },
               {
+                "cvss": "0.0",
                 "is_exploit": "true",
                 "id": "PACKETSTORM:151227",
-                "cvss": "0.0",
                 "type": "packetstorm"
               },
               {
+                "cvss": "0.0",
                 "is_exploit": "true",
                 "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
-                "cvss": "0.0",
                 "type": "metasploit"
               },
               {
+                "cvss": "0.0",
                 "is_exploit": "true",
                 "id": "1337DAY-ID-30937",
-                "cvss": "0.0",
                 "type": "zdt"
               }
             ]
@@ -3162,7 +3144,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "OK",
-        "finding": "34 >= 30 days"
+        "finding": "33 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -3372,7 +3354,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688012739"
+        "finding": "1688099147"
       },
       {
         "id": "HSTS_time",
@@ -3963,7 +3945,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "71"
+        "finding": "104"
       }
     ],
     "thirdparties": {
@@ -3972,7 +3954,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 29 Jun 2023 04:24:50 GMT",
+        "date": "Fri, 30 Jun 2023 04:24:29 GMT",
         "link": "<https://arthur.lutz.im/blog/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
@@ -4277,7 +4259,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/blog/",
         "finalUrl": "https://arthur.lutz.im/blog/",
-        "fetchTime": "2023-06-29T04:24:17.046Z",
+        "fetchTime": "2023-06-30T04:23:38.058Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -4319,49 +4301,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 2663,
+            "numericValue": 2546,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2663,
-                  "firstMeaningfulPaint": 2663,
-                  "largestContentfulPaint": 3638,
-                  "firstCPUIdle": 2663,
-                  "interactive": 2663,
-                  "speedIndex": 4532,
+                  "firstContentfulPaint": 2546,
+                  "firstMeaningfulPaint": 2546,
+                  "largestContentfulPaint": 3446,
+                  "firstCPUIdle": 2546,
+                  "interactive": 2546,
+                  "speedIndex": 4230,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 28,
+                  "maxPotentialFID": 23,
                   "cumulativeLayoutShift": 0.04453304121229384,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 237615681,
+                  "observedTimeOriginTs": 87063456,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 237615681,
-                  "observedFirstPaint": 2051,
-                  "observedFirstPaintTs": 239667000,
-                  "observedFirstContentfulPaint": 2051,
-                  "observedFirstContentfulPaintTs": 239667000,
-                  "observedFirstMeaningfulPaint": 2051,
-                  "observedFirstMeaningfulPaintTs": 239667000,
-                  "observedLargestContentfulPaint": 2178,
-                  "observedLargestContentfulPaintTs": 239793503,
-                  "observedTraceEnd": 3199,
-                  "observedTraceEndTs": 240815112,
-                  "observedLoad": 2140,
-                  "observedLoadTs": 239756027,
-                  "observedDomContentLoaded": 2035,
-                  "observedDomContentLoadedTs": 239650217,
+                  "observedNavigationStartTs": 87063456,
+                  "observedFirstPaint": 1731,
+                  "observedFirstPaintTs": 88794822,
+                  "observedFirstContentfulPaint": 1731,
+                  "observedFirstContentfulPaintTs": 88794822,
+                  "observedFirstMeaningfulPaint": 1731,
+                  "observedFirstMeaningfulPaintTs": 88794822,
+                  "observedLargestContentfulPaint": 2016,
+                  "observedLargestContentfulPaintTs": 89079750,
+                  "observedTraceEnd": 3164,
+                  "observedTraceEndTs": 90227507,
+                  "observedLoad": 2106,
+                  "observedLoadTs": 89169920,
+                  "observedDomContentLoaded": 1734,
+                  "observedDomContentLoadedTs": 88797623,
                   "observedCumulativeLayoutShift": 0.04453304121229384,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 2058,
-                  "observedFirstVisualChangeTs": 239673681,
-                  "observedLastVisualChange": 2658,
-                  "observedLastVisualChangeTs": 240273681,
-                  "observedSpeedIndex": 2141,
-                  "observedSpeedIndexTs": 239756909
+                  "observedFirstVisualChange": 1732,
+                  "observedFirstVisualChangeTs": 88795456,
+                  "observedLastVisualChange": 2349,
+                  "observedLastVisualChangeTs": 89412456,
+                  "observedSpeedIndex": 1952,
+                  "observedSpeedIndexTs": 89015939
                 },
                 {
                   "lcpInvalidated": false
@@ -4379,22 +4361,22 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 37,
+                  "numRequests": 35,
                   "numScripts": 8,
-                  "numStylesheets": 8,
+                  "numStylesheets": 7,
                   "numFonts": 0,
-                  "numTasks": 546,
+                  "numTasks": 545,
                   "numTasksOver10ms": 4,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 95.138,
-                  "throughput": 31308656.50955076,
-                  "maxRtt": 95.138,
-                  "maxServerLatency": 112.66,
-                  "totalByteWeight": 3753551,
-                  "totalTaskTime": 193.0769999999998,
+                  "rtt": 127.189,
+                  "throughput": 27859811.921075724,
+                  "maxRtt": 127.189,
+                  "maxServerLatency": 146.34399999999997,
+                  "totalByteWeight": 3753013,
+                  "totalTaskTime": 194.97799999999975,
                   "mainDocumentTransferSize": 38855
                 }
               ]
@@ -4443,7 +4425,7 @@
     "http": {
       "url": "https://www.festivalparminous.org/",
       "algorithm_version": 2,
-      "end_time": "Wed, 28 Jun 2023 04:25:51 GMT",
+      "end_time": "Fri, 30 Jun 2023 04:24:01 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -4451,7 +4433,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 28 Jun 2023 04:25:49 GMT",
+        "Date": "Fri, 30 Jun 2023 04:23:59 GMT",
         "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -4464,9 +4446,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 39059089,
+      "scan_id": 39153115,
       "score": 80,
-      "start_time": "Wed, 28 Jun 2023 04:25:00 GMT",
+      "start_time": "Fri, 30 Jun 2023 04:23:56 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -4666,15 +4648,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-06-29T04:10:20Z",
-      "next_check_at": "2023-06-29T04:40:03Z",
+      "last_check_at": "2023-06-30T04:04:08Z",
+      "next_check_at": "2023-06-30T04:33:50Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-32x32.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-06-29T00:11:20Z",
+        "tested_at": "2023-06-30T01:04:53Z",
         "expires_at": "2023-09-04T03:28:24Z",
         "valid": true,
         "error": null
@@ -4683,11 +4665,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 62,
-          "connection": 128,
-          "handshake": 150,
-          "response": 192,
-          "total": 531
+          "namelookup": 55,
+          "connection": 126,
+          "handshake": 149,
+          "response": 189,
+          "total": 520
         }
       },
       "uptimeGrade": "A",
@@ -5072,7 +5054,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "66 >= 30 days"
+        "finding": "65 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -5282,7 +5264,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688012722"
+        "finding": "1688099144"
       },
       {
         "id": "HSTS_time",
@@ -5873,7 +5855,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "57"
+        "finding": "93"
       }
     ],
     "thirdparties": {
@@ -5882,7 +5864,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 29 Jun 2023 04:24:42 GMT",
+        "date": "Fri, 30 Jun 2023 04:24:37 GMT",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -6194,13 +6176,13 @@
       {
         "requestedUrl": "https://www.festivalparminous.org/",
         "finalUrl": "https://www.festivalparminous.org/",
-        "fetchTime": "2023-06-29T04:24:16.975Z",
+        "fetchTime": "2023-06-30T04:23:44.508Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.5461240768432617
+            "score": 0.5461223602294922
           },
           "accessibility": {
             "title": "Accessibility",
@@ -6236,49 +6218,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3568,
+            "numericValue": 3558,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3493,
-                  "firstMeaningfulPaint": 3568,
+                  "firstContentfulPaint": 3489,
+                  "firstMeaningfulPaint": 3491,
                   "largestContentfulPaint": 4576,
-                  "firstCPUIdle": 3568,
-                  "interactive": 3568,
-                  "speedIndex": 3493,
+                  "firstCPUIdle": 3491,
+                  "interactive": 3558,
+                  "speedIndex": 3764,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 0,
-                  "maxPotentialFID": 26,
+                  "totalBlockingTime": 4,
+                  "maxPotentialFID": 58,
                   "cumulativeLayoutShift": 0.0007809524536132812,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 321475936,
+                  "observedTimeOriginTs": 112619240,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 321475936,
-                  "observedFirstPaint": 940,
-                  "observedFirstPaintTs": 322415857,
-                  "observedFirstContentfulPaint": 940,
-                  "observedFirstContentfulPaintTs": 322415857,
-                  "observedFirstMeaningfulPaint": 962,
-                  "observedFirstMeaningfulPaintTs": 322437655,
-                  "observedLargestContentfulPaint": 962,
-                  "observedLargestContentfulPaintTs": 322437655,
-                  "observedTraceEnd": 2323,
-                  "observedTraceEndTs": 323798546,
-                  "observedLoad": 1264,
-                  "observedLoadTs": 322740292,
-                  "observedDomContentLoaded": 932,
-                  "observedDomContentLoadedTs": 322408411,
+                  "observedNavigationStartTs": 112619240,
+                  "observedFirstPaint": 1191,
+                  "observedFirstPaintTs": 113810456,
+                  "observedFirstContentfulPaint": 1191,
+                  "observedFirstContentfulPaintTs": 113810456,
+                  "observedFirstMeaningfulPaint": 1220,
+                  "observedFirstMeaningfulPaintTs": 113839018,
+                  "observedLargestContentfulPaint": 1220,
+                  "observedLargestContentfulPaintTs": 113839018,
+                  "observedTraceEnd": 2752,
+                  "observedTraceEndTs": 115371298,
+                  "observedLoad": 1692,
+                  "observedLoadTs": 114311237,
+                  "observedDomContentLoaded": 1214,
+                  "observedDomContentLoadedTs": 113833054,
                   "observedCumulativeLayoutShift": 0.0007809524536132812,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 944,
-                  "observedFirstVisualChangeTs": 322419936,
-                  "observedLastVisualChange": 1361,
-                  "observedLastVisualChangeTs": 322836936,
-                  "observedSpeedIndex": 958,
-                  "observedSpeedIndexTs": 322434102
+                  "observedFirstVisualChange": 1192,
+                  "observedFirstVisualChangeTs": 113811240,
+                  "observedLastVisualChange": 1809,
+                  "observedLastVisualChangeTs": 114428240,
+                  "observedSpeedIndex": 1230,
+                  "observedSpeedIndexTs": 113848779
                 },
                 {
                   "lcpInvalidated": false
@@ -6300,19 +6282,19 @@
                   "numScripts": 3,
                   "numStylesheets": 8,
                   "numFonts": 2,
-                  "numTasks": 324,
-                  "numTasksOver10ms": 6,
-                  "numTasksOver25ms": 2,
+                  "numTasks": 311,
+                  "numTasksOver10ms": 7,
+                  "numTasksOver25ms": 4,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 81.33500000000001,
-                  "throughput": 46255876.89400591,
-                  "maxRtt": 81.33500000000001,
-                  "maxServerLatency": 76.32399999999998,
-                  "totalByteWeight": 3428193,
-                  "totalTaskTime": 222.7669999999994,
-                  "mainDocumentTransferSize": 132621
+                  "rtt": 107.86099999999999,
+                  "throughput": 33587989.02702389,
+                  "maxRtt": 107.86099999999999,
+                  "maxServerLatency": 75.62700000000001,
+                  "totalByteWeight": 3428202,
+                  "totalTaskTime": 301.2569999999996,
+                  "mainDocumentTransferSize": 132630
                 }
               ]
             }
@@ -6343,7 +6325,7 @@
       "cookiesCount": 0,
       "trackersGrade": "A",
       "trackersCount": 0,
-      "lighthouse_performance": 0.5461240768432617,
+      "lighthouse_performance": 0.5461223602294922,
       "lighthouse_performanceGrade": "C",
       "lighthouse_accessibility": 0.91,
       "lighthouse_accessibilityGrade": "A",
@@ -6361,7 +6343,7 @@
     "http": {
       "url": "https://www.soundsmag.org/",
       "algorithm_version": 2,
-      "end_time": "Wed, 28 Jun 2023 04:36:36 GMT",
+      "end_time": "Fri, 30 Jun 2023 04:28:59 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -6370,7 +6352,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Wed, 28 Jun 2023 04:36:34 GMT",
+        "Date": "Fri, 30 Jun 2023 04:28:57 GMT",
         "Link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -6386,9 +6368,9 @@
         "X-Spip-Cache": "86400",
         "X-XSS-Protection": "1, mode=block"
       },
-      "scan_id": 39059355,
+      "scan_id": 39153319,
       "score": 70,
-      "start_time": "Wed, 28 Jun 2023 04:31:08 GMT",
+      "start_time": "Fri, 30 Jun 2023 04:28:55 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -6950,7 +6932,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "66 >= 30 days"
+        "finding": "65 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -7153,14 +7135,14 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "-1 seconds from localtime"
+        "finding": "0 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688012964"
+        "finding": "1688099445"
       },
       {
         "id": "HSTS_time",
@@ -7751,7 +7733,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "60"
+        "finding": "97"
       }
     ],
     "thirdparties": {
@@ -7761,7 +7743,7 @@
         "composed-by": "SPIP 4.2.2 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=utf-8",
-        "date": "Thu, 29 Jun 2023 04:28:44 GMT",
+        "date": "Fri, 30 Jun 2023 04:29:34 GMT",
         "link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -8036,7 +8018,7 @@
       {
         "requestedUrl": "https://www.soundsmag.org/",
         "finalUrl": "https://www.soundsmag.org/",
-        "fetchTime": "2023-06-29T04:28:18.104Z",
+        "fetchTime": "2023-06-30T04:28:46.933Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -8078,49 +8060,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3599,
+            "numericValue": 3612,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3224,
-                  "firstMeaningfulPaint": 3224,
-                  "largestContentfulPaint": 3524,
-                  "firstCPUIdle": 3224,
-                  "interactive": 3599,
-                  "speedIndex": 3224,
+                  "firstContentfulPaint": 3237,
+                  "firstMeaningfulPaint": 3237,
+                  "largestContentfulPaint": 3537,
+                  "firstCPUIdle": 3237,
+                  "interactive": 3612,
+                  "speedIndex": 3492,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 7,
-                  "maxPotentialFID": 63,
+                  "maxPotentialFID": 64,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 128812036,
+                  "observedTimeOriginTs": 247570273,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 128812036,
-                  "observedFirstPaint": 874,
-                  "observedFirstPaintTs": 129685890,
-                  "observedFirstContentfulPaint": 874,
-                  "observedFirstContentfulPaintTs": 129685890,
-                  "observedFirstMeaningfulPaint": 874,
-                  "observedFirstMeaningfulPaintTs": 129685890,
-                  "observedLargestContentfulPaint": 874,
-                  "observedLargestContentfulPaintTs": 129685890,
-                  "observedTraceEnd": 1977,
-                  "observedTraceEndTs": 130789294,
-                  "observedLoad": 919,
-                  "observedLoadTs": 129731005,
-                  "observedDomContentLoaded": 738,
-                  "observedDomContentLoadedTs": 129549903,
+                  "observedNavigationStartTs": 247570273,
+                  "observedFirstPaint": 1167,
+                  "observedFirstPaintTs": 248736868,
+                  "observedFirstContentfulPaint": 1167,
+                  "observedFirstContentfulPaintTs": 248736868,
+                  "observedFirstMeaningfulPaint": 1167,
+                  "observedFirstMeaningfulPaintTs": 248736868,
+                  "observedLargestContentfulPaint": 1167,
+                  "observedLargestContentfulPaintTs": 248736868,
+                  "observedTraceEnd": 2328,
+                  "observedTraceEndTs": 249898024,
+                  "observedLoad": 1270,
+                  "observedLoadTs": 248840154,
+                  "observedDomContentLoaded": 1014,
+                  "observedDomContentLoadedTs": 248584666,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 882,
-                  "observedFirstVisualChangeTs": 129694036,
-                  "observedLastVisualChange": 882,
-                  "observedLastVisualChangeTs": 129694036,
-                  "observedSpeedIndex": 883,
-                  "observedSpeedIndexTs": 129694812
+                  "observedFirstVisualChange": 1169,
+                  "observedFirstVisualChangeTs": 248739273,
+                  "observedLastVisualChange": 1169,
+                  "observedLastVisualChangeTs": 248739273,
+                  "observedSpeedIndex": 1170,
+                  "observedSpeedIndexTs": 248740050
                 },
                 {
                   "lcpInvalidated": false
@@ -8142,18 +8124,18 @@
                   "numScripts": 3,
                   "numStylesheets": 5,
                   "numFonts": 0,
-                  "numTasks": 197,
-                  "numTasksOver10ms": 3,
-                  "numTasksOver25ms": 2,
+                  "numTasks": 206,
+                  "numTasksOver10ms": 2,
+                  "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 83.217,
-                  "throughput": 10029919.981444918,
-                  "maxRtt": 83.217,
-                  "maxServerLatency": 3.682000000000002,
+                  "rtt": 118.131,
+                  "throughput": 9107163.541018445,
+                  "maxRtt": 118.131,
+                  "maxServerLatency": 7.813000000000017,
                   "totalByteWeight": 433098,
-                  "totalTaskTime": 132.98899999999978,
+                  "totalTaskTime": 85.39000000000004,
                   "mainDocumentTransferSize": 20372
                 }
               ]
@@ -8199,7 +8181,7 @@
     "http": {
       "url": "https://cartographiepublicitaire.eu.org",
       "algorithm_version": 2,
-      "end_time": "Wed, 28 Jun 2023 04:37:24 GMT",
+      "end_time": "Fri, 30 Jun 2023 04:30:14 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -8207,7 +8189,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 28 Jun 2023 04:36:34 GMT",
+        "Date": "Fri, 30 Jun 2023 04:29:28 GMT",
         "Link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -8220,9 +8202,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 39059356,
+      "scan_id": 39153326,
       "score": 75,
-      "start_time": "Wed, 28 Jun 2023 04:31:41 GMT",
+      "start_time": "Fri, 30 Jun 2023 04:29:25 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -8793,7 +8775,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "31 >= 30 days"
+        "finding": "30 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -9003,7 +8985,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688012987"
+        "finding": "1688099543"
       },
       {
         "id": "HSTS_time",
@@ -9594,7 +9576,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "59"
+        "finding": "117"
       }
     ],
     "thirdparties": {
@@ -9645,7 +9627,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=3440f8c80befbb2aa55270f6b42c34935d758da2",
+          "url": "https://syndication.twitter.com/settings?session_id=23f5bb29b233a83606c18d39bc585c174c6e277a",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9661,7 +9643,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=3440f8c80befbb2aa55270f6b42c34935d758da2&showHeader=false&showReplies=false&transparent=true&widgetsVersion=aaf4084522e3a%3A1674595607486",
+          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=23f5bb29b233a83606c18d39bc585c174c6e277a&showHeader=false&showReplies=false&transparent=true&widgetsVersion=aaf4084522e3a%3A1674595607486",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9829,7 +9811,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1688012937784%2C%22event_namespace%22%3A%7B%22action%22%3A%22results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22aaf4084522e3a%3A1674595607486%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22bb06567%3A1687853948269%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=3440f8c80befbb2aa55270f6b42c34935d758da2",
+          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1688099451966%2C%22event_namespace%22%3A%7B%22action%22%3A%22results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22aaf4084522e3a%3A1674595607486%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22bb06567%3A1687853948269%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=23f5bb29b233a83606c18d39bc585c174c6e277a",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -10098,181 +10080,13 @@
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
           }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/card_img/1672099625489289219/ksWaL32q?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/card_img/1673548910244270080/CYLpKzl-?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/D1Yn4uzW0AAZufL?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/D1YafxOWkAA3dQ0?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/D1YahY8XcAEP_Qm?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/D1YMx4QX4AEJ-qf?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/DyT2T7WX0AEOIaR?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/DlnRvZwX0AAVVO5?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/DjNIyfqX4AADPpG?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/DlnGyYqX0AINSfv?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/DlnGzqdX0AEMIUc?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/C9D5xlLXYAAwvJ3?format=png&name=360x360",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/C9D5xkzWAAEcGBc?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZruX7WMAAGEHS?format=jpg&name=medium",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZruciXIAEplII?format=jpg&name=360x360",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZru2qXEAAdGIA?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/ClZrxrMWgAACeth?format=jpg&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/CUgGAJcWEAA3kf4?format=png&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LYKtJCMAAb64G?format=png&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LYKZmCMAA9Q6j?format=png&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
-        },
-        {
-          "type": "twitter",
-          "url": "https://pbs.twimg.com/media/B6LXgTTCYAAPdwk?format=png&name=240x240",
-          "details": {
-            "id": "twitter",
-            "message": "Dont embed twitter scripts, use your own tweet embed"
-          }
         }
       ],
       "cookies": [],
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 29 Jun 2023 04:28:55 GMT",
+        "date": "Fri, 30 Jun 2023 04:30:48 GMT",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -10422,7 +10236,7 @@
         },
         {
           "hostname": "platform.twitter.com",
-          "ip": "72.21.91.66",
+          "ip": "192.229.163.25",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -10454,8 +10268,8 @@
             },
             "location": {
               "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
+              "latitude": 32.7797,
+              "longitude": -96.8022,
               "time_zone": "America/Chicago"
             },
             "registered_country": {
@@ -10471,12 +10285,26 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 4736286,
+                "iso_code": "TX",
+                "names": {
+                  "en": "Texas",
+                  "es": "Texas",
+                  "fr": "Texas",
+                  "ja": "テキサス州",
+                  "ru": "Техас",
+                  "zh-CN": "德克萨斯州"
+                }
+              }
+            ]
           }
         },
         {
           "hostname": "syndication.twitter.com",
-          "ip": "104.244.42.72",
+          "ip": "104.244.42.200",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -10584,15 +10412,8 @@
         },
         {
           "hostname": "pbs.twimg.com",
-          "ip": "146.75.28.159",
+          "ip": "192.229.173.16",
           "geoip": {
-            "city": {
-              "geoname_id": 4744870,
-              "names": {
-                "en": "Ashburn",
-                "ru": "Ашберн"
-              }
-            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -10622,14 +10443,10 @@
               }
             },
             "location": {
-              "accuracy_radius": 20,
-              "latitude": 39.018,
-              "longitude": -77.539,
-              "metro_code": 511,
-              "time_zone": "America/New_York"
-            },
-            "postal": {
-              "code": "20147"
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -10644,21 +10461,7 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 6254928,
-                "iso_code": "VA",
-                "names": {
-                  "en": "Virginia",
-                  "fr": "Virginie",
-                  "ja": "バージニア州",
-                  "pt-BR": "Virgínia",
-                  "ru": "Вирджиния",
-                  "zh-CN": "弗吉尼亚州"
-                }
-              }
-            ]
+            }
           }
         }
       ]
@@ -10991,13 +10794,13 @@
       {
         "requestedUrl": "https://cartographiepublicitaire.eu.org/",
         "finalUrl": "https://cartographiepublicitaire.eu.org/",
-        "fetchTime": "2023-06-29T04:28:22.609Z",
+        "fetchTime": "2023-06-30T04:29:07.093Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.26309833526611326
+            "score": 0.2630887985229492
           },
           "accessibility": {
             "title": "Accessibility",
@@ -11033,49 +10836,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 14208,
+            "numericValue": 15657,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 7065,
-                  "firstMeaningfulPaint": 7065,
-                  "largestContentfulPaint": 7065,
-                  "firstCPUIdle": 12028,
-                  "interactive": 14208,
-                  "speedIndex": 11008,
-                  "estimatedInputLatency": 476,
-                  "totalBlockingTime": 1752,
-                  "maxPotentialFID": 938,
+                  "firstContentfulPaint": 7821,
+                  "firstMeaningfulPaint": 7821,
+                  "largestContentfulPaint": 7821,
+                  "firstCPUIdle": 14215,
+                  "interactive": 15657,
+                  "speedIndex": 11530,
+                  "estimatedInputLatency": 954,
+                  "totalBlockingTime": 3784,
+                  "maxPotentialFID": 1593,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 337823067,
+                  "observedTimeOriginTs": 110491717,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 337823067,
-                  "observedFirstPaint": 1360,
-                  "observedFirstPaintTs": 339182788,
-                  "observedFirstContentfulPaint": 1360,
-                  "observedFirstContentfulPaintTs": 339182788,
-                  "observedFirstMeaningfulPaint": 1360,
-                  "observedFirstMeaningfulPaintTs": 339182788,
-                  "observedLargestContentfulPaint": 1360,
-                  "observedLargestContentfulPaintTs": 339182788,
-                  "observedTraceEnd": 7781,
-                  "observedTraceEndTs": 345603858,
-                  "observedLoad": 6723,
-                  "observedLoadTs": 344546206,
-                  "observedDomContentLoaded": 1349,
-                  "observedDomContentLoadedTs": 339172064,
+                  "observedNavigationStartTs": 110491717,
+                  "observedFirstPaint": 2101,
+                  "observedFirstPaintTs": 112592957,
+                  "observedFirstContentfulPaint": 2101,
+                  "observedFirstContentfulPaintTs": 112592957,
+                  "observedFirstMeaningfulPaint": 2101,
+                  "observedFirstMeaningfulPaintTs": 112592957,
+                  "observedLargestContentfulPaint": 2101,
+                  "observedLargestContentfulPaintTs": 112592957,
+                  "observedTraceEnd": 6283,
+                  "observedTraceEndTs": 116775152,
+                  "observedLoad": 4901,
+                  "observedLoadTs": 115392514,
+                  "observedDomContentLoaded": 2081,
+                  "observedDomContentLoadedTs": 112572337,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1363,
-                  "observedFirstVisualChangeTs": 339186067,
-                  "observedLastVisualChange": 6729,
-                  "observedLastVisualChangeTs": 344552067,
-                  "observedSpeedIndex": 2484,
-                  "observedSpeedIndexTs": 340307554
+                  "observedFirstVisualChange": 2103,
+                  "observedFirstVisualChangeTs": 112594717,
+                  "observedLastVisualChange": 2703,
+                  "observedLastVisualChangeTs": 113194717,
+                  "observedSpeedIndex": 2197,
+                  "observedSpeedIndexTs": 112688826
                 },
                 {
                   "lcpInvalidated": false
@@ -11097,18 +10900,18 @@
                   "numScripts": 29,
                   "numStylesheets": 13,
                   "numFonts": 1,
-                  "numTasks": 1318,
-                  "numTasksOver10ms": 19,
-                  "numTasksOver25ms": 5,
-                  "numTasksOver50ms": 4,
-                  "numTasksOver100ms": 3,
-                  "numTasksOver500ms": 0,
-                  "rtt": 4.631,
-                  "throughput": 24118439.14465164,
-                  "maxRtt": 81.16,
-                  "maxServerLatency": 5416.507,
-                  "totalByteWeight": 2290623,
-                  "totalTaskTime": 1535.9409999999823,
+                  "numTasks": 1436,
+                  "numTasksOver10ms": 28,
+                  "numTasksOver25ms": 9,
+                  "numTasksOver50ms": 5,
+                  "numTasksOver100ms": 4,
+                  "numTasksOver500ms": 1,
+                  "rtt": 1.3090000000000002,
+                  "throughput": 13736901.601579849,
+                  "maxRtt": 150.429,
+                  "maxServerLatency": 464.63,
+                  "totalByteWeight": 2290673,
+                  "totalTaskTime": 2602.531000000018,
                   "mainDocumentTransferSize": 74939
                 }
               ]
@@ -11135,8 +10938,8 @@
       "cookiesGrade": "A",
       "cookiesCount": 0,
       "trackersGrade": "F",
-      "trackersCount": 84,
-      "lighthouse_performance": 0.26309833526611326,
+      "trackersCount": 63,
+      "lighthouse_performance": 0.2630887985229492,
       "lighthouse_performanceGrade": "E",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
