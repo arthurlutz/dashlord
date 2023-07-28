@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Jul 27 04:27:44 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Fri Jul 28 04:32:49 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.15s latency).
+Host is up (0.085s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -17,20 +17,20 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     compression_methods: 
 |     unknown: 
-|     auth_mechanisms: 
-|     stream_id: 8cd795ee-3670-4aa4-87b3-41313f6ae248
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     stream_id: 5a32dce1-8fa9-4b36-96a5-4975d3160f4e
+|     auth_mechanisms: 
 |     capabilities: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     compression_methods: 
 |_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -39,27 +39,27 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     compression_methods: 
 |     unknown: 
-|     auth_mechanisms: 
-|     stream_id: d23415de-40fb-4b46-8346-e3ece8c4a1ec
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     stream_id: 741780bb-2942-4d11-829d-c1ac9a206eaf
+|     auth_mechanisms: 
 |     capabilities: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     compression_methods: 
 |_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=7/27%Time=64C1F24F%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=7/28%Time=64C344FD%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lang
 SF:='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\.
 SF:org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -92,7 +92,7 @@ SF:20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=7/27%Time=64C1F24F%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.92%I=7%D=7/28%Time=64C344FD%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\x
 SF:20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xmln
 SF:s='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'>
@@ -129,4 +129,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jul 27 04:30:53 2023 -- 1 IP address (1 host up) scanned in 189.19 seconds
+# Nmap done at Fri Jul 28 04:35:53 2023 -- 1 IP address (1 host up) scanned in 183.53 seconds
