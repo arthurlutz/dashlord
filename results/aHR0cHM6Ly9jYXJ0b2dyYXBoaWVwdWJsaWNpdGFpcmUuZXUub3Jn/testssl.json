@@ -206,7 +206,7 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'next protocol/#13172' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'status request/#5' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23'"
+              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'status request/#5' 'next protocol/#13172' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -374,7 +374,7 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "54 >= 30 days"
+              "finding"      : "53 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -422,8 +422,15 @@
               "id"           : "OCSP_stapling",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked",
+              "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension",
@@ -570,14 +577,14 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
+              "finding"      : "-1 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1692419241"
+              "finding"      : "1692505765"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1168,6 +1175,6 @@
               "ip"           : "cartographiepublicitaire.eu.org/51.159.70.213",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "59"
+              "finding"      : "104"
           }
 ]
