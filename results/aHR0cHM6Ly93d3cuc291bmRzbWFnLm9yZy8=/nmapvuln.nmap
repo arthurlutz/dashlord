@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Aug 22 04:30:46 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Wed Aug 23 04:30:29 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.081s latency).
+Host is up (0.15s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -17,8 +17,6 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     stream_id: 4037f160-87c9-4023-a732-02f0c5c0b2ad
-|     capabilities: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
@@ -30,8 +28,10 @@ PORT     STATE SERVICE      VERSION
 |       stream:stream
 |       (timeout)
 |     auth_mechanisms: 
-|     features: 
-|_    compression_methods: 
+|     stream_id: 3d0a75bf-e465-4917-b879-222e75de4a8f
+|     compression_methods: 
+|     capabilities: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -39,8 +39,6 @@ PORT     STATE SERVICE      VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     stream_id: cb20053c-2d3c-4226-b71e-8315a07cd35b
-|     capabilities: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
@@ -52,14 +50,16 @@ PORT     STATE SERVICE      VERSION
 |       stream:stream
 |       (timeout)
 |     auth_mechanisms: 
-|     features: 
-|_    compression_methods: 
+|     stream_id: f9180ebd-ae46-4910-bb88-244dd1a40860
+|     compression_methods: 
+|     capabilities: 
+|_    features: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=8/22%Time=64E43A02%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=8/23%Time=64E58B74%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lang
 SF:='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\.
 SF:org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -92,7 +92,7 @@ SF:20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=8/22%Time=64E43A02%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.92%I=7%D=8/23%Time=64E58B74%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\x
 SF:20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xmln
 SF:s='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'>
@@ -129,4 +129,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Aug 22 04:33:33 2023 -- 1 IP address (1 host up) scanned in 166.46 seconds
+# Nmap done at Wed Aug 23 04:33:22 2023 -- 1 IP address (1 host up) scanned in 172.44 seconds
