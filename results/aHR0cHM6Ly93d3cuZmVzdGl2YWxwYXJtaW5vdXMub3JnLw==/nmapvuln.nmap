@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Sep 13 04:23:35 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
+# Nmap 7.92 scan initiated Thu Sep 14 04:21:43 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org
 Nmap scan report for www.festivalparminous.org (51.159.70.213)
-Host is up (0.11s latency).
+Host is up (0.084s latency).
 Other addresses for www.festivalparminous.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -15,52 +15,52 @@ PORT     STATE SERVICE      VERSION
 993/tcp  open  imaps?
 1935/tcp open  rtmp?
 5222/tcp open  xmpp-client?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+|_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     auth_mechanisms: 
 |     capabilities: 
-|     stream_id: 21295f3e-441b-4168-99c0-483b0dae64c8
-|     unknown: 
+|     features: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.festivalparminous.org
 |       stream:stream
 |       (timeout)
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|_      version: 1.0
-| fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-|_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+|     auth_mechanisms: 
+|     stream_id: 73ecac75-9855-43a0-9d1f-6288ce59b97f
+|_    unknown: 
 5269/tcp open  xmpp-server?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+|_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     auth_mechanisms: 
 |     capabilities: 
-|     stream_id: 869db140-03b5-41fc-a131-bf9b38284b7d
-|     unknown: 
+|     features: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.festivalparminous.org
 |       stream:stream
 |       (timeout)
-|     compression_methods: 
-|     xmpp: 
-|       lang: en
-|_      version: 1.0
-| fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-|_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+|     auth_mechanisms: 
+|     stream_id: 9b31ba65-1b00-497e-b3f9-4a8167dfdafa
+|_    unknown: 
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=9/13%Time=65013954%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=9/14%Time=65028A63%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lang
 SF:='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\.
 SF:org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -93,7 +93,7 @@ SF:20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=9/13%Time=65013954%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.92%I=7%D=9/14%Time=65028A63%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\x
 SF:20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xmln
 SF:s='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'>
@@ -130,4 +130,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 13 04:26:26 2023 -- 1 IP address (1 host up) scanned in 171.03 seconds
+# Nmap done at Thu Sep 14 04:24:30 2023 -- 1 IP address (1 host up) scanned in 166.64 seconds
