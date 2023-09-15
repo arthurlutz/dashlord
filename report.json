@@ -2,240 +2,7 @@
   {
     "404": null,
     "url": "https://arthur.lutz.im",
-    "http": {
-      "url": "https://arthur.lutz.im",
-      "algorithm_version": 2,
-      "end_time": "Wed, 13 Sep 2023 04:21:12 GMT",
-      "grade": "B+",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
-        "Content-Type": "text/html",
-        "Date": "Wed, 13 Sep 2023 04:21:09 GMT",
-        "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
-        "Transfer-Encoding": "chunked",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-XSS-Protection": "1; mode=block"
-      },
-      "scan_id": 42060911,
-      "score": 80,
-      "start_time": "Wed, 13 Sep 2023 04:21:05 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 1,
-      "tests_passed": 11,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "default-src": [
-                "data:",
-                "blob:",
-                "https:"
-              ],
-              "object-src": [
-                "data:",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "script-src": [
-                "data:",
-                "'unsafe-eval'",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "style-src": [
-                "data:",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "upgrade-insecure-requests": [
-                "'none'"
-              ],
-              "worker-src": [
-                "'self'",
-                "blob:"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": true,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://arthur.lutz.im/intro/",
-            "redirects": true,
-            "route": [
-              "http://arthur.lutz.im/",
-              "https://arthur.lutz.im/",
-              "https://arthur.lutz.im/intro",
-              "https://arthur.lutz.im/intro/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=63072000; includeSubDomains; preload",
-            "includeSubDomains": true,
-            "max-age": 63072000,
-            "preload": true,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
-          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1; mode=block"
-          },
-          "pass": true,
-          "result": "x-xss-protection-enabled-mode-block",
-          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
-          "score_modifier": 0
-        }
-      }
-    },
+    "http": null,
     "updownio": {
       "token": "hh0z",
       "url": "https://arthur.lutz.im/",
@@ -254,32 +21,32 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-09-14T04:05:51Z",
-      "next_check_at": "2023-09-14T04:35:44Z",
+      "last_check_at": "2023-09-15T04:29:38Z",
+      "next_check_at": "2023-09-15T04:59:36Z",
       "mute_until": null,
       "favicon_url": null,
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-09-14T02:36:31Z",
+        "tested_at": "2023-09-15T03:30:03Z",
         "expires_at": "2023-11-02T06:48:53Z",
         "valid": true,
         "error": null
       },
       "metrics": {
-        "apdex": 0.8,
+        "apdex": 1,
         "timings": {
-          "redirect": 888,
-          "namelookup": 17,
+          "redirect": 813,
+          "namelookup": 1,
           "connection": 0,
           "handshake": 0,
-          "response": 2166,
-          "total": 3071
+          "response": 160,
+          "total": 974
         }
       },
       "uptimeGrade": "A",
-      "apdexGrade": "F"
+      "apdexGrade": "A"
     },
     "nmap": {
       "host": "arthur.lutz.im",
@@ -310,124 +77,124 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "cvss": "5.8",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "cvss": "5.8",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EDB-ID:46516",
-                "cvss": "5.8",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "EDB-ID:46193",
-                "cvss": "5.8",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "false",
+                "cvss": "5.8",
                 "id": "CVE-2019-6111",
-                "cvss": "5.8",
-                "type": "cve"
+                "type": "cve",
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32328",
-                "cvss": "5.8",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.8",
                 "id": "1337DAY-ID-32009",
-                "cvss": "5.8",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "SSH_ENUM",
-                "cvss": "5.0",
-                "type": "canvas"
+                "type": "canvas",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "PACKETSTORM:150621",
-                "cvss": "5.0",
-                "type": "packetstorm"
+                "type": "packetstorm",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "cvss": "5.0",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "cvss": "5.0",
-                "type": "exploitpack"
+                "type": "exploitpack",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "EDB-ID:45939",
-                "cvss": "5.0",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "EDB-ID:45233",
-                "cvss": "5.0",
-                "type": "exploitdb"
+                "type": "exploitdb",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "false",
+                "cvss": "5.0",
                 "id": "CVE-2018-15919",
-                "cvss": "5.0",
-                "type": "cve"
+                "type": "cve",
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "false",
+                "cvss": "5.0",
                 "id": "CVE-2018-15473",
-                "cvss": "5.0",
-                "type": "cve"
+                "type": "cve",
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "false",
+                "cvss": "5.0",
                 "id": "CVE-2017-15906",
-                "cvss": "5.0",
-                "type": "cve"
+                "type": "cve",
+                "is_exploit": "false"
               },
               {
-                "is_exploit": "true",
+                "cvss": "5.0",
                 "id": "1337DAY-ID-31730",
-                "cvss": "5.0",
-                "type": "zdt"
+                "type": "zdt",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "0.0",
                 "id": "PACKETSTORM:151227",
-                "cvss": "0.0",
-                "type": "packetstorm"
+                "type": "packetstorm",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
+                "cvss": "0.0",
                 "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
-                "cvss": "0.0",
-                "type": "metasploit"
+                "type": "metasploit",
+                "is_exploit": "true"
               },
               {
-                "is_exploit": "true",
-                "id": "1337DAY-ID-30937",
                 "cvss": "0.0",
-                "type": "zdt"
+                "id": "1337DAY-ID-30937",
+                "type": "zdt",
+                "is_exploit": "true"
               }
             ]
           }
@@ -813,7 +580,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "OK",
-        "finding": "49 >= 30 days"
+        "finding": "48 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -1023,7 +790,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694665298"
+        "finding": "1694752171"
       },
       {
         "id": "HSTS_time",
@@ -1614,7 +1381,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "67"
+        "finding": "105"
       }
     ],
     "thirdparties": {
@@ -1645,7 +1412,7 @@
         },
         {
           "type": "google fonts",
-          "url": "https://fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2",
+          "url": "https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2",
           "details": {
             "id": "google fonts",
             "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
@@ -1653,7 +1420,7 @@
         },
         {
           "type": "google fonts",
-          "url": "https://fonts.gstatic.com/s/opensans/v35/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2",
+          "url": "https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2",
           "details": {
             "id": "google fonts",
             "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
@@ -1664,7 +1431,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html",
-        "date": "Thu, 14 Sep 2023 04:20:47 GMT",
+        "date": "Fri, 15 Sep 2023 04:28:09 GMT",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
@@ -1776,7 +1543,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.163.95",
+          "ip": "172.217.12.138",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1918,7 +1685,7 @@
         },
         {
           "hostname": "i.creativecommons.org",
-          "ip": "104.20.150.16",
+          "ip": "104.20.151.16",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -1938,7 +1705,7 @@
         },
         {
           "hostname": "blogantipub.files.wordpress.com",
-          "ip": "192.0.72.29",
+          "ip": "192.0.72.28",
           "geoip": {
             "city": {
               "geoname_id": 5391959,
@@ -2045,8 +1812,14 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.167.94",
+          "ip": "142.250.72.131",
           "geoip": {
+            "city": {
+              "geoname_id": 5102162,
+              "names": {
+                "en": "Old Bridge"
+              }
+            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -2076,10 +1849,14 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
+              "accuracy_radius": 500,
+              "latitude": 40.3913,
+              "longitude": -74.3247,
+              "metro_code": 501,
+              "time_zone": "America/New_York"
+            },
+            "postal": {
+              "code": "08857"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -2094,7 +1871,22 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 5101760,
+                "iso_code": "NJ",
+                "names": {
+                  "en": "New Jersey",
+                  "es": "Nueva Jersey",
+                  "fr": "New Jersey",
+                  "ja": "ニュージャージー州",
+                  "pt-BR": "Nova Jérsia",
+                  "ru": "Нью-Джерси",
+                  "zh-CN": "新泽西州"
+                }
+              }
+            ]
           }
         }
       ]
@@ -2227,7 +2019,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/",
         "finalUrl": "https://arthur.lutz.im/intro/",
-        "fetchTime": "2023-09-14T04:20:21.130Z",
+        "fetchTime": "2023-09-15T04:20:56.057Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://arthur.lutz.im/) was redirected to https://arthur.lutz.im/intro/. Try testing the second URL directly."
         ],
@@ -2271,49 +2063,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4146,
+            "numericValue": 3659,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2549,
-                  "firstMeaningfulPaint": 3581,
-                  "largestContentfulPaint": 3821,
-                  "firstCPUIdle": 4025,
-                  "interactive": 4146,
-                  "speedIndex": 4243,
+                  "firstContentfulPaint": 2947,
+                  "firstMeaningfulPaint": 2947,
+                  "largestContentfulPaint": 3880,
+                  "firstCPUIdle": 2947,
+                  "interactive": 3659,
+                  "speedIndex": 5203,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 17,
-                  "maxPotentialFID": 83,
-                  "cumulativeLayoutShift": 0,
+                  "totalBlockingTime": 7,
+                  "maxPotentialFID": 63,
+                  "cumulativeLayoutShift": 0.08075313568115235,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 166701966,
+                  "observedTimeOriginTs": 124130889,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 166701966,
-                  "observedFirstPaint": 1526,
-                  "observedFirstPaintTs": 168227525,
-                  "observedFirstContentfulPaint": 1526,
-                  "observedFirstContentfulPaintTs": 168227525,
-                  "observedFirstMeaningfulPaint": 1564,
-                  "observedFirstMeaningfulPaintTs": 168265761,
-                  "observedLargestContentfulPaint": 1526,
-                  "observedLargestContentfulPaintTs": 168227525,
-                  "observedTraceEnd": 2676,
-                  "observedTraceEndTs": 169377869,
-                  "observedLoad": 1617,
-                  "observedLoadTs": 168318941,
-                  "observedDomContentLoaded": 1511,
-                  "observedDomContentLoadedTs": 168212630,
-                  "observedCumulativeLayoutShift": 0,
+                  "observedNavigationStartTs": 124130889,
+                  "observedFirstPaint": 2509,
+                  "observedFirstPaintTs": 126639634,
+                  "observedFirstContentfulPaint": 2509,
+                  "observedFirstContentfulPaintTs": 126639634,
+                  "observedFirstMeaningfulPaint": 2523,
+                  "observedFirstMeaningfulPaintTs": 126653421,
+                  "observedLargestContentfulPaint": 2509,
+                  "observedLargestContentfulPaintTs": 126639634,
+                  "observedTraceEnd": 3748,
+                  "observedTraceEndTs": 127879346,
+                  "observedLoad": 2692,
+                  "observedLoadTs": 126823129,
+                  "observedDomContentLoaded": 2527,
+                  "observedDomContentLoadedTs": 126657726,
+                  "observedCumulativeLayoutShift": 0.08075313568115235,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1491,
-                  "observedFirstVisualChangeTs": 168192966,
-                  "observedLastVisualChange": 2091,
-                  "observedLastVisualChangeTs": 168792966,
-                  "observedSpeedIndex": 1514,
-                  "observedSpeedIndexTs": 168215938
+                  "observedFirstVisualChange": 2514,
+                  "observedFirstVisualChangeTs": 126644889,
+                  "observedLastVisualChange": 3114,
+                  "observedLastVisualChangeTs": 127244889,
+                  "observedSpeedIndex": 2526,
+                  "observedSpeedIndexTs": 126657267
                 },
                 {
                   "lcpInvalidated": false
@@ -2335,18 +2127,18 @@
                   "numScripts": 8,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 261,
-                  "numTasksOver10ms": 6,
-                  "numTasksOver25ms": 2,
-                  "numTasksOver50ms": 1,
+                  "numTasks": 287,
+                  "numTasksOver10ms": 4,
+                  "numTasksOver25ms": 1,
+                  "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.292,
-                  "throughput": 16795663.571342733,
-                  "maxRtt": 97.23,
-                  "maxServerLatency": 30.462999999999994,
-                  "totalByteWeight": 477659,
-                  "totalTaskTime": 216.7779999999997,
+                  "rtt": 8.683,
+                  "throughput": 9679550.202776836,
+                  "maxRtt": 164.983,
+                  "maxServerLatency": 29.458,
+                  "totalByteWeight": 477710,
+                  "totalTaskTime": 150.07699999999994,
                   "mainDocumentTransferSize": 15294
                 }
               ]
@@ -2366,9 +2158,8 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "httpGrade": "B+",
-      "apdex": 0.8,
-      "apdexGrade": "F",
+      "apdex": 1,
+      "apdexGrade": "A",
       "uptime": 100,
       "uptimeGrade": "A",
       "nmapGrade": "E",
@@ -2396,240 +2187,7 @@
   {
     "404": null,
     "url": "https://arthur.lutz.im/blog/",
-    "http": {
-      "url": "https://arthur.lutz.im/blog/",
-      "algorithm_version": 2,
-      "end_time": "Wed, 13 Sep 2023 04:21:12 GMT",
-      "grade": "B+",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
-        "Content-Type": "text/html",
-        "Date": "Wed, 13 Sep 2023 04:21:09 GMT",
-        "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
-        "Transfer-Encoding": "chunked",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-XSS-Protection": "1; mode=block"
-      },
-      "scan_id": 42060911,
-      "score": 80,
-      "start_time": "Wed, 13 Sep 2023 04:21:05 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 1,
-      "tests_passed": 11,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "default-src": [
-                "data:",
-                "blob:",
-                "https:"
-              ],
-              "object-src": [
-                "data:",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "script-src": [
-                "data:",
-                "'unsafe-eval'",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "style-src": [
-                "data:",
-                "'unsafe-inline'",
-                "https:"
-              ],
-              "upgrade-insecure-requests": [
-                "'none'"
-              ],
-              "worker-src": [
-                "'self'",
-                "blob:"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": true,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://arthur.lutz.im/intro/",
-            "redirects": true,
-            "route": [
-              "http://arthur.lutz.im/",
-              "https://arthur.lutz.im/",
-              "https://arthur.lutz.im/intro",
-              "https://arthur.lutz.im/intro/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=63072000; includeSubDomains; preload",
-            "includeSubDomains": true,
-            "max-age": 63072000,
-            "preload": true,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
-          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1; mode=block"
-          },
-          "pass": true,
-          "result": "x-xss-protection-enabled-mode-block",
-          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
-          "score_modifier": 0
-        }
-      }
-    },
+    "http": null,
     "updownio": null,
     "nmap": {
       "host": "arthur.lutz.im",
@@ -2660,124 +2218,124 @@
             "version": "7.4p1 Debian 10+deb9u7",
             "vulnerabilities": [
               {
+                "type": "exploitpack",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:98FE96309F9524B8C84C508837551A19",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "exploitpack"
+                "cvss": "5.8"
               },
               {
+                "type": "exploitpack",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "exploitpack"
+                "cvss": "5.8"
               },
               {
+                "type": "exploitdb",
+                "is_exploit": "true",
                 "id": "EDB-ID:46516",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "exploitdb"
+                "cvss": "5.8"
               },
               {
+                "type": "exploitdb",
+                "is_exploit": "true",
                 "id": "EDB-ID:46193",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "exploitdb"
+                "cvss": "5.8"
               },
               {
+                "type": "cve",
+                "is_exploit": "false",
                 "id": "CVE-2019-6111",
-                "cvss": "5.8",
-                "is_exploit": "false",
-                "type": "cve"
+                "cvss": "5.8"
               },
               {
+                "type": "zdt",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-32328",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "zdt"
+                "cvss": "5.8"
               },
               {
+                "type": "zdt",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-32009",
-                "cvss": "5.8",
-                "is_exploit": "true",
-                "type": "zdt"
+                "cvss": "5.8"
               },
               {
+                "type": "canvas",
+                "is_exploit": "true",
                 "id": "SSH_ENUM",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "canvas"
+                "cvss": "5.0"
               },
               {
+                "type": "packetstorm",
+                "is_exploit": "true",
                 "id": "PACKETSTORM:150621",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "packetstorm"
+                "cvss": "5.0"
               },
               {
+                "type": "exploitpack",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "exploitpack"
+                "cvss": "5.0"
               },
               {
+                "type": "exploitpack",
+                "is_exploit": "true",
                 "id": "EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "exploitpack"
+                "cvss": "5.0"
               },
               {
+                "type": "exploitdb",
+                "is_exploit": "true",
                 "id": "EDB-ID:45939",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "exploitdb"
+                "cvss": "5.0"
               },
               {
+                "type": "exploitdb",
+                "is_exploit": "true",
                 "id": "EDB-ID:45233",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "exploitdb"
+                "cvss": "5.0"
               },
               {
+                "type": "cve",
+                "is_exploit": "false",
                 "id": "CVE-2018-15919",
-                "cvss": "5.0",
-                "is_exploit": "false",
-                "type": "cve"
+                "cvss": "5.0"
               },
               {
+                "type": "cve",
+                "is_exploit": "false",
                 "id": "CVE-2018-15473",
-                "cvss": "5.0",
-                "is_exploit": "false",
-                "type": "cve"
+                "cvss": "5.0"
               },
               {
+                "type": "cve",
+                "is_exploit": "false",
                 "id": "CVE-2017-15906",
-                "cvss": "5.0",
-                "is_exploit": "false",
-                "type": "cve"
+                "cvss": "5.0"
               },
               {
+                "type": "zdt",
+                "is_exploit": "true",
                 "id": "1337DAY-ID-31730",
-                "cvss": "5.0",
-                "is_exploit": "true",
-                "type": "zdt"
+                "cvss": "5.0"
               },
               {
+                "type": "packetstorm",
+                "is_exploit": "true",
                 "id": "PACKETSTORM:151227",
-                "cvss": "0.0",
-                "is_exploit": "true",
-                "type": "packetstorm"
+                "cvss": "0.0"
               },
               {
+                "type": "metasploit",
+                "is_exploit": "true",
                 "id": "MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-",
-                "cvss": "0.0",
-                "is_exploit": "true",
-                "type": "metasploit"
+                "cvss": "0.0"
               },
               {
-                "id": "1337DAY-ID-30937",
-                "cvss": "0.0",
+                "type": "zdt",
                 "is_exploit": "true",
-                "type": "zdt"
+                "id": "1337DAY-ID-30937",
+                "cvss": "0.0"
               }
             ]
           }
@@ -3163,7 +2721,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "OK",
-        "finding": "49 >= 30 days"
+        "finding": "48 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -3373,7 +2931,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694665291"
+        "finding": "1694752133"
       },
       {
         "id": "HSTS_time",
@@ -3964,7 +3522,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "71"
+        "finding": "72"
       }
     ],
     "thirdparties": {
@@ -3973,7 +3531,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 14 Sep 2023 04:20:42 GMT",
+        "date": "Fri, 15 Sep 2023 04:28:01 GMT",
         "link": "<https://arthur.lutz.im/blog/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
@@ -4281,7 +3839,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/blog/",
         "finalUrl": "https://arthur.lutz.im/blog/",
-        "fetchTime": "2023-09-14T04:20:08.469Z",
+        "fetchTime": "2023-09-15T04:20:45.257Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -4323,49 +3881,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 2911,
+            "numericValue": 2976,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2911,
-                  "firstMeaningfulPaint": 2911,
-                  "largestContentfulPaint": 3886,
-                  "firstCPUIdle": 2911,
-                  "interactive": 2911,
-                  "speedIndex": 4536,
+                  "firstContentfulPaint": 2976,
+                  "firstMeaningfulPaint": 2976,
+                  "largestContentfulPaint": 4101,
+                  "firstCPUIdle": 2976,
+                  "interactive": 2976,
+                  "speedIndex": 4486,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 38,
+                  "maxPotentialFID": 29,
                   "cumulativeLayoutShift": 0.04453304121229384,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 136307733,
+                  "observedTimeOriginTs": 128595945,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 136307733,
-                  "observedFirstPaint": 1932,
-                  "observedFirstPaintTs": 138240175,
-                  "observedFirstContentfulPaint": 1932,
-                  "observedFirstContentfulPaintTs": 138240175,
-                  "observedFirstMeaningfulPaint": 1932,
-                  "observedFirstMeaningfulPaintTs": 138240175,
-                  "observedLargestContentfulPaint": 2063,
-                  "observedLargestContentfulPaintTs": 138370869,
-                  "observedTraceEnd": 3092,
-                  "observedTraceEndTs": 139399274,
-                  "observedLoad": 2033,
-                  "observedLoadTs": 138340447,
-                  "observedDomContentLoaded": 1921,
-                  "observedDomContentLoadedTs": 138228357,
+                  "observedNavigationStartTs": 128595945,
+                  "observedFirstPaint": 1779,
+                  "observedFirstPaintTs": 130374585,
+                  "observedFirstContentfulPaint": 1779,
+                  "observedFirstContentfulPaintTs": 130374585,
+                  "observedFirstMeaningfulPaint": 1779,
+                  "observedFirstMeaningfulPaintTs": 130374585,
+                  "observedLargestContentfulPaint": 1986,
+                  "observedLargestContentfulPaintTs": 130581836,
+                  "observedTraceEnd": 3012,
+                  "observedTraceEndTs": 131607921,
+                  "observedLoad": 1953,
+                  "observedLoadTs": 130548483,
+                  "observedDomContentLoaded": 1760,
+                  "observedDomContentLoadedTs": 130355779,
                   "observedCumulativeLayoutShift": 0.04453304121229384,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1936,
-                  "observedFirstVisualChangeTs": 138243733,
-                  "observedLastVisualChange": 2536,
-                  "observedLastVisualChangeTs": 138843733,
-                  "observedSpeedIndex": 2024,
-                  "observedSpeedIndexTs": 138332133
+                  "observedFirstVisualChange": 1782,
+                  "observedFirstVisualChangeTs": 130377945,
+                  "observedLastVisualChange": 2382,
+                  "observedLastVisualChangeTs": 130977945,
+                  "observedSpeedIndex": 1930,
+                  "observedSpeedIndexTs": 130525612
                 },
                 {
                   "lcpInvalidated": false
@@ -4387,18 +3945,18 @@
                   "numScripts": 8,
                   "numStylesheets": 8,
                   "numFonts": 0,
-                  "numTasks": 497,
-                  "numTasksOver10ms": 3,
+                  "numTasks": 488,
+                  "numTasksOver10ms": 4,
                   "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 96.75200000000001,
-                  "throughput": 36122664.73706133,
-                  "maxRtt": 96.75200000000001,
-                  "maxServerLatency": 60.95999999999998,
+                  "rtt": 105.571,
+                  "throughput": 39044676.969019055,
+                  "maxRtt": 105.571,
+                  "maxServerLatency": 125.72200000000001,
                   "totalByteWeight": 3847653,
-                  "totalTaskTime": 182.6929999999997,
+                  "totalTaskTime": 189.80199999999977,
                   "mainDocumentTransferSize": 43781
                 }
               ]
@@ -4418,7 +3976,6 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "httpGrade": "B+",
       "nmapGrade": "E",
       "nmapOpenPortsCount": 3,
       "nmapOpenPortsGrade": "F",
@@ -4444,214 +4001,7 @@
   {
     "404": null,
     "url": "https://www.festivalparminous.org/",
-    "http": {
-      "url": "https://www.festivalparminous.org/",
-      "algorithm_version": 2,
-      "end_time": "Wed, 13 Sep 2023 04:21:09 GMT",
-      "grade": "B+",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 13 Sep 2023 04:21:07 GMT",
-        "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
-        "Permissions-Policy": "interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
-        "Transfer-Encoding": "chunked",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-XSS-Protection": "1; mode=block"
-      },
-      "scan_id": 42060909,
-      "score": 80,
-      "start_time": "Wed, 13 Sep 2023 04:21:03 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 1,
-      "tests_passed": 11,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "upgrade-insecure-requests": [
-                "'none'"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": false,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://www.festivalparminous.org/",
-            "redirects": true,
-            "route": [
-              "http://www.festivalparminous.org/",
-              "https://www.festivalparminous.org/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=63072000; includeSubDomains; preload",
-            "includeSubDomains": true,
-            "max-age": 63072000,
-            "preload": true,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
-          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1; mode=block"
-          },
-          "pass": true,
-          "result": "x-xss-protection-enabled-mode-block",
-          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
-          "score_modifier": 0
-        }
-      }
-    },
+    "http": null,
     "updownio": {
       "token": "2yk9",
       "url": "https://www.festivalparminous.org",
@@ -4670,15 +4020,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-09-14T04:04:32Z",
-      "next_check_at": "2023-09-14T04:34:27Z",
+      "last_check_at": "2023-09-15T04:27:59Z",
+      "next_check_at": "2023-09-15T04:57:58Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-192x192.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-09-14T03:04:42Z",
+        "tested_at": "2023-09-15T03:58:15Z",
         "expires_at": "2023-11-17T03:28:10Z",
         "valid": true,
         "error": null
@@ -4687,11 +4037,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 42,
-          "connection": 168,
-          "handshake": 188,
-          "response": 239,
-          "total": 638
+          "namelookup": 58,
+          "connection": 140,
+          "handshake": 160,
+          "response": 200,
+          "total": 558
         }
       },
       "uptimeGrade": "A",
@@ -5076,7 +4426,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "63 >= 30 days"
+        "finding": "62 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -5286,7 +4636,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694665270"
+        "finding": "1694752112"
       },
       {
         "id": "HSTS_time",
@@ -5877,7 +5227,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "61"
+        "finding": "58"
       }
     ],
     "thirdparties": {
@@ -5886,7 +5236,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 14 Sep 2023 04:20:29 GMT",
+        "date": "Fri, 15 Sep 2023 04:27:52 GMT",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -6216,7 +5566,7 @@
       {
         "requestedUrl": "https://www.festivalparminous.org/",
         "finalUrl": "https://www.festivalparminous.org/",
-        "fetchTime": "2023-09-14T04:20:02.234Z",
+        "fetchTime": "2023-09-15T04:20:43.028Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -6258,49 +5608,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3404,
+            "numericValue": 3425,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3404,
-                  "firstMeaningfulPaint": 3404,
-                  "largestContentfulPaint": 3759,
-                  "firstCPUIdle": 3404,
-                  "interactive": 3404,
-                  "speedIndex": 3453,
+                  "firstContentfulPaint": 3425,
+                  "firstMeaningfulPaint": 3425,
+                  "largestContentfulPaint": 6616,
+                  "firstCPUIdle": 3425,
+                  "interactive": 3425,
+                  "speedIndex": 3550,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.0007809524536132812,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 156497445,
+                  "observedTimeOriginTs": 85620381,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 156497445,
-                  "observedFirstPaint": 1039,
-                  "observedFirstPaintTs": 157536530,
-                  "observedFirstContentfulPaint": 1039,
-                  "observedFirstContentfulPaintTs": 157536530,
-                  "observedFirstMeaningfulPaint": 1060,
-                  "observedFirstMeaningfulPaintTs": 157557179,
-                  "observedLargestContentfulPaint": 1039,
-                  "observedLargestContentfulPaintTs": 157536530,
-                  "observedTraceEnd": 2202,
-                  "observedTraceEndTs": 158699386,
-                  "observedLoad": 1145,
-                  "observedLoadTs": 157641963,
-                  "observedDomContentLoaded": 1051,
-                  "observedDomContentLoadedTs": 157548799,
+                  "observedNavigationStartTs": 85620381,
+                  "observedFirstPaint": 1113,
+                  "observedFirstPaintTs": 86733465,
+                  "observedFirstContentfulPaint": 1113,
+                  "observedFirstContentfulPaintTs": 86733465,
+                  "observedFirstMeaningfulPaint": 1126,
+                  "observedFirstMeaningfulPaintTs": 86746024,
+                  "observedLargestContentfulPaint": 1113,
+                  "observedLargestContentfulPaintTs": 86733465,
+                  "observedTraceEnd": 2268,
+                  "observedTraceEndTs": 87888761,
+                  "observedLoad": 1212,
+                  "observedLoadTs": 86832045,
+                  "observedDomContentLoaded": 1123,
+                  "observedDomContentLoadedTs": 86743261,
                   "observedCumulativeLayoutShift": 0.0007809524536132812,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1046,
-                  "observedFirstVisualChangeTs": 157543445,
-                  "observedLastVisualChange": 1346,
-                  "observedLastVisualChangeTs": 157843445,
-                  "observedSpeedIndex": 1064,
-                  "observedSpeedIndexTs": 157561864
+                  "observedFirstVisualChange": 1109,
+                  "observedFirstVisualChangeTs": 86729381,
+                  "observedLastVisualChange": 1242,
+                  "observedLastVisualChangeTs": 86862381,
+                  "observedSpeedIndex": 1124,
+                  "observedSpeedIndexTs": 86744697
                 },
                 {
                   "lcpInvalidated": false
@@ -6322,18 +5672,18 @@
                   "numScripts": 3,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 298,
-                  "numTasksOver10ms": 3,
+                  "numTasks": 315,
+                  "numTasksOver10ms": 6,
                   "numTasksOver25ms": 2,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 82.93700000000001,
-                  "throughput": 58532641.26621695,
-                  "maxRtt": 82.93700000000001,
-                  "maxServerLatency": 84.1,
+                  "rtt": 91.089,
+                  "throughput": 55575857.7924761,
+                  "maxRtt": 91.089,
+                  "maxServerLatency": 91.01599999999999,
                   "totalByteWeight": 3429611,
-                  "totalTaskTime": 207.2599999999997,
+                  "totalTaskTime": 209.25599999999946,
                   "mainDocumentTransferSize": 127740
                 }
               ]
@@ -6353,7 +5703,6 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "httpGrade": "B+",
       "apdex": 1,
       "apdexGrade": "A",
       "uptime": 100,
@@ -6380,218 +5729,7 @@
   {
     "404": null,
     "url": "https://www.soundsmag.org/",
-    "http": {
-      "url": "https://www.soundsmag.org/",
-      "algorithm_version": 2,
-      "end_time": "Wed, 13 Sep 2023 04:25:25 GMT",
-      "grade": "B",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Composed-By": "SPIP 4.2.2 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Type": "text/html; charset=utf-8",
-        "Date": "Wed, 13 Sep 2023 04:25:23 GMT",
-        "Link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
-        "Permissions-Policy": "interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=15768000",
-        "Transfer-Encoding": "chunked",
-        "Vary": "Cookie, Accept-Encoding",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-Robots-Tag": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-Spip-Cache": "86400",
-        "X-XSS-Protection": "1, mode=block"
-      },
-      "scan_id": 42060942,
-      "score": 70,
-      "start_time": "Wed, 13 Sep 2023 04:25:20 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 2,
-      "tests_passed": 10,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "upgrade-insecure-requests": [
-                "'none'"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": false,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://www.soundsmag.org/",
-            "redirects": true,
-            "route": [
-              "http://www.soundsmag.org/",
-              "https://www.soundsmag.org/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=15768000",
-            "includeSubDomains": false,
-            "max-age": 15768000,
-            "preload": false,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {}
-          },
-          "pass": true,
-          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
-          "score_modifier": 0
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1, mode=block"
-          },
-          "pass": false,
-          "result": "x-xss-protection-header-invalid",
-          "score_description": "X-XSS-Protection header cannot be recognized",
-          "score_modifier": -10
-        }
-      }
-    },
+    "http": null,
     "updownio": null,
     "nmap": null,
     "dependabot": null,
@@ -6972,7 +6110,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "63 >= 30 days"
+        "finding": "62 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -7182,7 +6320,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694665618"
+        "finding": "1694752854"
       },
       {
         "id": "HSTS_time",
@@ -7773,7 +6911,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "114"
+        "finding": "110"
       }
     ],
     "thirdparties": {
@@ -7783,7 +6921,7 @@
         "composed-by": "SPIP 4.2.2 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=utf-8",
-        "date": "Thu, 14 Sep 2023 04:25:31 GMT",
+        "date": "Fri, 15 Sep 2023 04:39:33 GMT",
         "link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -8058,7 +7196,7 @@
       {
         "requestedUrl": "https://www.soundsmag.org/",
         "finalUrl": "https://www.soundsmag.org/",
-        "fetchTime": "2023-09-14T04:24:57.541Z",
+        "fetchTime": "2023-09-15T04:32:02.896Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -8100,49 +7238,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3569,
+            "numericValue": 3551,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3269,
-                  "firstMeaningfulPaint": 3269,
-                  "largestContentfulPaint": 3494,
-                  "firstCPUIdle": 3269,
-                  "interactive": 3569,
-                  "speedIndex": 4000,
+                  "firstContentfulPaint": 3251,
+                  "firstMeaningfulPaint": 3251,
+                  "largestContentfulPaint": 3476,
+                  "firstCPUIdle": 3251,
+                  "interactive": 3551,
+                  "speedIndex": 4087,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 29,
-                  "maxPotentialFID": 108,
+                  "totalBlockingTime": 20,
+                  "maxPotentialFID": 90,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 149859254,
+                  "observedTimeOriginTs": 129473221,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 149859254,
-                  "observedFirstPaint": 1529,
-                  "observedFirstPaintTs": 151388296,
-                  "observedFirstContentfulPaint": 1529,
-                  "observedFirstContentfulPaintTs": 151388296,
-                  "observedFirstMeaningfulPaint": 1529,
-                  "observedFirstMeaningfulPaintTs": 151388296,
-                  "observedLargestContentfulPaint": 1529,
-                  "observedLargestContentfulPaintTs": 151388296,
-                  "observedTraceEnd": 2710,
-                  "observedTraceEndTs": 152568888,
-                  "observedLoad": 1640,
-                  "observedLoadTs": 151498858,
-                  "observedDomContentLoaded": 1321,
-                  "observedDomContentLoadedTs": 151179904,
+                  "observedNavigationStartTs": 129473221,
+                  "observedFirstPaint": 1582,
+                  "observedFirstPaintTs": 131055674,
+                  "observedFirstContentfulPaint": 1582,
+                  "observedFirstContentfulPaintTs": 131055674,
+                  "observedFirstMeaningfulPaint": 1582,
+                  "observedFirstMeaningfulPaintTs": 131055674,
+                  "observedLargestContentfulPaint": 1582,
+                  "observedLargestContentfulPaintTs": 131055674,
+                  "observedTraceEnd": 2773,
+                  "observedTraceEndTs": 132246617,
+                  "observedLoad": 1712,
+                  "observedLoadTs": 131185681,
+                  "observedDomContentLoaded": 1375,
+                  "observedDomContentLoadedTs": 130847736,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1518,
-                  "observedFirstVisualChangeTs": 151377254,
-                  "observedLastVisualChange": 1518,
-                  "observedLastVisualChangeTs": 151377254,
-                  "observedSpeedIndex": 1518,
-                  "observedSpeedIndexTs": 151377278
+                  "observedFirstVisualChange": 1588,
+                  "observedFirstVisualChangeTs": 131061221,
+                  "observedLastVisualChange": 1588,
+                  "observedLastVisualChangeTs": 131061221,
+                  "observedSpeedIndex": 1588,
+                  "observedSpeedIndexTs": 131061424
                 },
                 {
                   "lcpInvalidated": false
@@ -8164,18 +7302,18 @@
                   "numScripts": 3,
                   "numStylesheets": 5,
                   "numFonts": 0,
-                  "numTasks": 201,
-                  "numTasksOver10ms": 4,
-                  "numTasksOver25ms": 3,
+                  "numTasks": 196,
+                  "numTasksOver10ms": 3,
+                  "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 150.699,
-                  "throughput": 5276925.25190181,
-                  "maxRtt": 150.699,
-                  "maxServerLatency": 3.556999999999988,
+                  "rtt": 159.407,
+                  "throughput": 5011719.506929924,
+                  "maxRtt": 159.407,
+                  "maxServerLatency": 3.8039999999999736,
                   "totalByteWeight": 411245,
-                  "totalTaskTime": 173.85099999999986,
+                  "totalTaskTime": 130.89100000000002,
                   "mainDocumentTransferSize": 19372
                 }
               ]
@@ -8195,7 +7333,6 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "httpGrade": "B",
       "testsslExpireSoon": false,
       "testsslExpireDate": "2023-11-17T03:34:00.000Z",
       "testsslGrade": "A+",
@@ -8218,223 +7355,7 @@
   {
     "404": null,
     "url": "https://cartographiepublicitaire.eu.org",
-    "http": {
-      "url": "https://cartographiepublicitaire.eu.org",
-      "algorithm_version": 2,
-      "end_time": "Wed, 13 Sep 2023 04:27:24 GMT",
-      "grade": "B",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Connection": "keep-alive",
-        "Content-Security-Policy": "upgrade-insecure-requests",
-        "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Wed, 13 Sep 2023 04:27:01 GMT",
-        "Link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
-        "Permissions-Policy": "interest-cohort=()",
-        "Server": "nginx",
-        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
-        "Transfer-Encoding": "chunked",
-        "X-Content-Type-Options": "nosniff",
-        "X-Download-Options": "noopen",
-        "X-Frame-Options": "SAMEORIGIN",
-        "X-Permitted-Cross-Domain-Policies": "none",
-        "X-SSO-WAT": "You've just been SSOed",
-        "X-XSS-Protection": "1; mode=block"
-      },
-      "scan_id": 42060951,
-      "score": 75,
-      "start_time": "Wed, 13 Sep 2023 04:26:58 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 2,
-      "tests_passed": 10,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": {
-              "upgrade-insecure-requests": [
-                "'none'"
-              ]
-            },
-            "http": true,
-            "meta": false,
-            "numPolicies": 1,
-            "policy": {
-              "antiClickjacking": false,
-              "defaultNone": false,
-              "insecureBaseUri": true,
-              "insecureFormAction": true,
-              "insecureSchemeActive": false,
-              "insecureSchemePassive": false,
-              "strictDynamic": false,
-              "unsafeEval": false,
-              "unsafeInline": true,
-              "unsafeInlineStyle": true,
-              "unsafeObjects": true
-            }
-          },
-          "pass": false,
-          "result": "csp-implemented-with-unsafe-inline",
-          "score_description": "Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.",
-          "score_modifier": -20
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://cartographiepublicitaire.eu.org/",
-            "redirects": true,
-            "route": [
-              "http://cartographiepublicitaire.eu.org/",
-              "https://cartographiepublicitaire.eu.org/"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": "max-age=63072000; includeSubDomains; preload",
-            "includeSubDomains": true,
-            "max-age": 63072000,
-            "preload": true,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hsts-implemented-max-age-at-least-six-months",
-          "score_description": "HTTP Strict Transport Security (HSTS) header set to a minimum of six months (15768000)",
-          "score_modifier": 0
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {
-              "https://unpkg.com/leaflet.markercluster@1.0.4/dist/leaflet.markercluster.js": {
-                "crossorigin": null,
-                "integrity": null
-              },
-              "https://unpkg.com/leaflet@1.0.3/dist/leaflet.js": {
-                "crossorigin": null,
-                "integrity": null
-              }
-            }
-          },
-          "pass": false,
-          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
-          "score_modifier": -5
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": "nosniff"
-          },
-          "pass": true,
-          "result": "x-content-type-options-nosniff",
-          "score_description": "X-Content-Type-Options header set to \"nosniff\"",
-          "score_modifier": 0
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": "SAMEORIGIN"
-          },
-          "pass": true,
-          "result": "x-frame-options-sameorigin-or-deny",
-          "score_description": "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY",
-          "score_modifier": 0
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": "1; mode=block"
-          },
-          "pass": true,
-          "result": "x-xss-protection-enabled-mode-block",
-          "score_description": "X-XSS-Protection header set to \"1; mode=block\"",
-          "score_modifier": 0
-        }
-      }
-    },
+    "http": null,
     "updownio": null,
     "nmap": null,
     "dependabot": null,
@@ -8815,7 +7736,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "MEDIUM",
-        "finding": "expires < 30 days (28)"
+        "finding": "expires < 30 days (27)"
       },
       {
         "id": "cert_notBefore",
@@ -9025,7 +7946,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694665584"
+        "finding": "1694752920"
       },
       {
         "id": "HSTS_time",
@@ -9616,7 +8537,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "100"
+        "finding": "116"
       }
     ],
     "thirdparties": {
@@ -9667,7 +8588,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=e737ae209ee176e7d6d000b436dbe376b5de5668",
+          "url": "https://syndication.twitter.com/settings?session_id=9155a4249dae53a9884d024d15f4c65c86a19fe6",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9683,7 +8604,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=e737ae209ee176e7d6d000b436dbe376b5de5668&showHeader=false&showReplies=false&transparent=true&widgetsVersion=aaf4084522e3a%3A1674595607486",
+          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=9155a4249dae53a9884d024d15f4c65c86a19fe6&showHeader=false&showReplies=false&transparent=true&widgetsVersion=aaf4084522e3a%3A1674595607486",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9811,7 +8732,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1694665510827%2C%22event_namespace%22%3A%7B%22action%22%3A%22no-results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22aaf4084522e3a%3A1674595607486%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22d2b21d1%3A1693532938118%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=e737ae209ee176e7d6d000b436dbe376b5de5668",
+          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1694752834252%2C%22event_namespace%22%3A%7B%22action%22%3A%22no-results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%22aaf4084522e3a%3A1674595607486%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22d2b21d1%3A1693532938118%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=9155a4249dae53a9884d024d15f4c65c86a19fe6",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9822,7 +8743,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Thu, 14 Sep 2023 04:25:08 GMT",
+        "date": "Fri, 15 Sep 2023 04:40:32 GMT",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -9932,7 +8853,7 @@
         },
         {
           "hostname": "unpkg.com",
-          "ip": "104.16.123.175",
+          "ip": "104.16.126.175",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -10026,7 +8947,7 @@
         },
         {
           "hostname": "syndication.twitter.com",
-          "ip": "104.244.42.8",
+          "ip": "104.244.42.200",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -10408,13 +9329,13 @@
       {
         "requestedUrl": "https://cartographiepublicitaire.eu.org/",
         "finalUrl": "https://cartographiepublicitaire.eu.org/",
-        "fetchTime": "2023-09-14T04:24:38.718Z",
+        "fetchTime": "2023-09-15T04:32:48.023Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.8432538986206055
+            "score": 0.8432649612426758
           },
           "accessibility": {
             "title": "Accessibility",
@@ -10450,49 +9371,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 12124,
+            "numericValue": 13895,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 7786,
-                  "firstMeaningfulPaint": 7786,
-                  "largestContentfulPaint": 7786,
-                  "firstCPUIdle": 10975,
-                  "interactive": 12124,
-                  "speedIndex": 9694,
-                  "estimatedInputLatency": 13,
-                  "totalBlockingTime": 83,
-                  "maxPotentialFID": 201,
+                  "firstContentfulPaint": 7668,
+                  "firstMeaningfulPaint": 7668,
+                  "largestContentfulPaint": 7668,
+                  "firstCPUIdle": 10989,
+                  "interactive": 13895,
+                  "speedIndex": 14056,
+                  "estimatedInputLatency": 15,
+                  "totalBlockingTime": 137,
+                  "maxPotentialFID": 228,
                   "cumulativeLayoutShift": 0,
-                  "cumulativeLayoutShiftAllFrames": 0.11674074074074074,
+                  "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 161531538,
+                  "observedTimeOriginTs": 106452194,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 161531538,
-                  "observedFirstPaint": 1933,
-                  "observedFirstPaintTs": 163464965,
-                  "observedFirstContentfulPaint": 1933,
-                  "observedFirstContentfulPaintTs": 163464965,
-                  "observedFirstMeaningfulPaint": 1933,
-                  "observedFirstMeaningfulPaintTs": 163464965,
-                  "observedLargestContentfulPaint": 1933,
-                  "observedLargestContentfulPaintTs": 163464965,
-                  "observedTraceEnd": 3675,
-                  "observedTraceEndTs": 165206771,
-                  "observedLoad": 2616,
-                  "observedLoadTs": 164147538,
-                  "observedDomContentLoaded": 1924,
-                  "observedDomContentLoadedTs": 163455987,
+                  "observedNavigationStartTs": 106452194,
+                  "observedFirstPaint": 2260,
+                  "observedFirstPaintTs": 108711879,
+                  "observedFirstContentfulPaint": 2260,
+                  "observedFirstContentfulPaintTs": 108711879,
+                  "observedFirstMeaningfulPaint": 2260,
+                  "observedFirstMeaningfulPaintTs": 108711879,
+                  "observedLargestContentfulPaint": 2260,
+                  "observedLargestContentfulPaintTs": 108711879,
+                  "observedTraceEnd": 15502,
+                  "observedTraceEndTs": 121954286,
+                  "observedLoad": 14445,
+                  "observedLoadTs": 120896838,
+                  "observedDomContentLoaded": 2244,
+                  "observedDomContentLoadedTs": 108695806,
                   "observedCumulativeLayoutShift": 0,
-                  "observedCumulativeLayoutShiftAllFrames": 0.11674074074074074,
-                  "observedFirstVisualChange": 1945,
-                  "observedFirstVisualChangeTs": 163476538,
-                  "observedLastVisualChange": 2661,
-                  "observedLastVisualChangeTs": 164192538,
-                  "observedSpeedIndex": 2086,
-                  "observedSpeedIndexTs": 163617788
+                  "observedCumulativeLayoutShiftAllFrames": 0,
+                  "observedFirstVisualChange": 2260,
+                  "observedFirstVisualChangeTs": 108712194,
+                  "observedLastVisualChange": 14459,
+                  "observedLastVisualChangeTs": 120911194,
+                  "observedSpeedIndex": 4808,
+                  "observedSpeedIndexTs": 111260049
                 },
                 {
                   "lcpInvalidated": false
@@ -10514,18 +9435,18 @@
                   "numScripts": 26,
                   "numStylesheets": 12,
                   "numFonts": 1,
-                  "numTasks": 636,
-                  "numTasksOver10ms": 7,
-                  "numTasksOver25ms": 1,
+                  "numTasks": 678,
+                  "numTasksOver10ms": 11,
+                  "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.93,
-                  "throughput": 13349963.434138158,
-                  "maxRtt": 128.63199999999998,
-                  "maxServerLatency": 617.701,
-                  "totalByteWeight": 1870377,
-                  "totalTaskTime": 421.9889999999994,
+                  "rtt": 1.4790000000000003,
+                  "throughput": 12769160.205979278,
+                  "maxRtt": 155.48000000000002,
+                  "maxServerLatency": 12235.858,
+                  "totalByteWeight": 1870319,
+                  "totalTaskTime": 552.1349999999986,
                   "mainDocumentTransferSize": 70362
                 }
               ]
@@ -10545,7 +9466,6 @@
     "ecoindex": null,
     "sonarcloud": null,
     "summary": {
-      "httpGrade": "B",
       "testsslExpireSoon": true,
       "testsslExpireDate": "2023-10-13T03:25:00.000Z",
       "testsslGrade": "A+",
@@ -10553,7 +9473,7 @@
       "cookiesCount": 0,
       "trackersGrade": "F",
       "trackersCount": 25,
-      "lighthouse_performance": 0.8432538986206055,
+      "lighthouse_performance": 0.8432649612426758,
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
