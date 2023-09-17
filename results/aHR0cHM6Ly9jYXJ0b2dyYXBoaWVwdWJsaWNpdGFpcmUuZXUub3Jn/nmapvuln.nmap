@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Sep 16 04:27:52 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
+# Nmap 7.92 scan initiated Sun Sep 17 04:38:57 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartographiepublicitaire.eu.org
 Nmap scan report for cartographiepublicitaire.eu.org (51.159.70.213)
-Host is up (0.11s latency).
+Host is up (0.086s latency).
 Other addresses for cartographiepublicitaire.eu.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -14,52 +14,52 @@ PORT     STATE SERVICE      VERSION
 993/tcp  open  imaps?
 1935/tcp open  rtmp?
 5222/tcp open  xmpp-client?
-| fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
-|_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     capabilities: 
-|     features: 
-|     unknown: 
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     stream_id: 3d68732e-9d6d-4d81-b05e-4d450f324a24
-|     auth_mechanisms: 
-|_    compression_methods: 
+|     unknown: 
+|     stream_id: 19ac4e73-b5f9-4e7a-bb82-d7f74d843965
+|     features: 
+|_    capabilities: 
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
+|_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 5269/tcp open  xmpp-server?
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     capabilities: 
-|     features: 
-|     unknown: 
+|     compression_methods: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve cartographiepublicitaire.eu.org
 |       stream:stream
 |       (timeout)
+|     auth_mechanisms: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     stream_id: 7d7d4297-2ced-4741-9234-8e373fda539e
-|     auth_mechanisms: 
-|_    compression_methods: 
+|     unknown: 
+|     stream_id: 70d62e46-afff-4de4-b126-d381fa134c50
+|     features: 
+|_    capabilities: 
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=9/16%Time=65052ED5%P=x86_64-alpine-linux-musl
+SF-Port5222-TCP:V=7.92%I=7%D=9/17%Time=650682ED%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lang
 SF:='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\.
 SF:org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:x
@@ -92,7 +92,7 @@ SF:20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not-
 SF:well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:er
 SF:ror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=9/16%Time=65052ED5%P=x86_64-alpine-linux-musl
+SF-Port5269-TCP:V=7.92%I=7%D=9/17%Time=650682ED%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\x
 SF:20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xmln
 SF:s='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'>
@@ -129,4 +129,4 @@ SF:stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Sep 16 04:30:52 2023 -- 1 IP address (1 host up) scanned in 179.86 seconds
+# Nmap done at Sun Sep 17 04:41:54 2023 -- 1 IP address (1 host up) scanned in 177.65 seconds
