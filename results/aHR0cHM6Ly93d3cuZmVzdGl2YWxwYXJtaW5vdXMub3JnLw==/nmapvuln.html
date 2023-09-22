@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.festivalparminous.org</pre>
-<p class="lead">Thu Sep 21 04:30:32 2023 – Thu Sep 21 04:33:40 2023<br>1 hosts scanned.
+<p class="lead">Fri Sep 22 04:24:03 2023 – Fri Sep 22 04:26:56 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -159,7 +159,10 @@
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">587</td>
 <td title="Protocol">tcp</td>
@@ -204,21 +207,21 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
+    unknown: 
+    compression_methods: 
     errors: 
       host-unknown
       
         text: This server does not serve www.festivalparminous.org
       stream:stream
       (timeout)
-    compression_methods: 
-    unknown: 
+    auth_mechanisms: 
+    features: 
+    stream_id: d1e0efe8-7627-45dd-b9f4-3764acacd56f
+    capabilities: 
     xmpp: 
       lang: en
-      version: 1.0
-    features: 
-    stream_id: 88549c1c-2139-4061-8830-c1414d296c6b
-    capabilities: 
-    auth_mechanisms: </pre>
+      version: 1.0</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
@@ -234,29 +237,29 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>xmpp-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
+    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+<h5>xmpp-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   STARTTLS Failed
   info: 
+    unknown: 
+    compression_methods: 
     errors: 
       host-unknown
       
         text: This host does not serve www.festivalparminous.org
       stream:stream
       (timeout)
-    compression_methods: 
-    unknown: 
+    auth_mechanisms: 
+    features: 
+    stream_id: 4e7354ea-cde1-4820-9c53-584edabfc518
+    capabilities: 
     xmpp: 
       lang: en
-      version: 1.0
-    features: 
-    stream_id: b5972f36-13ea-40c9-81d0-9d1bf1d1ebc8
-    capabilities: 
-    auth_mechanisms: </pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
-    &lt;?xml version='1.0'?&gt;&lt;stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'&gt;&lt;stream:error&gt;&lt;not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/&gt;&lt;/stream:error&gt;&lt;/stream:stream&gt;</pre>
+      version: 1.0</pre>
 </td></tr>
 </tbody>
 </table></div>
