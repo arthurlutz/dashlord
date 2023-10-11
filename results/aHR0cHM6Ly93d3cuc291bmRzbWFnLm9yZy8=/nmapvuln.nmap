@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Oct 10 04:27:32 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
+# Nmap 7.92 scan initiated Wed Oct 11 04:28:07 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.soundsmag.org
 Nmap scan report for www.soundsmag.org (51.159.70.213)
-Host is up (0.084s latency).
+Host is up (0.083s latency).
 Other addresses for www.soundsmag.org (not scanned): 2001:bc8:1200:d:ec4:7aff:fe71:8214
 rDNS record for 51.159.70.213: lutz.im
 Not shown: 990 filtered tcp ports (no-response)
@@ -18,20 +18,20 @@ PORT     STATE SERVICE      VERSION
 |   STARTTLS Failed
 |   info: 
 |     unknown: 
-|     capabilities: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
-|     features: 
-|     stream_id: b80bd6b1-cfdb-4d3b-8452-a648b0cbc18b
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|_    auth_mechanisms: 
+|     features: 
+|     stream_id: c87bb97f-d804-461c-b5f8-cc4760208e7a
+|     capabilities: 
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
 |_    <?xml version='1.0'?><stream:stream xml:lang='en' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
@@ -40,26 +40,26 @@ PORT     STATE SERVICE      VERSION
 |   STARTTLS Failed
 |   info: 
 |     unknown: 
-|     capabilities: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
 |     compression_methods: 
-|     features: 
-|     stream_id: f854bb3b-bdd4-4d98-9c33-3cff57e87dbb
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve www.soundsmag.org
 |       stream:stream
 |       (timeout)
-|_    auth_mechanisms: 
+|     features: 
+|     stream_id: 27bf9859-f125-45a4-9bcb-6260f84e0d5c
+|     capabilities: 
+|     xmpp: 
+|       lang: en
+|_      version: 1.0
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest: 
 |_    <?xml version='1.0'?><stream:stream to='' from='' xmlns:db='jabber:server:dialback' xml:lang='en' xmlns='jabber:server' xmlns:stream='http://etherx.jabber.org/streams'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5222-TCP:V=7.92%I=7%D=10/10%Time=6524D2C0%P=x86_64-alpine-linux-mus
+SF-Port5222-TCP:V=7.92%I=7%D=10/11%Time=65262464%P=x86_64-alpine-linux-mus
 SF:l%r(GetRequest,E3,"<\?xml\x20version='1\.0'\?><stream:stream\x20xml:lan
 SF:g='en'\x20xmlns='jabber:client'\x20xmlns:stream='http://etherx\.jabber\
 SF:.org/streams'><stream:error><not-well-formed\x20xmlns='urn:ietf:params:
@@ -92,7 +92,7 @@ SF:x20xmlns:stream='http://etherx\.jabber\.org/streams'><stream:error><not
 SF:-well-formed\x20xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:e
 SF:rror></stream:stream>");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5269-TCP:V=7.92%I=7%D=10/10%Time=6524D2C0%P=x86_64-alpine-linux-mus
+SF-Port5269-TCP:V=7.92%I=7%D=10/11%Time=65262464%P=x86_64-alpine-linux-mus
 SF:l%r(GetRequest,113,"<\?xml\x20version='1\.0'\?><stream:stream\x20to=''\
 SF:x20from=''\x20xmlns:db='jabber:server:dialback'\x20xml:lang='en'\x20xml
 SF:ns='jabber:server'\x20xmlns:stream='http://etherx\.jabber\.org/streams'
@@ -129,4 +129,4 @@ SF:/stream:stream>");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Oct 10 04:30:19 2023 -- 1 IP address (1 host up) scanned in 166.73 seconds
+# Nmap done at Wed Oct 11 04:31:02 2023 -- 1 IP address (1 host up) scanned in 174.45 seconds
