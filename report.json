@@ -5,7 +5,7 @@
     "http": {
       "url": "https://arthur.lutz.im",
       "algorithm_version": 2,
-      "end_time": "Fri, 15 Dec 2023 04:29:58 GMT",
+      "end_time": "Mon, 18 Dec 2023 04:22:55 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,7 +13,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "Content-Type": "text/html",
-        "Date": "Fri, 15 Dec 2023 04:29:54 GMT",
+        "Date": "Mon, 18 Dec 2023 04:22:52 GMT",
         "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
@@ -25,9 +25,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 45482272,
+      "scan_id": 45572405,
       "score": 80,
-      "start_time": "Fri, 15 Dec 2023 04:22:14 GMT",
+      "start_time": "Mon, 18 Dec 2023 04:22:49 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -41,13 +41,13 @@
             "data": {
               "default-src": [
                 "data:",
-                "https:",
-                "blob:"
+                "blob:",
+                "https:"
               ],
               "object-src": [
+                "data:",
                 "https:",
-                "'unsafe-inline'",
-                "data:"
+                "'unsafe-inline'"
               ],
               "script-src": [
                 "data:",
@@ -56,9 +56,9 @@
                 "'unsafe-eval'"
               ],
               "style-src": [
+                "data:",
                 "https:",
-                "'unsafe-inline'",
-                "data:"
+                "'unsafe-inline'"
               ],
               "upgrade-insecure-requests": [
                 "'none'"
@@ -254,32 +254,32 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-12-16T04:13:51Z",
-      "next_check_at": "2023-12-16T04:43:45Z",
+      "last_check_at": "2023-12-18T04:29:08Z",
+      "next_check_at": "2023-12-18T04:58:56Z",
       "mute_until": null,
       "favicon_url": null,
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-12-16T02:14:18Z",
+        "tested_at": "2023-12-18T03:59:10Z",
         "expires_at": "2024-01-16T03:35:31Z",
         "valid": true,
         "error": null
       },
       "metrics": {
-        "apdex": 0.6,
+        "apdex": 1,
         "timings": {
-          "redirect": 1532,
-          "namelookup": 53,
-          "connection": 57,
+          "redirect": 638,
+          "namelookup": 0,
+          "connection": 0,
           "handshake": 0,
-          "response": 2588,
-          "total": 4229
+          "response": 123,
+          "total": 761
         }
       },
       "uptimeGrade": "A",
-      "apdexGrade": "F"
+      "apdexGrade": "A"
     },
     "nmap": null,
     "dependabot": null,
@@ -659,8 +659,8 @@
         "id": "cert_expirationStatus",
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
-        "severity": "OK",
-        "finding": "30 >= 30 days"
+        "severity": "MEDIUM",
+        "finding": "expires < 30 days (28)"
       },
       {
         "id": "cert_notBefore",
@@ -673,7 +673,7 @@
         "id": "cert_notAfter",
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
-        "severity": "OK",
+        "severity": "MEDIUM",
         "finding": "2024-01-16 03:35"
       },
       {
@@ -870,7 +870,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1702700599"
+        "finding": "1702873453"
       },
       {
         "id": "HSTS_time",
@@ -1461,7 +1461,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "107"
+        "finding": "63"
       }
     ],
     "thirdparties": {
@@ -1511,7 +1511,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html",
-        "date": "Sat, 16 Dec 2023 04:21:56 GMT",
+        "date": "Mon, 18 Dec 2023 04:23:25 GMT",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
         "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
@@ -1620,14 +1620,8 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.250.68.10",
+          "ip": "142.251.16.95",
           "geoip": {
-            "city": {
-              "geoname_id": 5131638,
-              "names": {
-                "en": "Plainview"
-              }
-            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -1658,13 +1652,9 @@
             },
             "location": {
               "accuracy_radius": 1000,
-              "latitude": 40.7746,
-              "longitude": -73.4761,
-              "metro_code": 501,
-              "time_zone": "America/New_York"
-            },
-            "postal": {
-              "code": "11803"
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1679,23 +1669,7 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 5128638,
-                "iso_code": "NY",
-                "names": {
-                  "de": "New York",
-                  "en": "New York",
-                  "es": "Nueva York",
-                  "fr": "New York",
-                  "ja": "ニューヨーク州",
-                  "pt-BR": "Nova Iorque",
-                  "ru": "Нью-Йорк",
-                  "zh-CN": "纽约州"
-                }
-              }
-            ]
+            }
           }
         },
         {
@@ -1782,8 +1756,42 @@
         },
         {
           "hostname": "i.creativecommons.org",
-          "ip": "104.20.150.16",
+          "ip": "172.67.34.140",
           "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
             "registered_country": {
               "geoname_id": 6252001,
               "iso_code": "US",
@@ -1889,7 +1897,7 @@
         },
         {
           "hostname": "licensebuttons.net",
-          "ip": "104.22.11.121",
+          "ip": "104.22.10.121",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -1909,7 +1917,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.40.35",
+          "ip": "172.253.62.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2091,7 +2099,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/",
         "finalUrl": "https://arthur.lutz.im/intro/",
-        "fetchTime": "2023-12-16T04:21:30.128Z",
+        "fetchTime": "2023-12-18T04:22:40.161Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://arthur.lutz.im/) was redirected to https://arthur.lutz.im/intro/. Try testing the second URL directly."
         ],
@@ -2135,49 +2143,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 2845,
+            "numericValue": 3438,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2845,
-                  "firstMeaningfulPaint": 2845,
-                  "largestContentfulPaint": 4545,
-                  "firstCPUIdle": 2845,
-                  "interactive": 2845,
-                  "speedIndex": 4587,
+                  "firstContentfulPaint": 3438,
+                  "firstMeaningfulPaint": 3438,
+                  "largestContentfulPaint": 4861,
+                  "firstCPUIdle": 3438,
+                  "interactive": 3438,
+                  "speedIndex": 4013,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 16,
-                  "cumulativeLayoutShift": 0.08075313568115235,
+                  "maxPotentialFID": 50,
+                  "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 184904327,
+                  "observedTimeOriginTs": 122648972,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 184904327,
-                  "observedFirstPaint": 2121,
-                  "observedFirstPaintTs": 187025503,
-                  "observedFirstContentfulPaint": 2121,
-                  "observedFirstContentfulPaintTs": 187025503,
-                  "observedFirstMeaningfulPaint": 2131,
-                  "observedFirstMeaningfulPaintTs": 187034974,
-                  "observedLargestContentfulPaint": 2121,
-                  "observedLargestContentfulPaintTs": 187025503,
-                  "observedTraceEnd": 3343,
-                  "observedTraceEndTs": 188247523,
-                  "observedLoad": 2286,
-                  "observedLoadTs": 187190534,
-                  "observedDomContentLoaded": 2130,
-                  "observedDomContentLoadedTs": 187034499,
-                  "observedCumulativeLayoutShift": 0.08075313568115235,
+                  "observedNavigationStartTs": 122648972,
+                  "observedFirstPaint": 1442,
+                  "observedFirstPaintTs": 124091275,
+                  "observedFirstContentfulPaint": 1442,
+                  "observedFirstContentfulPaintTs": 124091275,
+                  "observedFirstMeaningfulPaint": 1485,
+                  "observedFirstMeaningfulPaintTs": 124133762,
+                  "observedLargestContentfulPaint": 1442,
+                  "observedLargestContentfulPaintTs": 124091275,
+                  "observedTraceEnd": 2598,
+                  "observedTraceEndTs": 125247379,
+                  "observedLoad": 1538,
+                  "observedLoadTs": 124187308,
+                  "observedDomContentLoaded": 1437,
+                  "observedDomContentLoadedTs": 124086297,
+                  "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 2121,
-                  "observedFirstVisualChangeTs": 187025327,
-                  "observedLastVisualChange": 2721,
-                  "observedLastVisualChangeTs": 187625327,
-                  "observedSpeedIndex": 2134,
-                  "observedSpeedIndexTs": 187038352
+                  "observedFirstVisualChange": 1429,
+                  "observedFirstVisualChangeTs": 124077972,
+                  "observedLastVisualChange": 2029,
+                  "observedLastVisualChangeTs": 124677972,
+                  "observedSpeedIndex": 1449,
+                  "observedSpeedIndexTs": 124097703
                 },
                 {
                   "lcpInvalidated": false
@@ -2199,18 +2207,18 @@
                   "numScripts": 8,
                   "numStylesheets": 7,
                   "numFonts": 2,
-                  "numTasks": 247,
-                  "numTasksOver10ms": 1,
-                  "numTasksOver25ms": 0,
+                  "numTasks": 238,
+                  "numTasksOver10ms": 4,
+                  "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 8.075,
-                  "throughput": 19289121.9673607,
-                  "maxRtt": 150.19799999999998,
-                  "maxServerLatency": 28.652,
-                  "totalByteWeight": 478683,
-                  "totalTaskTime": 85.31700000000005,
+                  "rtt": 1.5,
+                  "throughput": 17510767.225482866,
+                  "maxRtt": 94.623,
+                  "maxServerLatency": 13.163999999999987,
+                  "totalByteWeight": 478682,
+                  "totalTaskTime": 136.38099999999994,
                   "mainDocumentTransferSize": 15294
                 }
               ]
@@ -2230,8 +2238,8 @@
     "sonarcloud": null,
     "summary": {
       "httpGrade": "B+",
-      "apdex": 0.6,
-      "apdexGrade": "F",
+      "apdex": 1,
+      "apdexGrade": "A",
       "uptime": 99.724,
       "uptimeGrade": "A",
       "testsslExpireSoon": true,
@@ -2259,7 +2267,7 @@
     "http": {
       "url": "https://arthur.lutz.im/blog/",
       "algorithm_version": 2,
-      "end_time": "Sun, 17 Dec 2023 04:22:01 GMT",
+      "end_time": "Mon, 18 Dec 2023 04:22:55 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -2267,7 +2275,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "Content-Type": "text/html",
-        "Date": "Sun, 17 Dec 2023 04:21:58 GMT",
+        "Date": "Mon, 18 Dec 2023 04:22:52 GMT",
         "Permissions-Policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "Server": "nginx",
         "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
@@ -2279,9 +2287,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 45539976,
+      "scan_id": 45572405,
       "score": 80,
-      "start_time": "Sun, 17 Dec 2023 04:21:55 GMT",
+      "start_time": "Mon, 18 Dec 2023 04:22:49 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -2294,32 +2302,32 @@
           "output": {
             "data": {
               "default-src": [
-                "blob:",
                 "data:",
+                "blob:",
                 "https:"
               ],
               "object-src": [
-                "'unsafe-inline'",
                 "data:",
-                "https:"
+                "https:",
+                "'unsafe-inline'"
               ],
               "script-src": [
-                "'unsafe-inline'",
-                "'unsafe-eval'",
                 "data:",
-                "https:"
+                "https:",
+                "'unsafe-inline'",
+                "'unsafe-eval'"
               ],
               "style-src": [
-                "'unsafe-inline'",
                 "data:",
-                "https:"
+                "https:",
+                "'unsafe-inline'"
               ],
               "upgrade-insecure-requests": [
                 "'none'"
               ],
               "worker-src": [
-                "'self'",
-                "blob:"
+                "blob:",
+                "'self'"
               ]
             },
             "http": true,
@@ -2870,7 +2878,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "MEDIUM",
-        "finding": "expires < 30 days (29)"
+        "finding": "expires < 30 days (28)"
       },
       {
         "id": "cert_notBefore",
@@ -3080,7 +3088,7 @@
         "ip": "arthur.lutz.im/91.170.138.84",
         "port": "443",
         "severity": "INFO",
-        "finding": "1702787032"
+        "finding": "1702873486"
       },
       {
         "id": "HSTS_time",
@@ -3680,7 +3688,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests; default-src https: data: blob: ; object-src https: data: 'unsafe-inline'; style-src https: data: 'unsafe-inline' ; script-src https: data: 'unsafe-inline' 'unsafe-eval'; worker-src 'self' blob:;",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 17 Dec 2023 04:22:33 GMT",
+        "date": "Mon, 18 Dec 2023 04:23:25 GMT",
         "link": "<https://arthur.lutz.im/blog/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "fullscreen=(), geolocation=(), payment=(), accelerometer=(), battery=(), magnetometer=(), usb=(), interest-cohort=()",
         "server": "nginx",
@@ -3985,7 +3993,7 @@
       {
         "requestedUrl": "https://arthur.lutz.im/blog/",
         "finalUrl": "https://arthur.lutz.im/blog/",
-        "fetchTime": "2023-12-17T04:21:44.845Z",
+        "fetchTime": "2023-12-18T04:22:38.340Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -4027,49 +4035,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 2894,
+            "numericValue": 2893,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2894,
-                  "firstMeaningfulPaint": 2894,
-                  "largestContentfulPaint": 7994,
-                  "firstCPUIdle": 2894,
-                  "interactive": 2894,
-                  "speedIndex": 5502,
+                  "firstContentfulPaint": 2893,
+                  "firstMeaningfulPaint": 2893,
+                  "largestContentfulPaint": 7993,
+                  "firstCPUIdle": 2893,
+                  "interactive": 2893,
+                  "speedIndex": 5302,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.04453304121229384,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 185568670,
+                  "observedTimeOriginTs": 138667318,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 185568670,
-                  "observedFirstPaint": 2601,
-                  "observedFirstPaintTs": 188169253,
-                  "observedFirstContentfulPaint": 2601,
-                  "observedFirstContentfulPaintTs": 188169253,
-                  "observedFirstMeaningfulPaint": 2601,
-                  "observedFirstMeaningfulPaintTs": 188169253,
-                  "observedLargestContentfulPaint": 2810,
-                  "observedLargestContentfulPaintTs": 188378650,
-                  "observedTraceEnd": 3846,
-                  "observedTraceEndTs": 189415014,
-                  "observedLoad": 2790,
-                  "observedLoadTs": 188358598,
-                  "observedDomContentLoaded": 2586,
-                  "observedDomContentLoadedTs": 188155120,
+                  "observedNavigationStartTs": 138667318,
+                  "observedFirstPaint": 2472,
+                  "observedFirstPaintTs": 141139368,
+                  "observedFirstContentfulPaint": 2472,
+                  "observedFirstContentfulPaintTs": 141139368,
+                  "observedFirstMeaningfulPaint": 2472,
+                  "observedFirstMeaningfulPaintTs": 141139368,
+                  "observedLargestContentfulPaint": 2666,
+                  "observedLargestContentfulPaintTs": 141333464,
+                  "observedTraceEnd": 3701,
+                  "observedTraceEndTs": 142368772,
+                  "observedLoad": 2646,
+                  "observedLoadTs": 141313131,
+                  "observedDomContentLoaded": 2468,
+                  "observedDomContentLoadedTs": 141135566,
                   "observedCumulativeLayoutShift": 0.04453304121229384,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 2607,
-                  "observedFirstVisualChangeTs": 188175670,
-                  "observedLastVisualChange": 3207,
-                  "observedLastVisualChangeTs": 188775670,
-                  "observedSpeedIndex": 2765,
-                  "observedSpeedIndexTs": 188333800
+                  "observedFirstVisualChange": 2477,
+                  "observedFirstVisualChangeTs": 141144318,
+                  "observedLastVisualChange": 3077,
+                  "observedLastVisualChangeTs": 141744318,
+                  "observedSpeedIndex": 2623,
+                  "observedSpeedIndexTs": 141289848
                 },
                 {
                   "lcpInvalidated": false
@@ -4091,18 +4099,18 @@
                   "numScripts": 8,
                   "numStylesheets": 8,
                   "numFonts": 0,
-                  "numTasks": 655,
-                  "numTasksOver10ms": 2,
+                  "numTasks": 541,
+                  "numTasksOver10ms": 1,
                   "numTasksOver25ms": 0,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 163.777,
-                  "throughput": 27490729.79853198,
-                  "maxRtt": 163.777,
-                  "maxServerLatency": 44.07500000000002,
+                  "rtt": 163.81900000000002,
+                  "throughput": 28890889.596993666,
+                  "maxRtt": 163.81900000000002,
+                  "maxServerLatency": 43.39699999999999,
                   "totalByteWeight": 3853721,
-                  "totalTaskTime": 116.91700000000017,
+                  "totalTaskTime": 108.36200000000015,
                   "mainDocumentTransferSize": 44559
                 }
               ]
@@ -4147,7 +4155,7 @@
     "http": {
       "url": "https://www.festivalparminous.org/",
       "algorithm_version": 2,
-      "end_time": "Sun, 17 Dec 2023 04:21:50 GMT",
+      "end_time": "Mon, 18 Dec 2023 04:22:53 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -4155,7 +4163,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Sun, 17 Dec 2023 04:21:48 GMT",
+        "Date": "Mon, 18 Dec 2023 04:22:50 GMT",
         "Link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -4168,9 +4176,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 45539972,
+      "scan_id": 45572404,
       "score": 80,
-      "start_time": "Sun, 17 Dec 2023 04:21:44 GMT",
+      "start_time": "Mon, 18 Dec 2023 04:22:47 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -4370,15 +4378,15 @@
       "recipients": [
         "email:640360656"
       ],
-      "last_check_at": "2023-12-17T04:04:56Z",
-      "next_check_at": "2023-12-17T04:34:52Z",
+      "last_check_at": "2023-12-18T04:28:32Z",
+      "next_check_at": "2023-12-18T04:58:16Z",
       "mute_until": null,
       "favicon_url": "https://www.festivalparminous.org/wp-content/uploads/2020/01/cropped-black-on-white-192x192.jpg",
       "custom_headers": {},
       "http_verb": "GET/HEAD",
       "http_body": "",
       "ssl": {
-        "tested_at": "2023-12-17T00:06:01Z",
+        "tested_at": "2023-12-18T00:59:14Z",
         "expires_at": "2024-01-30T04:28:08Z",
         "valid": true,
         "error": null
@@ -4387,11 +4395,11 @@
         "apdex": 1,
         "timings": {
           "redirect": 0,
-          "namelookup": 50,
-          "connection": 137,
-          "handshake": 163,
-          "response": 213,
-          "total": 563
+          "namelookup": 41,
+          "connection": 108,
+          "handshake": 128,
+          "response": 176,
+          "total": 453
         }
       },
       "uptimeGrade": "A",
@@ -4776,7 +4784,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "44 >= 30 days"
+        "finding": "43 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -4986,7 +4994,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1702786981"
+        "finding": "1702873479"
       },
       {
         "id": "HSTS_time",
@@ -5577,7 +5585,7 @@
         "ip": "www.festivalparminous.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "58"
+        "finding": "103"
       }
     ],
     "thirdparties": {
@@ -5586,7 +5594,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 17 Dec 2023 04:22:21 GMT",
+        "date": "Mon, 18 Dec 2023 04:23:23 GMT",
         "link": "<https://www.festivalparminous.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -5916,7 +5924,7 @@
       {
         "requestedUrl": "https://www.festivalparminous.org/",
         "finalUrl": "https://www.festivalparminous.org/",
-        "fetchTime": "2023-12-17T04:21:36.257Z",
+        "fetchTime": "2023-12-18T04:22:37.697Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -5958,49 +5966,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3247,
+            "numericValue": 3436,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3247,
-                  "firstMeaningfulPaint": 3247,
-                  "largestContentfulPaint": 10283,
-                  "firstCPUIdle": 3247,
-                  "interactive": 3247,
-                  "speedIndex": 3318,
+                  "firstContentfulPaint": 3436,
+                  "firstMeaningfulPaint": 3436,
+                  "largestContentfulPaint": 10329,
+                  "firstCPUIdle": 3436,
+                  "interactive": 3436,
+                  "speedIndex": 4248,
                   "estimatedInputLatency": 13,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.0007809524536132812,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 169245271,
+                  "observedTimeOriginTs": 155712145,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 169245271,
-                  "observedFirstPaint": 980,
-                  "observedFirstPaintTs": 170225609,
-                  "observedFirstContentfulPaint": 980,
-                  "observedFirstContentfulPaintTs": 170225609,
-                  "observedFirstMeaningfulPaint": 986,
-                  "observedFirstMeaningfulPaintTs": 170231757,
-                  "observedLargestContentfulPaint": 980,
-                  "observedLargestContentfulPaintTs": 170225609,
-                  "observedTraceEnd": 2128,
-                  "observedTraceEndTs": 171373496,
-                  "observedLoad": 1072,
-                  "observedLoadTs": 170317240,
-                  "observedDomContentLoaded": 981,
-                  "observedDomContentLoadedTs": 170226326,
+                  "observedNavigationStartTs": 155712145,
+                  "observedFirstPaint": 1574,
+                  "observedFirstPaintTs": 157286413,
+                  "observedFirstContentfulPaint": 1574,
+                  "observedFirstContentfulPaintTs": 157286413,
+                  "observedFirstMeaningfulPaint": 1586,
+                  "observedFirstMeaningfulPaintTs": 157297648,
+                  "observedLargestContentfulPaint": 1574,
+                  "observedLargestContentfulPaintTs": 157286413,
+                  "observedTraceEnd": 2784,
+                  "observedTraceEndTs": 158496120,
+                  "observedLoad": 1728,
+                  "observedLoadTs": 157439662,
+                  "observedDomContentLoaded": 1581,
+                  "observedDomContentLoadedTs": 157293064,
                   "observedCumulativeLayoutShift": 0.0007809524536132812,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 981,
-                  "observedFirstVisualChangeTs": 170226271,
-                  "observedLastVisualChange": 1297,
-                  "observedLastVisualChangeTs": 170542271,
-                  "observedSpeedIndex": 1005,
-                  "observedSpeedIndexTs": 170249856
+                  "observedFirstVisualChange": 1581,
+                  "observedFirstVisualChangeTs": 157293145,
+                  "observedLastVisualChange": 1898,
+                  "observedLastVisualChangeTs": 157610145,
+                  "observedSpeedIndex": 1605,
+                  "observedSpeedIndexTs": 157317040
                 },
                 {
                   "lcpInvalidated": false
@@ -6023,17 +6031,17 @@
                   "numStylesheets": 7,
                   "numFonts": 2,
                   "numTasks": 344,
-                  "numTasksOver10ms": 3,
+                  "numTasksOver10ms": 2,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 83.822,
-                  "throughput": 53014198.344523884,
-                  "maxRtt": 83.822,
-                  "maxServerLatency": 8.019999999999996,
+                  "rtt": 136.27599999999998,
+                  "throughput": 30787438.357391123,
+                  "maxRtt": 136.27599999999998,
+                  "maxServerLatency": 53.76400000000001,
                   "totalByteWeight": 3435165,
-                  "totalTaskTime": 124.53300000000003,
+                  "totalTaskTime": 118.80100000000014,
                   "mainDocumentTransferSize": 127495
                 }
               ]
@@ -6082,7 +6090,7 @@
     "http": {
       "url": "https://www.soundsmag.org/",
       "algorithm_version": 2,
-      "end_time": "Sun, 17 Dec 2023 04:35:31 GMT",
+      "end_time": "Mon, 18 Dec 2023 04:36:53 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -6091,7 +6099,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=utf-8",
-        "Date": "Sun, 17 Dec 2023 04:35:29 GMT",
+        "Date": "Mon, 18 Dec 2023 04:36:51 GMT",
         "Link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -6107,9 +6115,9 @@
         "X-Spip-Cache": "86400",
         "X-XSS-Protection": "1, mode=block"
       },
-      "scan_id": 45540329,
+      "scan_id": 45572888,
       "score": 70,
-      "start_time": "Sun, 17 Dec 2023 04:35:26 GMT",
+      "start_time": "Mon, 18 Dec 2023 04:36:48 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -6671,7 +6679,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "43 >= 30 days"
+        "finding": "42 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -6874,14 +6882,14 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "-1 seconds from localtime"
+        "finding": "0 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1702787810"
+        "finding": "1702874281"
       },
       {
         "id": "HSTS_time",
@@ -7472,7 +7480,7 @@
         "ip": "www.soundsmag.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "66"
+        "finding": "56"
       }
     ],
     "thirdparties": {
@@ -7482,7 +7490,7 @@
         "composed-by": "SPIP 4.2.2 @ www.spip.net + https://www.soundsmag.org/local/config.txt",
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=utf-8",
-        "date": "Sun, 17 Dec 2023 04:36:02 GMT",
+        "date": "Mon, 18 Dec 2023 04:37:22 GMT",
         "link": "<https://www.soundsmag.org/local/cache-css/cbf69a63bba2142f94197e4f73eb2eca.css?1680453233>;rel=\"preload\";as=\"style\";",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -7757,7 +7765,7 @@
       {
         "requestedUrl": "https://www.soundsmag.org/",
         "finalUrl": "https://www.soundsmag.org/",
-        "fetchTime": "2023-12-17T04:35:19.337Z",
+        "fetchTime": "2023-12-18T04:36:41.418Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -7799,49 +7807,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3512,
+            "numericValue": 3464,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3212,
-                  "firstMeaningfulPaint": 3212,
-                  "largestContentfulPaint": 3587,
-                  "firstCPUIdle": 3212,
-                  "interactive": 3512,
-                  "speedIndex": 3324,
+                  "firstContentfulPaint": 3239,
+                  "firstMeaningfulPaint": 3239,
+                  "largestContentfulPaint": 3614,
+                  "firstCPUIdle": 3239,
+                  "interactive": 3464,
+                  "speedIndex": 3239,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 1,
-                  "maxPotentialFID": 51,
+                  "totalBlockingTime": 15,
+                  "maxPotentialFID": 80,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 138316222,
+                  "observedTimeOriginTs": 176553783,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 138316222,
-                  "observedFirstPaint": 1052,
-                  "observedFirstPaintTs": 139367895,
-                  "observedFirstContentfulPaint": 1052,
-                  "observedFirstContentfulPaintTs": 139367895,
-                  "observedFirstMeaningfulPaint": 1052,
-                  "observedFirstMeaningfulPaintTs": 139367895,
-                  "observedLargestContentfulPaint": 1052,
-                  "observedLargestContentfulPaintTs": 139367895,
-                  "observedTraceEnd": 2196,
-                  "observedTraceEndTs": 140512614,
-                  "observedLoad": 1139,
-                  "observedLoadTs": 139455239,
-                  "observedDomContentLoaded": 918,
-                  "observedDomContentLoadedTs": 139234575,
+                  "observedNavigationStartTs": 176553783,
+                  "observedFirstPaint": 842,
+                  "observedFirstPaintTs": 177396215,
+                  "observedFirstContentfulPaint": 842,
+                  "observedFirstContentfulPaintTs": 177396215,
+                  "observedFirstMeaningfulPaint": 842,
+                  "observedFirstMeaningfulPaintTs": 177396215,
+                  "observedLargestContentfulPaint": 842,
+                  "observedLargestContentfulPaintTs": 177396215,
+                  "observedTraceEnd": 1964,
+                  "observedTraceEndTs": 178517698,
+                  "observedLoad": 894,
+                  "observedLoadTs": 177448064,
+                  "observedDomContentLoaded": 723,
+                  "observedDomContentLoadedTs": 177276878,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0,
-                  "observedFirstVisualChange": 1061,
-                  "observedFirstVisualChangeTs": 139377222,
-                  "observedLastVisualChange": 1061,
-                  "observedLastVisualChangeTs": 139377222,
-                  "observedSpeedIndex": 1062,
-                  "observedSpeedIndexTs": 139377758
+                  "observedFirstVisualChange": 839,
+                  "observedFirstVisualChangeTs": 177392783,
+                  "observedLastVisualChange": 839,
+                  "observedLastVisualChangeTs": 177392783,
+                  "observedSpeedIndex": 839,
+                  "observedSpeedIndexTs": 177392904
                 },
                 {
                   "lcpInvalidated": false
@@ -7863,19 +7871,19 @@
                   "numScripts": 3,
                   "numStylesheets": 5,
                   "numFonts": 0,
-                  "numTasks": 200,
-                  "numTasksOver10ms": 2,
-                  "numTasksOver25ms": 0,
-                  "numTasksOver50ms": 0,
+                  "numTasks": 193,
+                  "numTasksOver10ms": 4,
+                  "numTasksOver25ms": 1,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 105.723,
-                  "throughput": 9437897.981650904,
-                  "maxRtt": 105.723,
-                  "maxServerLatency": 3.595000000000013,
-                  "totalByteWeight": 402506,
-                  "totalTaskTime": 70.76200000000003,
-                  "mainDocumentTransferSize": 21664
+                  "rtt": 81.31,
+                  "throughput": 12056986.737922652,
+                  "maxRtt": 81.31,
+                  "maxServerLatency": 2.906000000000006,
+                  "totalByteWeight": 401699,
+                  "totalTaskTime": 145.46399999999994,
+                  "mainDocumentTransferSize": 21715
                 }
               ]
             }
@@ -7919,7 +7927,7 @@
     "http": {
       "url": "https://cartographiepublicitaire.eu.org",
       "algorithm_version": 2,
-      "end_time": "Sun, 17 Dec 2023 04:43:20 GMT",
+      "end_time": "Mon, 18 Dec 2023 04:38:24 GMT",
       "grade": "B",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -7927,7 +7935,7 @@
         "Connection": "keep-alive",
         "Content-Security-Policy": "upgrade-insecure-requests",
         "Content-Type": "text/html; charset=UTF-8",
-        "Date": "Sun, 17 Dec 2023 04:42:10 GMT",
+        "Date": "Mon, 18 Dec 2023 04:37:38 GMT",
         "Link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "Permissions-Policy": "interest-cohort=()",
         "Server": "nginx",
@@ -7940,9 +7948,9 @@
         "X-SSO-WAT": "You've just been SSOed",
         "X-XSS-Protection": "1; mode=block"
       },
-      "scan_id": 45540362,
+      "scan_id": 45572907,
       "score": 75,
-      "start_time": "Sun, 17 Dec 2023 04:36:52 GMT",
+      "start_time": "Mon, 18 Dec 2023 04:37:34 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 2,
@@ -8513,7 +8521,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "OK",
-        "finding": "82 >= 30 days"
+        "finding": "81 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -8723,7 +8731,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "1702788278"
+        "finding": "1702874391"
       },
       {
         "id": "HSTS_time",
@@ -9314,7 +9322,7 @@
         "ip": "cartographiepublicitaire.eu.org/51.159.70.213",
         "port": "443",
         "severity": "INFO",
-        "finding": "58"
+        "finding": "57"
       }
     ],
     "thirdparties": {
@@ -9365,7 +9373,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/settings?session_id=6c8793c6cbcb4bbe75f753d9377309e1c7f6b887",
+          "url": "https://syndication.twitter.com/settings?session_id=1088e38310a2524df630a314f0a94158ffba7121",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9381,7 +9389,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=6c8793c6cbcb4bbe75f753d9377309e1c7f6b887&showHeader=false&showReplies=false&transparent=true&widgetsVersion=2615f7e52b7e0%3A1702314776716",
+          "url": "https://syndication.twitter.com/srv/timeline-profile/screen-name/carto_des_pubs?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfZm9zbnJfc29mdF9pbnRlcnZlbnRpb25zX2VuYWJsZWQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X21peGVkX21lZGlhXzE1ODk3Ijp7ImJ1Y2tldCI6InRyZWF0bWVudCIsInZlcnNpb24iOm51bGx9LCJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmlyZHdhdGNoX3Bpdm90c19lbmFibGVkIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdXNlX3Byb2ZpbGVfaW1hZ2Vfc2hhcGVfZW5hYmxlZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9mcm9udGVuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=false&hideHeader=true&hideScrollBar=false&lang=fr&maxHeight=600px&origin=https%3A%2F%2Fcartographiepublicitaire.eu.org%2F&sessionId=1088e38310a2524df630a314f0a94158ffba7121&showHeader=false&showReplies=false&transparent=true&widgetsVersion=2615f7e52b7e0%3A1702314776716",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9509,7 +9517,7 @@
         },
         {
           "type": "twitter",
-          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1702788233094%2C%22event_namespace%22%3A%7B%22action%22%3A%22no-results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22d2b21d1%3A1693532938118%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=6c8793c6cbcb4bbe75f753d9377309e1c7f6b887",
+          "url": "https://syndication.twitter.com/i/jot?l=%7B%22_category_%22%3A%22tfw_client_event%22%2C%22triggered_on%22%3A1702874331125%2C%22event_namespace%22%3A%7B%22action%22%3A%22no-results%22%2C%22client%22%3A%22tfw%22%2C%22page%22%3A%22timeline-profile%22%2C%22section%22%3A%22main%22%7D%2C%22context%22%3A%22horizon%22%2C%22client_version%22%3A%222615f7e52b7e0%3A1702314776716%22%2C%22dnt%22%3Afalse%2C%22widget_id%22%3A%22twitter-widget-0%22%2C%22widget_origin%22%3A%22https%3A%2F%2Fcartographiepublicitaire.eu.org%2F%22%2C%22widget_frame%22%3A%22false%22%2C%22widget_partner%22%3A%22%22%2C%22widget_site_screen_name%22%3A%22%22%2C%22widget_site_user_id%22%3A%22%22%2C%22widget_creator_screen_name%22%3A%22%22%2C%22widget_creator_user_id%22%3A%22%22%2C%22widget_iframe_version%22%3A%22d2b21d1%3A1693532938118%22%2C%22widget_data_source%22%3A%22screen-name%3Acarto_des_pubs%22%7D&session_id=1088e38310a2524df630a314f0a94158ffba7121",
           "details": {
             "id": "twitter",
             "message": "Dont embed twitter scripts, use your own tweet embed"
@@ -9520,7 +9528,7 @@
       "headers": {
         "content-security-policy": "upgrade-insecure-requests",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 17 Dec 2023 04:43:51 GMT",
+        "date": "Mon, 18 Dec 2023 04:38:49 GMT",
         "link": "<https://cartographiepublicitaire.eu.org/wp-json/>; rel=\"https://api.w.org/\"",
         "permissions-policy": "interest-cohort=()",
         "server": "nginx",
@@ -9630,7 +9638,7 @@
         },
         {
           "hostname": "unpkg.com",
-          "ip": "104.16.122.175",
+          "ip": "104.16.124.175",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -9650,42 +9658,8 @@
         },
         {
           "hostname": "www.cartographiepublicitaire.org",
-          "ip": "172.67.222.248",
+          "ip": "104.21.25.55",
           "geoip": {
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
-            },
             "registered_country": {
               "geoname_id": 6252001,
               "iso_code": "US",
@@ -10104,13 +10078,13 @@
       {
         "requestedUrl": "https://cartographiepublicitaire.eu.org/",
         "finalUrl": "https://cartographiepublicitaire.eu.org/",
-        "fetchTime": "2023-12-17T04:36:37.416Z",
+        "fetchTime": "2023-12-18T04:37:19.796Z",
         "runWarnings": [],
         "categories": {
           "performance": {
             "title": "Performance",
             "id": "performance",
-            "score": 0.861606216430664
+            "score": 0.8616008758544922
           },
           "accessibility": {
             "title": "Accessibility",
@@ -10146,49 +10120,49 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 11761,
+            "numericValue": 11561,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 6451,
-                  "firstMeaningfulPaint": 6451,
-                  "largestContentfulPaint": 6912,
-                  "firstCPUIdle": 9865,
-                  "interactive": 11761,
-                  "speedIndex": 10207,
+                  "firstContentfulPaint": 6577,
+                  "firstMeaningfulPaint": 6577,
+                  "largestContentfulPaint": 7047,
+                  "firstCPUIdle": 9918,
+                  "interactive": 11561,
+                  "speedIndex": 9696,
                   "estimatedInputLatency": 13,
-                  "totalBlockingTime": 60,
-                  "maxPotentialFID": 169,
+                  "totalBlockingTime": 83,
+                  "maxPotentialFID": 149,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftAllFrames": 0.11674074074074074,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 240926264,
+                  "observedTimeOriginTs": 224719292,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 240926264,
-                  "observedFirstPaint": 1341,
-                  "observedFirstPaintTs": 242267366,
-                  "observedFirstContentfulPaint": 1341,
-                  "observedFirstContentfulPaintTs": 242267366,
-                  "observedFirstMeaningfulPaint": 1341,
-                  "observedFirstMeaningfulPaintTs": 242267366,
-                  "observedLargestContentfulPaint": 1341,
-                  "observedLargestContentfulPaintTs": 242267366,
-                  "observedTraceEnd": 7880,
-                  "observedTraceEndTs": 248806189,
-                  "observedLoad": 6823,
-                  "observedLoadTs": 247749640,
-                  "observedDomContentLoaded": 1327,
-                  "observedDomContentLoadedTs": 242253688,
+                  "observedNavigationStartTs": 224719292,
+                  "observedFirstPaint": 1405,
+                  "observedFirstPaintTs": 226123851,
+                  "observedFirstContentfulPaint": 1405,
+                  "observedFirstContentfulPaintTs": 226123851,
+                  "observedFirstMeaningfulPaint": 1405,
+                  "observedFirstMeaningfulPaintTs": 226123851,
+                  "observedLargestContentfulPaint": 1405,
+                  "observedLargestContentfulPaintTs": 226123851,
+                  "observedTraceEnd": 6483,
+                  "observedTraceEndTs": 231202335,
+                  "observedLoad": 5427,
+                  "observedLoadTs": 230146595,
+                  "observedDomContentLoaded": 1382,
+                  "observedDomContentLoadedTs": 226101034,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftAllFrames": 0.11674074074074074,
-                  "observedFirstVisualChange": 1347,
-                  "observedFirstVisualChangeTs": 242273264,
-                  "observedLastVisualChange": 6830,
-                  "observedLastVisualChangeTs": 247756264,
-                  "observedSpeedIndex": 2491,
-                  "observedSpeedIndexTs": 243417430
+                  "observedFirstVisualChange": 1388,
+                  "observedFirstVisualChangeTs": 226107292,
+                  "observedLastVisualChange": 5438,
+                  "observedLastVisualChangeTs": 230157292,
+                  "observedSpeedIndex": 2235,
+                  "observedSpeedIndexTs": 226954088
                 },
                 {
                   "lcpInvalidated": false
@@ -10210,18 +10184,18 @@
                   "numScripts": 23,
                   "numStylesheets": 12,
                   "numFonts": 1,
-                  "numTasks": 597,
-                  "numTasksOver10ms": 4,
-                  "numTasksOver25ms": 1,
+                  "numTasks": 590,
+                  "numTasksOver10ms": 7,
+                  "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 0.459,
-                  "throughput": 20517170.1855866,
-                  "maxRtt": 80.84899999999999,
-                  "maxServerLatency": 6038.068000000001,
-                  "totalByteWeight": 1774158,
-                  "totalTaskTime": 319.58799999999945,
+                  "rtt": 0.35,
+                  "throughput": 21526402.793060374,
+                  "maxRtt": 85.289,
+                  "maxServerLatency": 4685.107999999999,
+                  "totalByteWeight": 1774186,
+                  "totalTaskTime": 354.97099999999983,
                   "mainDocumentTransferSize": 72059
                 }
               ]
@@ -10248,7 +10222,7 @@
       "cookiesCount": 0,
       "trackersGrade": "F",
       "trackersCount": 25,
-      "lighthouse_performance": 0.861606216430664,
+      "lighthouse_performance": 0.8616008758544922,
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.9,
       "lighthouse_accessibilityGrade": "A",
