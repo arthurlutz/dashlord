@@ -1,2 +1,30 @@
-# Nmap 7.92 scan initiated Thu Jul  4 04:35:54 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln arthur.lutz.im
-# Nmap done at Thu Jul  4 04:35:58 2024 -- 1 IP address (0 hosts up) scanned in 3.51 seconds
+# Nmap 7.92 scan initiated Sat Jul 13 04:37:59 2024 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln arthur.lutz.im
+Nmap scan report for arthur.lutz.im (91.170.138.84)
+Host is up (0.098s latency).
+rDNS record for 91.170.138.84: 91-170-138-84.subs.proxad.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT      STATE SERVICE  VERSION
+80/tcp    open  http     nginx
+443/tcp   open  ssl/http nginx
+|_http-trane-info: Problem with XML parsing of /evox/about
+12345/tcp open  ssh      OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.4p1: 
+|     	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
+|     	B8190CDB-3EB9-5631-9828-8064A1575B23	9.8	https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23	*EXPLOIT*
+|     	8FC9C5AB-3968-5F3C-825E-E8DB5379A623	9.8	https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623	*EXPLOIT*
+|     	SSV:92579	7.5	https://vulners.com/seebug/SSV:92579	*EXPLOIT*
+|     	PACKETSTORM:173661	7.5	https://vulners.com/packetstorm/PACKETSTORM:173661	*EXPLOIT*
+|     	F0979183-AE88-53B4-86CF-3AF0523F3807	7.5	https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807	*EXPLOIT*
+|     	1337DAY-ID-26576	7.5	https://vulners.com/zdt/1337DAY-ID-26576	*EXPLOIT*
+|     	CVE-2021-28041	7.1	https://vulners.com/cve/CVE-2021-28041
+|     	CVE-2021-41617	7.0	https://vulners.com/cve/CVE-2021-41617
+|     	CVE-2023-51385	6.5	https://vulners.com/cve/CVE-2023-51385
+|     	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
+|     	CVE-2020-14145	5.9	https://vulners.com/cve/CVE-2020-14145
+|     	CVE-2016-20012	5.3	https://vulners.com/cve/CVE-2016-20012
+|_    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul 13 04:38:22 2024 -- 1 IP address (1 host up) scanned in 22.99 seconds
