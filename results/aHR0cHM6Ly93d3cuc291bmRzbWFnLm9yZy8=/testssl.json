@@ -374,7 +374,7 @@
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (29)"
+              "finding"      : "expires < 30 days (27)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -527,8 +527,8 @@
               "id"           : "HTTP_status_code",
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 502 Bad Gateway @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -542,28 +542,28 @@
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1729658428"
+              "finding"      : "1729831344"
           }
 ,         {
               "id"           : "HSTS_time",
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "182 days (=15768000 seconds) > 15552000 seconds"
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
           }
 ,         {
               "id"           : "HSTS_subdomains",
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "only for this domain"
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
           }
 ,         {
               "id"           : "HSTS_preload",
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
           }
 ,         {
               "id"           : "HPKP",
@@ -591,7 +591,7 @@
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -626,7 +626,7 @@
               "ip"           : "www.soundsmag.org/51.159.5.215",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1, mode=block"
+              "finding"      : "1; mode=block"
           }
 ,         {
               "id"           : "banner_reverseproxy",
