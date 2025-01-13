@@ -88,7 +88,7 @@ jobs:
       - name: Lighthouse scan
         continue-on-error: true
         timeout-minutes: 10
-        uses: treosh/lighthouse-ci-action@v7
+        uses: treosh/lighthouse-ci-action@v12
         if: ${{ matrix.sites.tools.lighthouse }}
         with:
           urls: "${{ matrix.sites.url }}"
